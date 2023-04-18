@@ -29,9 +29,11 @@ export default function Attitudes() {
 
           <img src="/img-attitudes-1.png" alt="" width="300" className="block max-w-full h-auto mx-auto mb-6" />
 
-          <p className="text-xl text-[#473f9b] mb-4">You arrive at school and go straight to your form room.</p>
+          <div>
+            <p className="text-xl text-[#473f9b] mb-4">You arrive at school and go straight to your form room.</p>
 
-          <p className="text-xl text-[#473f9b] mb-6">When you sit down, you can hear the boys at the back of the room watching a video and making misogynistic comments.</p>
+            <p className="text-xl text-[#473f9b] mb-6">When you sit down, you can hear the boys at the back of the room watching a video and making misogynistic comments.</p>
+          </div>
 
           <button onClick={() => setPageStep(3)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
         </div>
@@ -64,7 +66,9 @@ export default function Attitudes() {
 
           <img src="/img-attitudes-1.png" alt="" width="300" className="block max-w-full h-auto mx-auto mb-6" />
 
-          <p className="text-xl text-[#473f9b] mb-4">You ignore them. The boys continue to joke, getting louder. It makes you feel very uncomfortable.</p>
+          <div>
+            <p className="text-xl text-[#473f9b] mb-4">You ignore them. The boys continue to joke, getting louder. It makes you feel very uncomfortable.</p>
+          </div>
 
           <button onClick={() => setPageStep(5)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
         </div>
@@ -95,7 +99,9 @@ export default function Attitudes() {
       <div className="bg-[#b2d5d3]">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10">
 
-          <p className="text-xl text-[#473f9b]">You continue to stay silent. No one calls them out, and they continue to make jokes all day. Other boys start to get involved too.</p>
+          <div>
+            <p className="text-xl text-[#473f9b]">You continue to stay silent. No one calls them out, and they continue to make jokes all day. Other boys start to get involved too.</p>
+          </div>
 
           <blockquote className="bg-white text-[#473f9b] p-7 rounded-[0.25rem] shadow-[0.5rem_0.5rem_0_#6071be]">
             <p className="text-xl mb-4"><span className="block font-serif text-6xl mb-4">92%</span> of girls stated that they received sexist name-calling ‘a lot’ or ‘sometimes’ between people their age*</p>
@@ -112,7 +118,9 @@ export default function Attitudes() {
       <div className="bg-[#b2d5d3]">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10">
 
-          <p className="text-xl text-[#473f9b]">The boys laugh and call you frigid. It doesn’t stop them. After all, the guy they’re watching makes the same jokes and has millions of fans.</p>
+          <div>
+            <p className="text-xl text-[#473f9b]">The boys laugh and call you frigid. It doesn’t stop them. After all, the guy they’re watching makes the same jokes and has millions of fans.</p>
+          </div>
 
           <blockquote className="bg-white text-[#473f9b] p-7 rounded-[0.25rem] shadow-[0.5rem_0.5rem_0_#6071be]">
             <p className="text-xl mb-4"><span className="block font-serif text-6xl mb-4">92%</span> of girls stated that they received sexist name-calling ‘a lot’ or ‘sometimes’ between people their age*</p>
@@ -129,14 +137,12 @@ export default function Attitudes() {
       <div className="bg-[#b2d5d3]">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10">
 
-          <div className="flex-1 flex items-center justify-center">
-            <p className="text-[#473f9b] font-serif text-6xl mb-6 uppercase text-center">
-              <span className="block italic">But,</span>
-              <span className="block font-bold">there is good news</span>
-            </p>
-          </div>
+          <p className="text-[#473f9b] font-serif text-6xl mb-6 uppercase text-center">
+            <span className="block italic">But,</span>
+            <span className="block font-bold">there is good news</span>
+          </p>
 
-          <div className="mb-2">
+          <div>
             <p className="text-xl text-[#473f9b] mb-4">In 2012, British feminst writer Laura Bates founded The Everyday Sexism project. The site documents examples of sexism from around the world. Entries may be submitted directly to the site, or by email or tweet. The accounts of abuse are collated by a small group of volunteers. The launch of this website is considered to be the beginning of fourth-wave feminism.</p>
           </div>
 

@@ -6,7 +6,14 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    fontFamily: {
+      'sans': ['Roboto', 'sans-serif'],
+      'serif': ['Playfair Display', 'serif'],
+    },
     extend: {
+      borderWidth: {
+        '5': '5px',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

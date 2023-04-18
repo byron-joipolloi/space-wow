@@ -1,73 +1,147 @@
 import { useEffect, useState, useRef } from 'react'
-import SpeechBubble from '../components/SpeechBubble.js'
+import Link from 'next/link'
 
 export default function Attitudes() {
-
   const [pageStep, setPageStep] = useState(1)
-  const messagesEndRef = useRef(null)
-
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView()
-  }
-
-  const handleAnswerClick = (answer) => {
-    if (answer === 'positive') {
-      setPageStep(pageStep + 1)
-    } else {
-      setPageStep(pageStep - 1)
-    }
-  }
-
-  const backToStart = () => {
-    setPageStep(1)
-  }
-
-  useEffect(() => {
-    scrollToBottom()
-  }, [pageStep]);
 
   if (pageStep === 1) {
     return (
-      <div className="flex items-center min-h-screen bg-[#ffc7dc]">
-        <div className="max-w-sm mx-auto px-6 py-12 text-center">
-          <h1 className="text-[#a50c9d] font-serif text-5xl mb-6 uppercase">
-            <span className="block font-bold">One Way</span>
-            <span className="block italic">or</span>
-            <span className="block font-bold">Another</span>
-          </h1>
+      <div className="bg-[#b2d5d3]">
+        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 text-center">
+          <p className="text-lg font-bold text-[#473f9b] uppercase tracking-widest mb-12">Scenario 1 / 4</p>
 
-          <p className="text-[#a50c9d] uppercase tracking-widest mb-12">Interactive Experience</p>
+          <div>
+            <h1 className="text-[#473f9b] font-serif text-6xl mb-6 uppercase">
+              <span className="block font-bold">Mind</span>
+              <span className="block italic">his</span>
+              <span className="block font-bold">attitude</span>
+            </h1>
+          </div>
 
-          <button onClick={() => setPageStep(2)} className="text-lg w-full p-2 font-semibold text-sm bg-[#a50c9d] border-4 border-[#80097a] text-white rounded-full shadow-sm transition">Start</button>
+          <button onClick={() => setPageStep(2)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Start</button>
         </div>
       </div>
     )
-  } else {
+  } else if (pageStep === 2) {
     return (
-      <div className="flex items-end min-h-screen bg-[#accff8]">
-        <div className="max-w-sm mx-auto px-6 py-12 relative">
-          
-          <div className="">
+      <div className="bg-[#b2d5d3]">
+        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10">
 
-            {(pageStep > 1) ? <SpeechBubble text={`Hi there!`} /> : null}
-            {(pageStep > 2) ? <SpeechBubble text={`We're from the local secondary school.`} /> : null}
-            {(pageStep > 3) ? <SpeechBubble text={`You've just found one of the barn's interactive experience stations!`} /> : null}
-            {(pageStep > 4) ? <SpeechBubble text={`Around the barn, you will find different stations relating to topics that affect women, girls and non-binary people.`} /> : null}
-            {(pageStep > 5) ? <SpeechBubble text={`You'll be given a scenario at each station. It's your job to make decisions!`} /> : null}
+          <img src="/img-attitudes-1.png" alt="" width="300" className="block max-w-full h-auto mx-auto mb-6" />
+
+          <p className="text-xl text-[#473f9b] mb-4">You arrive at school and go straight to your form room.</p>
+
+          <p className="text-xl text-[#473f9b] mb-6">When you sit down, you can hear the boys at the back of the room watching a video and making misogynistic comments.</p>
+
+          <button onClick={() => setPageStep(3)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
+        </div>
+      </div>
+    )
+  } else if (pageStep === 3) {
+    return (
+      <div className="bg-[#454791]">
+        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10">
+
+          <div className="flex-1 flex items-center justify-center">
+            <p className="text-[#c0dbd4] font-serif text-6xl mb-6 uppercase text-center">
+              <span className="block font-bold">What</span>
+              <span className="block italic">do</span>
+              <span className="block font-bold">you do?</span>
+            </p>
           </div>
 
-          <div className="mb-6">
-            <img src="/img-girls.png" alt="" />
-          </div>
-
-          <div className="flex justify-end">
-            <button onClick={() => handleAnswerClick('negative')} className="p-2 font-semibold text-sm bg-[#374590] border-4 border-[#29336a] text-white rounded-full shadow-sm ml-3"><span className="sr-only">Previous</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" class="w-6 h-6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"/></svg></button>
-            
-            <button onClick={() => handleAnswerClick('positive')} className="p-2 font-semibold text-sm bg-[#374590] border-4 border-[#29336a] text-white rounded-full shadow-sm ml-3"><span className="sr-only">Next</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" class="w-6 h-6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></button>
+          <div>
+            <button onClick={() => setPageStep(4)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#c0dbd4] border-5 border-[#231d57] text-[#454791] shadow-sm transition mb-4">Ignore them</button>
+            <button onClick={() => setPageStep(7)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#c0dbd4] border-5 border-[#231d57] text-[#454791] shadow-sm transition">Ask them to stop</button>
           </div>
         </div>
+      </div>
+    )
+  } else if (pageStep === 4) {
+    return (
+      <div className="bg-[#b2d5d3]">
+        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10">
 
-        <div ref={messagesEndRef} />
+          <img src="/img-attitudes-1.png" alt="" width="300" className="block max-w-full h-auto mx-auto mb-6" />
+
+          <p className="text-xl text-[#473f9b] mb-4">You ignore them. The boys continue to joke, getting louder. It makes you feel very uncomfortable.</p>
+
+          <button onClick={() => setPageStep(5)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
+        </div>
+      </div>
+    )
+  } else if (pageStep === 5) {
+    return (
+      <div className="bg-[#454791]">
+        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10">
+
+          <div className="flex-1 flex items-center justify-center">
+            <p className="text-[#c0dbd4] font-serif text-6xl mb-6 uppercase text-center">
+              <span className="block font-bold">Want to</span>
+              <span className="block italic">change</span>
+              <span className="block font-bold">your mind?</span>
+            </p>
+          </div>
+
+          <div>
+            <button onClick={() => setPageStep(6)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#c0dbd4] border-5 border-[#231d57] text-[#454791] shadow-sm transition mb-4">Continue ignoring them</button>
+            <button onClick={() => setPageStep(7)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#c0dbd4] border-5 border-[#231d57] text-[#454791] shadow-sm transition">Ask them to stop</button>
+          </div>
+        </div>
+      </div>
+    )
+  } else if (pageStep === 6) {
+    return (
+      <div className="bg-[#b2d5d3]">
+        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10">
+
+          <p className="text-xl text-[#473f9b]">You continue to stay silent. No one calls them out, and they continue to make jokes all day. Other boys start to get involved too.</p>
+
+          <blockquote className="bg-white text-[#473f9b] p-7 rounded-[0.25rem] shadow-[0.5rem_0.5rem_0_#6071be]">
+            <p className="text-xl mb-4"><span className="block font-serif text-6xl mb-4">92%</span> of girls stated that they received sexist name-calling ‘a lot’ or ‘sometimes’ between people their age*</p>
+
+            <p className="leading-tight"><small>*A 2021 Ofsted survey of 32 schools and colleges</small></p>
+          </blockquote>
+
+          <button onClick={() => setPageStep(8)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
+        </div>
+      </div>
+    )
+  } else if (pageStep === 7) {
+    return (
+      <div className="bg-[#b2d5d3]">
+        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10">
+
+          <p className="text-xl text-[#473f9b]">The boys laugh and call you frigid. It doesn’t stop them. After all, the guy they’re watching makes the same jokes and has millions of fans.</p>
+
+          <blockquote className="bg-white text-[#473f9b] p-7 rounded-[0.25rem] shadow-[0.5rem_0.5rem_0_#6071be]">
+            <p className="text-xl mb-4"><span className="block font-serif text-6xl mb-4">92%</span> of girls stated that they received sexist name-calling ‘a lot’ or ‘sometimes’ between people their age*</p>
+
+            <p className="leading-tight"><small>*A 2021 Ofsted survey of 32 schools and colleges</small></p>
+          </blockquote>
+
+          <button onClick={() => setPageStep(8)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
+        </div>
+      </div>
+    )
+  } else if (pageStep === 8) {
+    return (
+      <div className="bg-[#b2d5d3]">
+        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10">
+
+          <div className="flex-1 flex items-center justify-center">
+            <p className="text-[#473f9b] font-serif text-6xl mb-6 uppercase text-center">
+              <span className="block italic">But,</span>
+              <span className="block font-bold">there is good news</span>
+            </p>
+          </div>
+
+          <div className="mb-2">
+            <p className="text-xl text-[#473f9b] mb-4">In 2012, British feminst writer Laura Bates founded The Everyday Sexism project. The site documents examples of sexism from around the world. Entries may be submitted directly to the site, or by email or tweet. The accounts of abuse are collated by a small group of volunteers. The launch of this website is considered to be the beginning of fourth-wave feminism.</p>
+          </div>
+
+          <Link href="/finish" className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Finish</Link>
+        </div>
       </div>
     )
   }

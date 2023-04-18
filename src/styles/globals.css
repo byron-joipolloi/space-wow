@@ -1,25 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Roboto:wght@400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --black: #000;
-  --white: #fff;
-}
-
-body {
-  color: var(--black);
-  background-color: var(--white);
-}
-
-.bubble {
-  border-radius: 0.25rem;
-  box-shadow: 0.5rem 0.5rem 0 #6071be;
-  position: relative;
-}
-
-.bubble::before,
-.bubble::after {
+.message::before,
+.message::after {
   content: '';
   border-top: 12px solid #6071be;
   border-right: 8px solid transparent;
@@ -29,7 +15,7 @@ body {
   left: 50%;
 }
 
-.bubble::after {
+.message::after {
   border-top: 12px solid #fff;
   bottom: -12px;
   left: calc(50% - 6px);

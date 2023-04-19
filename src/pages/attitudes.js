@@ -146,7 +146,7 @@ export default function Attitudes() {
             <p>In 2012, British feminst writer Laura Bates founded The Everyday Sexism project. The site documents examples of sexism from around the world. Entries may be submitted directly to the site, or by email or tweet. The accounts of abuse are collated by a small group of volunteers. The launch of this website is considered to be the beginning of fourth-wave feminism.</p>
           </div>
 
-          <Link href="/finish" className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Finish</Link>
+          <Link href="/menu" className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Finish</Link>
         </div>
       </div>
     )

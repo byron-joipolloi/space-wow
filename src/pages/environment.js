@@ -148,7 +148,7 @@ export default function Attitudes() {
             <p>In India, a group of women founded an app that helps women stay safe by letting users rate streets and areas for safety criteria such as lighting, visibility, people density, gender diversity, security and transportation. The app has now been contracted by local authorities in Delhi to make recommendations on how to make metro stations, bus stops, tourist spots, public toilets and parks more woman-friendly.</p>
           </div>
 
-          <Link href="/finish" className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#6E0869] border-5 border-[#390136] text-white shadow-sm transition">Finish</Link>
+          <Link href="/menu" className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#6E0869] border-5 border-[#390136] text-white shadow-sm transition">Finish</Link>
         </div>
       </div>
     )

@@ -148,7 +148,7 @@ export default function Attitudes() {
             <p>Campaign groups have managed to get a bill that would make street harassment illegal debated in parliament. However, as of the 24th of March 2023, the Bill still places a burden on victims of public sexual harassment to prove that the perpetrator intended to cause distress or harm. It does not explicitly make public sexual harassment a crime. Public sexual harassment needs to be directly addressed by the Bill as it progresses.</p>
           </div>
 
-          <Link href="/finish" className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Finish</Link>
+          <Link href="/menu" className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Finish</Link>
         </div>
       </div>
     )

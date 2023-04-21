@@ -11,7 +11,7 @@ export default function Attitudes() {
 
   if (pageStep === 1) {
     return (
-      <div className="bg-[#FF8FBA]">
+      <div className="bg-[#FF8FBA] bg-[url('/bg-medium-pink.jpg')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 text-center">
           <p className="text-lg font-bold text-[#6E0869] uppercase tracking-widest">Scenario 3 / 4</p>
 
@@ -29,7 +29,7 @@ export default function Attitudes() {
     )
   } else if (pageStep === 2) {
     return (
-      <div className="bg-[#FF8FBA]">
+      <div className="bg-[#FF8FBA] bg-[url('/bg-medium-pink.jpg')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
 
           <img src="/img-environment-1.png" alt="" width="375" className="block max-w-full h-auto mx-auto" />
@@ -44,7 +44,7 @@ export default function Attitudes() {
     )
   } else if (pageStep === 3) {
     return (
-      <div className="bg-[#8b1e6b]">
+      <div className="bg-[#8b1e6b] bg-[url('/bg-purple.jpg')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10">
 
           <div className="flex-1 flex items-center justify-center">
@@ -64,7 +64,7 @@ export default function Attitudes() {
     )
   } else if (pageStep === 4) {
     return (
-      <div className="bg-[#FF8FBA]">
+      <div className="bg-[#FF8FBA] bg-[url('/bg-medium-pink.jpg')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10">
 
           <img src="/img-environment-1.png" alt="" width="375" className="block max-w-full h-auto mx-auto" />
@@ -81,7 +81,7 @@ export default function Attitudes() {
     )
   } else if (pageStep === 5) {
     return (
-      <div className="bg-[#8b1e6b]">
+      <div className="bg-[#8b1e6b] bg-[url('/bg-purple.jpg')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10">
 
           <div className="flex-1 flex items-center justify-center">
@@ -101,7 +101,7 @@ export default function Attitudes() {
     )
   } else if (pageStep === 6) {
     return (
-      <div className="bg-[#FF8FBA]">
+      <div className="bg-[#FF8FBA] bg-[url('/bg-medium-pink.jpg')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
 
           <div className="text-2xl text-[#6E0869] space-y-3">
@@ -122,7 +122,7 @@ export default function Attitudes() {
     )
   } else if (pageStep === 7) {
     return (
-      <div className="bg-[#FF8FBA]">
+      <div className="bg-[#FF8FBA] bg-[url('/bg-medium-pink.jpg')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
 
           <div className="text-2xl text-[#6E0869] space-y-3">
@@ -141,7 +141,7 @@ export default function Attitudes() {
     )
   } else if (pageStep === 8) {
     return (
-      <div className="bg-[#FF8FBA]">
+      <div className="bg-[#FF8FBA] bg-[url('/bg-medium-pink.jpg')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
 
           <p className="text-[#6E0869] font-serif text-6xl uppercase text-center">

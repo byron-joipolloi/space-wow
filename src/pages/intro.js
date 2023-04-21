@@ -57,7 +57,7 @@ export default function Intro() {
   }, [activeMessage])
 
   return (
-    <div className="flex items-end min-h-screen bg-[#accff8]">
+    <div className="flex items-end min-h-screen bg-[#accff8] bg-[url('/bg-blue.jpg')] bg-center bg-no-repeat bg-cover">
       <div className="max-w-sm mx-auto px-6 py-12 relative">
         
         <div>

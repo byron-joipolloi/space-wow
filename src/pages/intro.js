@@ -1,6 +1,11 @@
-import Link from 'next/link'
 import { useEffect, useState, useRef } from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
 import Message from '../components/Message.js'
+
+const imgLoader = ({ src, width, quality }) => {
+  return `${src}?w=${width}&q=${quality || 75}`
+}
 
 export default function Intro() {
   const data = [
@@ -58,7 +63,7 @@ export default function Intro() {
 
   return (
     <div className="flex items-end min-h-screen bg-[#accff8] bg-[url('/bg-blue.jpg')] bg-center bg-no-repeat bg-cover">
-      <div className="max-w-sm mx-auto px-6 py-12 relative">
+      <div className="max-w-sm mx-auto px-6 py-10 relative">
         
         <div>
           {/*{messages.map(message => <Message key={message.id} text={message.text} active={message.active} />)}*/}
@@ -70,7 +75,14 @@ export default function Intro() {
         </div>
 
         <div className="mb-6">
-          <img src="/img-girls.png" alt="" />
+          <Image
+            loader={imgLoader}
+            src="/img-girls.png"
+            alt="Girls illustration"
+            width={327}
+            height={300}
+            className="block max-w-full h-auto mx-auto"
+          />
         </div>
 
         <div className="flex justify-end">

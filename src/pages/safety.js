@@ -1,5 +1,10 @@
 import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
+
+const imgLoader = ({ src, width, quality }) => {
+  return `${src}?w=${width}&q=${quality || 75}`
+}
 
 export default function Attitudes() {
   const [pageStep, setPageStep] = useState(1)
@@ -32,7 +37,14 @@ export default function Attitudes() {
       <div className="bg-[#FFF6F5] bg-[url('/bg-light-pink.jpg')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
 
-          <img src="/img-safety-1.png" alt="" width="300" className="block max-w-full h-auto mx-auto" />
+          <Image
+            loader={imgLoader}
+            src="/img-safety.png"
+            alt="Safety illustration"
+            width={327}
+            height={290}
+            className="block max-w-full h-auto mx-auto"
+          />
 
           <div className="text-2xl text-[#DA1B64] space-y-3">
             <p>On your walk home from school, a group of men in a car start driving slowly next to you, shouting inappropriate comments.</p>
@@ -67,7 +79,14 @@ export default function Attitudes() {
       <div className="bg-[#FFF6F5] bg-[url('/bg-light-pink.jpg')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10">
 
-          <img src="/img-safety-1.png" alt="" width="300" className="block max-w-full h-auto mx-auto" />
+          <Image
+            loader={imgLoader}
+            src="/img-safety.png"
+            alt="Safety illustration"
+            width={327}
+            height={290}
+            className="block max-w-full h-auto mx-auto"
+          />
 
           <div className="text-2xl text-[#DA1B64] space-y-3">
             <p>You ignore them. The car continues to follow you. Ignoring them only seems to make them harass you more and more.</p>

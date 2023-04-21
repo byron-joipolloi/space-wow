@@ -1,5 +1,10 @@
 import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
+
+const imgLoader = ({ src, width, quality }) => {
+  return `${src}?w=${width}&q=${quality || 75}`
+}
 
 export default function Attitudes() {
   const [pageStep, setPageStep] = useState(1)
@@ -32,7 +37,14 @@ export default function Attitudes() {
       <div className="bg-[#FF8FBA] bg-[url('/bg-medium-pink.jpg')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
 
-          <img src="/img-environment-1.png" alt="" width="375" className="block max-w-full h-auto mx-auto" />
+          <Image
+            loader={imgLoader}
+            src="/img-environment.png"
+            alt="Environment illustration"
+            width={327}
+            height={294}
+            className="block max-w-full h-auto mx-auto"
+          />
 
           <div className="text-2xl text-[#6E0869] space-y-3">
             <p>You’re walking home after school. It’s winter, so it’s already dark outside. The park you normally walk through doesn’t have any lighting or CCTV.</p>
@@ -67,7 +79,14 @@ export default function Attitudes() {
       <div className="bg-[#FF8FBA] bg-[url('/bg-medium-pink.jpg')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10">
 
-          <img src="/img-environment-1.png" alt="" width="375" className="block max-w-full h-auto mx-auto" />
+          <Image
+            loader={imgLoader}
+            src="/img-environment.png"
+            alt="Environment illustration"
+            width={327}
+            height={294}
+            className="block max-w-full h-auto mx-auto"
+          />
 
           <div className="text-2xl text-[#6E0869] space-y-3">
             <p>You begin to walk through the park, it’s dark and you can’t see much.</p>

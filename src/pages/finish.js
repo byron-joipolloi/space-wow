@@ -30,7 +30,7 @@ export default function Intro() {
 
   return (
     <div className="flex items-end min-h-screen bg-[#accff8] bg-[url('/bg-blue.jpg')] bg-center bg-no-repeat bg-cover">
-      <div className="max-w-sm mx-auto px-6 py-12 relative">
+      <div className="max-w-sm mx-auto px-6 py-10 relative">
         
         <div>
           {(activeMessage > 0) ? <Message text={`You've found 1 of 4`} /> : null}

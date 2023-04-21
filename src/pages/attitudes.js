@@ -1,5 +1,10 @@
 import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
+
+const imgLoader = ({ src, width, quality }) => {
+  return `${src}?w=${width}&q=${quality || 75}`
+}
 
 export default function Attitudes() {
   const [pageStep, setPageStep] = useState(1)
@@ -32,7 +37,14 @@ export default function Attitudes() {
       <div className="bg-[#b2d5d3] bg-[url('/bg-green.jpg')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
 
-          <img src="/img-attitudes-1.png" alt="" width="300" className="block max-w-full h-auto mx-auto" />
+          <Image
+            loader={imgLoader}
+            src="/img-attitudes.png"
+            alt="attitudes illustration"
+            width={300}
+            height={259}
+            className="block max-w-full h-auto mx-auto"
+          />
 
           <div className="text-2xl text-[#473f9b] space-y-3">
             <p>You arrive at school and go straight to your form room.</p>
@@ -69,7 +81,14 @@ export default function Attitudes() {
       <div className="bg-[#b2d5d3] bg-[url('/bg-green.jpg')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
 
-          <img src="/img-attitudes-1.png" alt="" width="300" className="block max-w-full h-auto mx-auto" />
+          <Image
+            loader={imgLoader}
+            src="/img-attitudes.png"
+            alt="attitudes illustration"
+            width={327}
+            height={300}
+            className="block max-w-full h-auto mx-auto"
+          />
 
           <div className="text-2xl text-[#473f9b] space-y-3">
             <p>You ignore them. The boys continue to joke, getting louder. It makes you feel very uncomfortable.</p>

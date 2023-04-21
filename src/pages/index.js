@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-const myLoader = ({ src, width, quality }) => {
+const imgLoader = ({ src, width, quality }) => {
   return `${src}?w=${width}&q=${quality || 75}`
 }
 
@@ -12,7 +12,7 @@ export default function Home() {
         <div className="flex items-center justify-center space-x-6">
           <span>
             <Image
-              loader={myLoader}
+              loader={imgLoader}
               src="/img-leeds.png"
               alt="Leeds 2020"
               width={93}
@@ -22,7 +22,7 @@ export default function Home() {
           </span>
           <span>
             <Image
-              loader={myLoader}
+              loader={imgLoader}
               src="/img-wow.png"
               alt="Leeds 2020"
               width={93}
@@ -32,7 +32,7 @@ export default function Home() {
           </span>
           <span>
             <Image
-              loader={myLoader}
+              loader={imgLoader}
               src="/img-space.png"
               alt="Leeds 2020"
               width={105}

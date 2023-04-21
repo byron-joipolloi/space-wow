@@ -2,8 +2,8 @@ import Link from 'next/link'
 
 export default function Menu() {
   return (
-    <div className="bg-[#accff8] bg-[#accff8] bg-[url('/bg-blue.png')] bg-center bg-no-repeat bg-cover">
-      <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-12 text-center">
+    <div className="bg-[#accff8] bg-[#accff8] bg-[url('/bg-blue.jpg')] bg-center bg-no-repeat bg-cover">
+      <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 text-center">
         <h1 className="text-[#374590] font-serif font-bold text-6xl uppercase">
           Choose a topic
         </h1>

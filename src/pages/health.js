@@ -1,5 +1,10 @@
 import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
+
+const imgLoader = ({ src, width, quality }) => {
+  return `${src}?w=${width}&q=${quality || 75}`
+}
 
 export default function Attitudes() {
   const [pageStep, setPageStep] = useState(1)
@@ -32,7 +37,14 @@ export default function Attitudes() {
       <div className="bg-[#FFC33C] bg-[url('/bg-yellow.jpg')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
 
-          <img src="/img-health-1.png" alt="" width="300" className="block max-w-full h-auto mx-auto" />
+          <Image
+            loader={imgLoader}
+            src="/img-health.png"
+            alt="Health illustration"
+            width={327}
+            height={311}
+            className="block max-w-full h-auto mx-auto"
+          />
 
           <div class="scrollbar-thin scrollbar-thumb-[#9C0D95] scrollbar-track-white scrollbar-thumb-rounded scrollbar-track-rounded h-[16rem] overflow-y-scroll pr-6 space-y-10">
             <div className="text-2xl text-[#9C0D95] space-y-3">
@@ -69,7 +81,14 @@ export default function Attitudes() {
       <div className="bg-[#FFC33C] bg-[url('/bg-yellow.jpg')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10">
 
-          <img src="/img-health-1.png" alt="" width="300" className="block max-w-full h-auto mx-auto" />
+          <Image
+            loader={imgLoader}
+            src="/img-health.png"
+            alt="Health illustration"
+            width={327}
+            height={311}
+            className="block max-w-full h-auto mx-auto"
+          />
 
           <div className="text-2xl text-[#9C0D95] space-y-3">
             <p>You wait, but after a few minutes, you worry you’ll get into trouble if you wait any longer.</p>

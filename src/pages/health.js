@@ -4,6 +4,11 @@ import Link from 'next/link'
 export default function Attitudes() {
   const [pageStep, setPageStep] = useState(1)
 
+  const handleClick = (pageStep) => {
+    setPageStep(pageStep)
+    window.scrollTo(0, 0)
+  }
+
   if (pageStep === 1) {
     return (
       <div className="bg-[#FFC33C]">
@@ -18,7 +23,7 @@ export default function Attitudes() {
             </h1>
           </div>
 
-          <button onClick={() => setPageStep(2)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#9C0D95] border-5 border-[#72056D] text-white shadow-sm transition">Start</button>
+          <button onClick={() => handleClick(2)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#9C0D95] border-5 border-[#72056D] text-white shadow-sm transition">Start</button>
         </div>
       </div>
     )
@@ -35,7 +40,7 @@ export default function Attitudes() {
             </div>
           </div>
 
-          <button onClick={() => setPageStep(3)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#9C0D95] border-5 border-[#72056D] text-white shadow-sm transition">Next</button>
+          <button onClick={() => handleClick(3)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#9C0D95] border-5 border-[#72056D] text-white shadow-sm transition">Next</button>
         </div>
       </div>
     )
@@ -53,8 +58,8 @@ export default function Attitudes() {
           </div>
 
           <div>
-            <button onClick={() => setPageStep(4)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#FFC33C] border-5 border-[#72056D] text-[#9C0D95] shadow-sm transition mb-4">Wait for someone</button>
-            <button onClick={() => setPageStep(7)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#FFC33C] border-5 border-[#72056D] text-[#9C0D95] shadow-sm transition">Use toilet paper</button>
+            <button onClick={() => handleClick(4)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#FFC33C] border-5 border-[#72056D] text-[#9C0D95] shadow-sm transition mb-4">Wait for someone</button>
+            <button onClick={() => handleClick(7)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#FFC33C] border-5 border-[#72056D] text-[#9C0D95] shadow-sm transition">Use toilet paper</button>
           </div>
         </div>
       </div>
@@ -70,7 +75,7 @@ export default function Attitudes() {
             <p>You wait, but after a few minutes, you worry you’ll get into trouble if you wait any longer.</p>
           </div>
 
-          <button onClick={() => setPageStep(5)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#9C0D95] border-5 border-[#72056D] text-white shadow-sm transition">Next</button>
+          <button onClick={() => handleClick(5)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#9C0D95] border-5 border-[#72056D] text-white shadow-sm transition">Next</button>
         </div>
       </div>
     )
@@ -88,8 +93,8 @@ export default function Attitudes() {
           </div>
 
           <div>
-            <button onClick={() => setPageStep(6)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#FFC33C] border-5 border-[#72056D] text-[#9C0D95] shadow-sm transition mb-4">Keep waiting</button>
-            <button onClick={() => setPageStep(7)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#FFC33C] border-5 border-[#72056D] text-[#9C0D95] shadow-sm transition">Use toilet paper</button>
+            <button onClick={() => handleClick(6)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#FFC33C] border-5 border-[#72056D] text-[#9C0D95] shadow-sm transition mb-4">Keep waiting</button>
+            <button onClick={() => handleClick(7)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#FFC33C] border-5 border-[#72056D] text-[#9C0D95] shadow-sm transition">Use toilet paper</button>
           </div>
         </div>
       </div>
@@ -111,7 +116,7 @@ export default function Attitudes() {
             <p className="leading-tight"><small className="text-base">*A study by PHS Group with 250 young people</small></p>
           </blockquote>
 
-          <button onClick={() => setPageStep(8)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#9C0D95] border-5 border-[#72056D] text-white shadow-sm transition">Next</button>
+          <button onClick={() => handleClick(8)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#9C0D95] border-5 border-[#72056D] text-white shadow-sm transition">Next</button>
         </div>
       </div>
     )
@@ -132,7 +137,7 @@ export default function Attitudes() {
             <p className="leading-tight"><small className="text-base">*A study by PHS Group with 250 young people</small></p>
           </blockquote>
 
-          <button onClick={() => setPageStep(8)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#9C0D95] border-5 border-[#72056D] text-white shadow-sm transition">Next</button>
+          <button onClick={() => handleClick(8)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#9C0D95] border-5 border-[#72056D] text-white shadow-sm transition">Next</button>
         </div>
       </div>
     )

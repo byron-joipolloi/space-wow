@@ -4,6 +4,11 @@ import Link from 'next/link'
 export default function Attitudes() {
   const [pageStep, setPageStep] = useState(1)
 
+  const handleClick = (pageStep) => {
+    setPageStep(pageStep)
+    window.scrollTo(0, 0)
+  }
+
   if (pageStep === 1) {
     return (
       <div className="bg-[#b2d5d3]">
@@ -18,7 +23,7 @@ export default function Attitudes() {
             </h1>
           </div>
 
-          <button onClick={() => setPageStep(2)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Start</button>
+          <button onClick={() => handleClick(2)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Start</button>
         </div>
       </div>
     )
@@ -35,7 +40,7 @@ export default function Attitudes() {
             <p>When you sit down, you can hear the boys at the back of the room watching a video and making misogynistic comments.</p>
           </div>
 
-          <button onClick={() => setPageStep(3)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
+          <button onClick={() => handleClick(3)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
         </div>
       </div>
     )
@@ -53,8 +58,8 @@ export default function Attitudes() {
           </div>
 
           <div>
-            <button onClick={() => setPageStep(4)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#c0dbd4] border-5 border-[#231d57] text-[#454791] shadow-sm transition mb-4">Ignore them</button>
-            <button onClick={() => setPageStep(7)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#c0dbd4] border-5 border-[#231d57] text-[#454791] shadow-sm transition">Ask them to stop</button>
+            <button onClick={() => handleClick(4)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#c0dbd4] border-5 border-[#231d57] text-[#454791] shadow-sm transition mb-4">Ignore them</button>
+            <button onClick={() => handleClick(7)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#c0dbd4] border-5 border-[#231d57] text-[#454791] shadow-sm transition">Ask them to stop</button>
           </div>
         </div>
       </div>
@@ -70,7 +75,7 @@ export default function Attitudes() {
             <p>You ignore them. The boys continue to joke, getting louder. It makes you feel very uncomfortable.</p>
           </div>
 
-          <button onClick={() => setPageStep(5)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
+          <button onClick={() => handleClick(5)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
         </div>
       </div>
     )
@@ -88,8 +93,8 @@ export default function Attitudes() {
           </div>
 
           <div>
-            <button onClick={() => setPageStep(6)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#c0dbd4] border-5 border-[#231d57] text-[#454791] shadow-sm transition mb-4">Continue ignoring them</button>
-            <button onClick={() => setPageStep(7)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#c0dbd4] border-5 border-[#231d57] text-[#454791] shadow-sm transition">Ask them to stop</button>
+            <button onClick={() => handleClick(6)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#c0dbd4] border-5 border-[#231d57] text-[#454791] shadow-sm transition mb-4">Continue ignoring them</button>
+            <button onClick={() => handleClick(7)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#c0dbd4] border-5 border-[#231d57] text-[#454791] shadow-sm transition">Ask them to stop</button>
           </div>
         </div>
       </div>
@@ -109,7 +114,7 @@ export default function Attitudes() {
             <p className="leading-tight"><small className="text-base">*A 2021 Ofsted survey of 32 schools and colleges</small></p>
           </blockquote>
 
-          <button onClick={() => setPageStep(8)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
+          <button onClick={() => handleClick(8)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
         </div>
       </div>
     )
@@ -128,7 +133,7 @@ export default function Attitudes() {
             <p className="leading-tight"><small className="text-base">*A 2021 Ofsted survey of 32 schools and colleges</small></p>
           </blockquote>
 
-          <button onClick={() => setPageStep(8)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
+          <button onClick={() => handleClick(8)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
         </div>
       </div>
     )

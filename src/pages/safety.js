@@ -4,6 +4,11 @@ import Link from 'next/link'
 export default function Attitudes() {
   const [pageStep, setPageStep] = useState(1)
 
+  const handleClick = (pageStep) => {
+    setPageStep(pageStep)
+    window.scrollTo(0, 0)
+  }
+
   if (pageStep === 1) {
     return (
       <div className="bg-[#FFF6F5]">
@@ -18,7 +23,7 @@ export default function Attitudes() {
             </h1>
           </div>
 
-          <button onClick={() => setPageStep(2)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Start</button>
+          <button onClick={() => handleClick(2)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Start</button>
         </div>
       </div>
     )
@@ -33,7 +38,7 @@ export default function Attitudes() {
             <p>On your walk home from school, a group of men in a car start driving slowly next to you, shouting inappropriate comments.</p>
           </div>
 
-          <button onClick={() => setPageStep(3)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Next</button>
+          <button onClick={() => handleClick(3)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Next</button>
         </div>
       </div>
     )
@@ -51,8 +56,8 @@ export default function Attitudes() {
           </div>
 
           <div>
-            <button onClick={() => setPageStep(4)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-white border-5 border-[#96013B] text-[#DA1B64] shadow-sm transition mb-4">Ignore them</button>
-            <button onClick={() => setPageStep(7)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-white border-5 border-[#96013B] text-[#DA1B64] shadow-sm transition">Shout back at them</button>
+            <button onClick={() => handleClick(4)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-white border-5 border-[#96013B] text-[#DA1B64] shadow-sm transition mb-4">Ignore them</button>
+            <button onClick={() => handleClick(7)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-white border-5 border-[#96013B] text-[#DA1B64] shadow-sm transition">Shout back at them</button>
           </div>
         </div>
       </div>
@@ -68,7 +73,7 @@ export default function Attitudes() {
             <p>You ignore them. The car continues to follow you. Ignoring them only seems to make them harass you more and more.</p>
           </div>
 
-          <button onClick={() => setPageStep(5)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Next</button>
+          <button onClick={() => handleClick(5)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Next</button>
         </div>
       </div>
     )
@@ -86,8 +91,8 @@ export default function Attitudes() {
           </div>
 
           <div>
-            <button onClick={() => setPageStep(6)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-white border-5 border-[#96013B] text-[#DA1B64] shadow-sm transition mb-4">Ignore them</button>
-            <button onClick={() => setPageStep(7)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-white border-5 border-[#96013B] text-[#DA1B64] shadow-sm transition">Shout back at them</button>
+            <button onClick={() => handleClick(6)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-white border-5 border-[#96013B] text-[#DA1B64] shadow-sm transition mb-4">Ignore them</button>
+            <button onClick={() => handleClick(7)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-white border-5 border-[#96013B] text-[#DA1B64] shadow-sm transition">Shout back at them</button>
           </div>
         </div>
       </div>
@@ -109,7 +114,7 @@ export default function Attitudes() {
             <p className="leading-tight"><small className="text-base">*A Plan International UK survey</small></p>
           </blockquote>
 
-          <button onClick={() => setPageStep(8)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Next</button>
+          <button onClick={() => handleClick(8)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Next</button>
         </div>
       </div>
     )
@@ -130,7 +135,7 @@ export default function Attitudes() {
             <p className="leading-tight"><small className="text-base">A Plan International UK survey</small></p>
           </blockquote>
 
-          <button onClick={() => setPageStep(8)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Next</button>
+          <button onClick={() => handleClick(8)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Next</button>
         </div>
       </div>
     )

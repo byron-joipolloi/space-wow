@@ -1,13 +1,45 @@
 import Link from 'next/link'
+import Image from 'next/image'
+
+const myLoader = ({ src, width, quality }) => {
+  return `${src}?w=${width}&q=${quality || 75}`
+}
 
 export default function Home() {
   return (
     <div className="bg-gradient-to-b from-[#fecee1] via-[#f1b6d9] to-[#fecee1]">
       <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-12 text-center">
         <div className="flex items-center justify-center space-x-6">
-          <span><img src="/img-leeds.png" alt="" className="max-w-full" /></span>
-          <span><img src="/img-wow.png" alt="" className="max-w-full" /></span>
-          <span><img src="/img-space.png" alt="" className="max-w-full" /></span>
+          <span>
+            <Image
+              loader={myLoader}
+              src="/img-leeds.png"
+              alt="Leeds 2020"
+              width={93}
+              height={33}
+              className="max-w-full"
+            />
+          </span>
+          <span>
+            <Image
+              loader={myLoader}
+              src="/img-wow.png"
+              alt="Leeds 2020"
+              width={93}
+              height={33}
+              className="max-w-full"
+            />
+          </span>
+          <span>
+            <Image
+              loader={myLoader}
+              src="/img-space.png"
+              alt="Leeds 2020"
+              width={105}
+              height={34}
+              className="max-w-full"
+            />
+          </span>
         </div>
 
         <div className="space-y-6">

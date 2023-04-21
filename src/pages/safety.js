@@ -144,11 +144,13 @@ export default function Attitudes() {
             <span className="block font-bold">there is good news</span>
           </p>
 
-          <div className="text-2xl text-[#DA1B64] space-y-3">
-            <p>Campaign groups have managed to get a bill that would make street harassment illegal debated in parliament. However, as of the 24th of March 2023, the Bill still places a burden on victims of public sexual harassment to prove that the perpetrator intended to cause distress or harm. It does not explicitly make public sexual harassment a crime. Public sexual harassment needs to be directly addressed by the Bill as it progresses.</p>
+          <div class="scrollbar-thin scrollbar-thumb-[#DA1B64] scrollbar-track-white scrollbar-thumb-rounded scrollbar-track-rounded h-[16rem] overflow-y-scroll pr-6 space-y-10">
+            <div className="text-2xl text-[#DA1B64] space-y-3">
+              <p>Campaign groups have managed to get a bill that would make street harassment illegal debated in parliament. However, as of the 24th of March 2023, the Bill still places a burden on victims of public sexual harassment to prove that the perpetrator intended to cause distress or harm. It does not explicitly make public sexual harassment a crime. Public sexual harassment needs to be directly addressed by the Bill as it progresses.</p>
+            </div>
           </div>
 
-          <Link href="/menu" className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Finish</Link>
+          <Link href="/finish" className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Finish</Link>
         </div>
       </div>
     )

@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className="bg-[#f0b4d7]">
+    <div className="bg-gradient-to-b from-[#fecee1] via-[#f1b6d9] to-[#fecee1]">
       <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-12 text-center">
         <div className="flex items-center justify-center space-x-6">
           <span><img src="/img-leeds.png" alt="" className="max-w-full" /></span>

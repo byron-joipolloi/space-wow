@@ -11,6 +11,14 @@ module.exports = {
       'serif': ['Playfair Display', 'serif'],
     },
     extend: {
+      fontSize: {
+        '2xl': ['1.375rem', {
+          lineHeight: '2rem'
+        }],
+        '3xl': ['1.5rem', {
+          lineHeight: '2.125rem'
+        }],
+      },
       borderWidth: {
         '5': '5px',
       },
@@ -21,5 +29,10 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar')({ nocompatible: true }),
+  ],
+  variants: {
+    scrollbar: ['rounded']
+  }
 }

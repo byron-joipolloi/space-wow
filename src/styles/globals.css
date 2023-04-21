@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.message {
+  width: 270px;
+}
+
 .message::before,
 .message::after {
   content: '';
@@ -20,3 +24,35 @@
   bottom: -12px;
   left: calc(50% - 6px);
 }
+
+.message:nth-child(odd) {
+  margin-left: 2rem;
+}
+
+.message:nth-child(even) {
+  margin-left: 3rem;
+}
+
+.message-1 {
+  width: 140px;
+}
+
+.message:nth-child(odd)::before {
+  left: 35%;
+}
+
+.message:nth-child(odd)::after {
+  left: calc(35% - 6px);
+}
+
+.message:nth-child(even)::before {
+  left: 65%;
+}
+
+.message:nth-child(even)::after {
+  left: calc(65% - 6px);
+}
+
+/*.message:not(:last-child) p {
+  @apply blur-sm;
+}*/

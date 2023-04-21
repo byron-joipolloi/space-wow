@@ -144,11 +144,13 @@ export default function Attitudes() {
             <span className="block font-bold">there is good news</span>
           </p>
 
-          <div className="text-2xl text-[#6E0869] space-y-3">
-            <p>In India, a group of women founded an app that helps women stay safe by letting users rate streets and areas for safety criteria such as lighting, visibility, people density, gender diversity, security and transportation. The app has now been contracted by local authorities in Delhi to make recommendations on how to make metro stations, bus stops, tourist spots, public toilets and parks more woman-friendly.</p>
+          <div class="scrollbar-thin scrollbar-thumb-[#6E0869] scrollbar-track-white scrollbar-thumb-rounded scrollbar-track-rounded h-[306px] overflow-y-scroll pr-6 space-y-10">
+            <div className="text-2xl text-[#6E0869] space-y-3">
+              <p>In India, a group of women founded an app that helps women stay safe by letting users rate streets and areas for safety criteria such as lighting, visibility, people density, gender diversity, security and transportation. The app has now been contracted by local authorities in Delhi to make recommendations on how to make metro stations, bus stops, tourist spots, public toilets and parks more woman-friendly.</p>
+            </div>
           </div>
 
-          <Link href="/menu" className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#6E0869] border-5 border-[#390136] text-white shadow-sm transition">Finish</Link>
+          <Link href="/finish" className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#6E0869] border-5 border-[#390136] text-white shadow-sm transition">Finish</Link>
         </div>
       </div>
     )

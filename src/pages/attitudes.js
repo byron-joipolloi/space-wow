@@ -16,7 +16,7 @@ export default function Attitudes() {
 
   if (pageStep === 1) {
     return (
-      <div className="bg-[#b2d5d3] bg-[url('/bg-green.jpg')] bg-center bg-no-repeat bg-cover">
+      <div className="bg-[url('/bg-green.jpg')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 text-center">
           <p className="text-lg font-bold text-[#473f9b] uppercase tracking-widest">Scenario 1 / 4</p>
 
@@ -166,7 +166,7 @@ export default function Attitudes() {
             <span className="block font-bold">there is good news</span>
           </p>
 
-          <div class="scrollbar-thin scrollbar-thumb-[#473f9b] scrollbar-track-white scrollbar-thumb-rounded scrollbar-track-rounded h-[16rem] overflow-y-scroll pr-6">
+          <div className="scrollbar-thin scrollbar-thumb-[#473f9b] scrollbar-track-white scrollbar-thumb-rounded scrollbar-track-rounded h-[16rem] overflow-y-scroll pr-6">
             <div className="text-2xl text-[#473f9b] space-y-3">
               <p>In 2012, British feminst writer Laura Bates founded The Everyday Sexism project. The site documents examples of sexism from around the world. Entries may be submitted directly to the site, or by email or tweet. The accounts of abuse are collated by a small group of volunteers. The launch of this website is considered to be the beginning of fourth-wave feminism.</p>
             </div>

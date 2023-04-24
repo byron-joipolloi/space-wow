@@ -1,0 +1,218 @@
+{
+    "home": {
+        "title": [
+            "One way",
+            "or",
+            "another"
+        ],
+        "text": "An Interactive Experience",
+        "link": {
+            "text": "Start",
+            "url": "/intro"
+        }
+    },
+    "intro": {
+        "text": [
+            "Hi there!",
+            "We're from the local secondary school.",
+            "You've just found one of the barn's interactive experience stations!",
+            "Around the barn, you will find different stations relating to topics that affect women, girls and non-binary people.",
+            "You'll be given a scenario at each station. It's your job to make decisions!"
+        ],
+        "link": {
+            "text": "I'm ready!",
+            "url": "/menu"
+        }
+    },
+    "attitudes": [
+        {
+            "title": [
+                "Mind",
+                "his",
+                "attitude"
+            ]
+        },
+        {
+            "text": "<p>You arrive at school and go straight to your form room.</p><p>When you sit down, you can hear the boys at the back of the room watching a video and making misogynistic comments.</p>"
+        },
+        {
+            "title": [
+                "What",
+                "do",
+                "you do?"
+            ],
+            "button": [
+                "Ignore them",
+                "Ask them to stop"
+            ]
+        },
+        {
+            "text": "<p>You ignore them. The boys continue to joke, getting louder. It makes you feel very uncomfortable.</p>"
+        },
+        {
+            "title": [
+                "Want to",
+                "change",
+                "your mind?"
+            ],
+            "button": [
+                "Continue ignoring them",
+                "Ask them to stop"
+            ]
+        },
+        {
+            "text1": "<p>You continue to stay silent. No one calls them out, and they continue to make jokes all day. Other boys start to get involved too.</p>",
+            "text2": "<p>The boys laugh and call you frigid. It doesn’t stop them. After all, the guy they’re watching makes the same jokes and has millions of fans.</p>",
+            "quote": "<p><span>92%</span> of girls stated that they received sexist name-calling ‘a lot’ or ‘sometimes’ between people their age*</p><p><small>*A 2021 Ofsted survey of 32 schools and colleges</small></p>"
+        },
+        {
+            "title": "<span>But,</span><span>there is good news</span>",
+            "text": "<p>In 2012, British feminst writer Laura Bates founded The Everyday Sexism project. The site documents examples of sexism from around the world. Entries may be submitted directly to the site, or by email or tweet. The accounts of abuse are collated by a small group of volunteers. The launch of this website is considered to be the beginning of fourth-wave feminism.</p>"
+        }
+    ],
+    "safety": [
+        {
+            "title": [
+                "Do we",
+                "feel",
+                "safe"
+            ]
+        },
+        {
+            "text": "<p>On your walk home from school, a group of men in a car start driving slowly next to you, shouting inappropriate comments.</p>"
+        },
+        {
+            "title": [
+                "What",
+                "do",
+                "you do?"
+            ],
+            "button": [
+                "Ignore them",
+                "Shout back at them"
+            ]
+        },
+        {
+            "text": "<p>You ignore them. The car continues to follow you. Ignoring them only seems to make them harass you more and more.</p>"
+        },
+        {
+            "title": [
+                "Want to",
+                "change",
+                "your mind?"
+            ],
+            "button": [
+                "Ignore them",
+                "Shout back at them"
+            ]
+        },
+        {
+            "text1": "<p>You ignore them and the men continue to follow you until you find a shop and run inside.</p><p>They all laugh when I do.</p>",
+            "text2": "<p>You shout back at them. They become more aggressive and start threatening you, continuing to follow you until you find a shop and run inside.</p><p>They all laugh when you do.</p>",
+            "quote": "<p><span>35%</span> of females aged 14-21 have experienced unwanted sexual attention or harassment in a public place while wearing a school uniform*</p><p><small>*A Plan International UK survey</small></p>"
+        },
+        {
+            "title": "<span>But,</span><span>there is good news</span>",
+            "text": "<p>Campaign groups have managed to get a bill that would make street harassment illegal debated in parliament. However, as of the 24th of March 2023, the Bill still places a burden on victims of public sexual harassment to prove that the perpetrator intended to cause distress or harm. It does not explicitly make public sexual harassment a crime. Public sexual harassment needs to be directly addressed by the Bill as it progresses.</p>"
+        }
+    ],
+    "environment": [
+        {
+            "title": [
+                "It's a",
+                "man's",
+                "world"
+            ]
+        },
+        {
+            "text": "<p>You’re walking home after school. It’s winter, so it’s already dark outside. The park you normally walk through doesn’t have any lighting or CCTV.</p>"
+        },
+        {
+            "title": [
+                "What",
+                "do",
+                "you do?"
+            ],
+            "button": [
+                "Walk through",
+                "Walk around"
+            ]
+        },
+        {
+            "text": "<p>You begin to walk through the park, it’s dark and you can’t see much.</p><p>You can see a group of people sat on a park bench up ahead.</p>"
+        },
+        {
+            "title": [
+                "Want to",
+                "change",
+                "your mind?"
+            ],
+            "button": [
+                "Walk through",
+                "Walk around"
+            ]
+        },
+        {
+            "text1": "<p>You continue to walk through the park, as you know if you go around it it will take longer.</p><p>You clutch your keys between your fingers as you walk past the group of people. Luckily, they don’t bother you, but you are scared regardless. You don’t want to have to risk this every time you walk home in winter.</p>",
+            "text2": "<p>You walk round the outside of the park. Whilst you made it back safely, it takes 20 minutes longer than if you had walked through it. You don't want to have to have this added journey time all winter.</p>",
+            "quote": "<p><span>28%</span> of women steer clear of certain areas and 21% avoid being out at certain times to protect themselves. By contrast, only 14% of men avoid certain areas, and 9% avoid being out at certain times.*</p><p><small>*A 2018 YouGov survey</small></p>"
+        },
+        {
+            "title": "<span>But,</span><span>there is good news</span>",
+            "text": "<p>In India, a group of women founded an app that helps women stay safe by letting users rate streets and areas for safety criteria such as lighting, visibility, people density, gender diversity, security and transportation. The app has now been contracted by local authorities in Delhi to make recommendations on how to make metro stations, bus stops, tourist spots, public toilets and parks more woman-friendly.</p>"
+        }
+    ],
+    "health": [
+        {
+            "title": [
+                "What is",
+                "healthy",
+                "living"
+            ]
+        },
+        {
+            "text": "<p>In a lesson, you think you’ve got your period. You have to beg your teacher to go to the toilet after they initially say no as “It’s just been breaktime”. Eventually, they let you go. When you get to the bathroom you realise that you don’t have any pads or tampons. There is no one else in the bathroom for you to ask.</p>"
+        },
+        {
+            "title": [
+                "What",
+                "do",
+                "you do?"
+            ],
+            "button": [
+                "Wait for someone",
+                "Use toilet paper"
+            ]
+        },
+        {
+            "text": "<p>You wait, but after a few minutes, you worry you’ll get into trouble if you wait any longer.</p>"
+        },
+        {
+            "title": [
+                "Want to",
+                "change",
+                "your mind?"
+            ],
+            "button": [
+                "Keep waiting",
+                "Use toilet paper"
+            ]
+        },
+        {
+            "text1": "<p>Your teacher sends someone to find you.</p><p>They have a tampon on them, but you get into trouble when you’re back at your lesson.</p>",
+            "text2": "<p>You use toilet paper as a temporary solution and go back to your lesson. When you get there, you manage to ask the girl next to you for a tampon, but your teacher won’t let you go to the toilet twice in one lesson. You find it hard to concentrate all lesson as you’re worried about your period. You go to the loo in between your next lesson, but get into trouble for being late.</p>",
+            "quote": "<p><span>35%</span> of girls aged 13-18 have taken time off school or college because they have their period*</p><p><small>*A study by PHS Group with 250 young people</small></p>"
+        },
+        {
+            "title": "<span>But,</span><span>there is good news</span>",
+            "text": "<p>In January 2020, the UK government launched its Period Products Scheme, which allows all state-maintained schools and 16 to 19 education organisations in England to order free period products. Since the scheme’s launch, 94% of secondary schools and 90% post-16 organisations in England now provide free period products to pupils.</p>"
+        }
+    ],
+    "finish": {
+        "text": [
+            "You've found 1 of 4",
+            "How do you think attitudes would be different if the world around us was built by women?",
+            "Write your thoughts on the whiteboard, and then find another station."
+        ]
+    }
+}

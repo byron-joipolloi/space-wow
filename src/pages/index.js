@@ -1,13 +1,16 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import data from '../data.json'
 
 const imgLoader = ({ src, width, quality }) => {
   return `${src}?w=${width}&q=${quality || 75}`
 }
 
+const home = data.home
+
 export default function Home() {
   return (
-    <div className="bg-[#fecee1] bg-[url('/bg-pink.jpg')] bg-center bg-no-repeat bg-cover">
+    <div className="bg-[#fecee1] bg-[url('/bg-pink.png')] bg-center bg-no-repeat bg-cover">
       <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-12 text-center">
         <div className="flex items-center justify-center space-x-6">
           <span>
@@ -44,9 +47,9 @@ export default function Home() {
 
         <div className="space-y-6">
           <h1 className="text-[#a50c9d] font-serif text-6xl uppercase">
-            <span className="block font-bold">One Way</span>
-            <span className="block italic">or</span>
-            <span className="block font-bold">Another</span>
+            <span className="block font-bold">{home.title[0]}</span>
+            <span className="block italic">{home.title[1]}</span>
+            <span className="block font-bold">{home.title[2]}</span>
           </h1>
 
           <p className="text-lg font-bold text-[#a50c9d] uppercase tracking-widest">An Interactive Experience</p>

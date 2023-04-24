@@ -2,40 +2,15 @@ import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Message from '../components/Message.js'
+import data from '../data.json'
 
 const imgLoader = ({ src, width, quality }) => {
   return `${src}?w=${width}&q=${quality || 75}`
 }
 
-export default function Intro() {
-  const data = [
-    {
-      id: 1,
-      text: "Hi there!",
-      active: true,
-    },
-    {
-      id: 2,
-      text: "We're from the local secondary school.",
-      active: false,
-    },
-    {
-      id: 3,
-      text: "You've just found one of the barn's interactive experience stations!",
-      active: false,
-    },
-    {
-      id: 4,
-      text: "Around the barn, you will find different stations relating to topics that affect women, girls and non-binary people.",
-      active: false,
-    },
-    {
-      id: 5,
-      text: "You'll be given a scenario at each station. It's your job to make decisions!",
-      active: false,
-    }
-  ]
+const intro = data.intro
 
+export default function Intro() {
   const [messages, setMessages] = useState(data)
   const [activeMessage, setActiveMessage] = useState(1)
   const messagesEndRef = useRef(null)
@@ -62,16 +37,15 @@ export default function Intro() {
   }, [activeMessage])
 
   return (
-    <div className="flex items-end min-h-screen bg-[#accff8] bg-[url('/bg-blue.jpg')] bg-center bg-no-repeat bg-cover">
+    <div className="flex items-end min-h-screen bg-[#accff8] bg-[url('/bg-blue.png')] bg-center bg-no-repeat bg-cover">
       <div className="max-w-sm mx-auto px-6 py-10 relative">
         
         <div>
-          {/*{messages.map(message => <Message key={message.id} text={message.text} active={message.active} />)}*/}
-          {(activeMessage > 0) ? <Message id={1} text={`Hi there!`} /> : null}
-          {(activeMessage > 1) ? <Message id={2} text={`We're from the local secondary school.`} /> : null}
-          {(activeMessage > 2) ? <Message id={3} text={`You've just found one of the barn's interactive experience stations!`} /> : null}
-          {(activeMessage > 3) ? <Message id={4} text={`Around the barn, you will find different stations relating to topics that affect women, girls and non-binary people.`} /> : null}
-          {(activeMessage > 4) ? <Message id={5} text={`You'll be given a scenario at each station. It's your job to make decisions!`} /> : null}
+          {(activeMessage > 0) ? <Message id={1} text={intro.text[0]} /> : null}
+          {(activeMessage > 1) ? <Message id={2} text={intro.text[1]} /> : null}
+          {(activeMessage > 2) ? <Message id={3} text={intro.text[2]} /> : null}
+          {(activeMessage > 3) ? <Message id={4} text={intro.text[3]} /> : null}
+          {(activeMessage > 4) ? <Message id={5} text={intro.text[4]} /> : null}
         </div>
 
         <div className="mb-6">
@@ -92,7 +66,7 @@ export default function Intro() {
           </button>
 
           {(activeMessage >= 5) ? (
-            <Link href="/menu" className="text-lg uppercase tracking-widest flex items-center justify-center h-[60px] px-6 bg-[#374590] border-5 border-[#10194a] text-white ml-3">I'm ready!</Link>
+            <Link href={intro.link.url} className="text-lg uppercase tracking-widest flex items-center justify-center h-[60px] px-6 bg-[#374590] border-5 border-[#10194a] text-white ml-3">{intro.link.text}</Link>
           ) : (
             <button onClick={() => handleClick('next')} className="flex items-center justify-center w-[60px] h-[60px] bg-[#374590] border-5 border-[#10194a] text-white ml-3">
               <span className="sr-only">Next</span>

@@ -53,6 +53,30 @@
   left: calc(65% - 6px);
 }
 
-/*.message:not(:last-child) p {
-  @apply blur-sm;
-}*/
+.quote p:first-child {
+  @apply text-2xl mb-4;
+}
+
+.quote span {
+  @apply block font-serif text-6xl mb-4;
+}
+
+.quote p:nth-child(2) {
+  @apply leading-tight;
+}
+
+.quote small {
+  @apply text-base;
+}
+
+.end span {
+  @apply block
+}
+
+.end span:first-child {
+  @apply italic;
+}
+
+.end span:last-child {
+  @apply font-bold;
+}

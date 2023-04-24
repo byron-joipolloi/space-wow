@@ -1,6 +1,9 @@
 import Link from 'next/link'
 import { useEffect, useState, useRef } from 'react'
 import Message from '../components/Message.js'
+import data from '../data.json'
+
+const finish = data.finish
 
 export default function Intro() {
   const [messages, setMessages] = useState()
@@ -29,13 +32,13 @@ export default function Intro() {
   }, [activeMessage])
 
   return (
-    <div className="flex items-end min-h-screen bg-[#accff8] bg-[url('/bg-blue.jpg')] bg-center bg-no-repeat bg-cover">
+    <div className="flex items-end min-h-screen bg-[#accff8] bg-[url('/bg-blue.png')] bg-center bg-no-repeat bg-cover">
       <div className="max-w-sm mx-auto px-6 py-10 relative">
         
         <div>
-          {(activeMessage > 0) ? <Message text={`You've found 1 of 4`} /> : null}
-          {(activeMessage > 1) ? <Message text={`How do you think attitudes would be different if the world around us was built by women?`} /> : null}
-          {(activeMessage > 2) ? <Message text={`Write your thoughts on the whiteboard, and then find another station.`} /> : null}
+          {(activeMessage > 0) ? <Message text={finish.text[0]} /> : null}
+          {(activeMessage > 1) ? <Message text={finish.text[1]} /> : null}
+          {(activeMessage > 2) ? <Message text={finish.text[2]} /> : null}
         </div>
 
         <div className="mb-6">

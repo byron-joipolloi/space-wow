@@ -61,7 +61,7 @@
             ]
         },
         {
-            "text1": "<p>You continue to stay silent. No one calls them out, and they continue to make jokes all day. Other boys start to get involved too.</p>",
+            "text1": "<p>No one calls them out, and they continue to make jokes all day. Other boys start to get involved too.</p>",
             "text2": "<p>The boys laugh and call you frigid. It doesn’t stop them. After all, the guy they’re watching makes the same jokes and has millions of fans.</p>",
             "quote": "<p><span>92%</span> of girls stated that they received sexist name-calling ‘a lot’ or ‘sometimes’ between people their age*</p><p><small>*A 2021 Ofsted survey of 32 schools and colleges</small></p>"
         },
@@ -93,7 +93,7 @@
             ]
         },
         {
-            "text": "<p>You ignore them. The car continues to follow you. Ignoring them only seems to make them harass you more and more.</p>"
+            "text": "<p>You ignore them. The car continues to follow you and they keep harassing you.</p>"
         },
         {
             "title": [
@@ -107,7 +107,7 @@
             ]
         },
         {
-            "text1": "<p>You ignore them and the men continue to follow you until you find a shop and run inside.</p><p>They all laugh when I do.</p>",
+            "text1": "<p>You ignore them and the men continue to follow you. Luckily, you find a shop and run inside.</p><p>They all laugh when I do.</p>",
             "text2": "<p>You shout back at them. They become more aggressive and start threatening you, continuing to follow you until you find a shop and run inside.</p><p>They all laugh when you do.</p>",
             "quote": "<p><span>35%</span> of females aged 14-21 have experienced unwanted sexual attention or harassment in a public place while wearing a school uniform*</p><p><small>*A Plan International UK survey</small></p>"
         },
@@ -159,7 +159,7 @@
         },
         {
             "title": "<span>But,</span><span>there is good news</span>",
-            "text": "<p>In India, a group of women founded an app that helps women stay safe by letting users rate streets and areas for safety criteria such as lighting, visibility, people density, gender diversity, security and transportation. The app has now been contracted by local authorities in Delhi to make recommendations on how to make metro stations, bus stops, tourist spots, public toilets and parks more woman-friendly.</p>"
+            "text": "<p>Bradford has teamed up with personality safety app WalkSafe+ to become the world's first WalkSafe city. The app brings police crime data and community reported data together, allowing the user to plan safer journeys and understand local crime hotspots, as well as share their journey with family and friends so they can monitor their safe arrival, sending automatic alerts if they fail to reach their destination.</p>"
         }
     ],
     "health": [

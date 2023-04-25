@@ -5,7 +5,7 @@ import data from '../data.json'
 
 const finish = data.finish
 
-export default function Intro() {
+export default function Finish({progress}) {
   const [messages, setMessages] = useState()
   const [activeMessage, setActiveMessage] = useState(1)
   const messagesEndRef = useRef(null)
@@ -36,7 +36,7 @@ export default function Intro() {
       <div className="max-w-sm mx-auto px-6 py-10 relative">
         
         <div>
-          {(activeMessage > 0) ? <Message text={finish.text[0]} /> : null}
+          {(activeMessage > 0) ? <Message text={`You've found ${progress.score} of 4`} /> : null}
           {(activeMessage > 1) ? <Message text={finish.text[1]} /> : null}
           {(activeMessage > 2) ? <Message text={finish.text[2]} /> : null}
         </div>

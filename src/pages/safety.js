@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react'
+import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Image from 'next/image'
 import data from '../data.json'
@@ -9,19 +10,53 @@ const imgLoader = ({ src, width, quality }) => {
 
 const safety = data.safety
 
-export default function Safety() {
-  const [pageStep, setPageStep] = useState(1)
+export default function Safety({
+  progress,
+  setProgress,
+  incrementScorel,
+  updateLocalStorage,
+}) {
+  const router = useRouter()
 
   const handleClick = (pageStep) => {
-    setPageStep(pageStep)
+    const newProgress = {
+      ...progress,
+      safety: {
+        ...progress.safety,
+        step: pageStep
+      }
+    }
+    setProgress(newProgress)
+    updateLocalStorage(newProgress)
     window.scrollTo(0, 0)
   }
 
-  if (pageStep === 1) {
+  const handleFinish = () => {
+    const newScore = progress.score + 1
+    const newFinished = true
+    const newProgress = {
+      ...progress,
+      score: newScore,
+      safety: {
+        ...progress.safety,
+        finished: newFinished,
+      }
+    }
+    setProgress(newProgress)
+    updateLocalStorage(newProgress)
+
+    if (newFinished) {
+      router.push({
+        pathname: '/finish',
+      })
+    }
+  }
+
+  if (progress.safety.step === 1) {
     return (
       <div className="bg-[#FFF6F5] bg-[url('/bg-light-pink.png')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 text-center">
-          <p className="text-lg font-bold text-[#DA1B64] uppercase tracking-widest">Scenario 2 / 4</p>
+          <p className="text-lg font-bold text-[#DA1B64] uppercase tracking-widest">Scenario {progress.score + 1} / 4</p>
 
           <div>
             <h1 className="text-[#DA1B64] font-serif text-6xl uppercase">
@@ -35,7 +70,7 @@ export default function Safety() {
         </div>
       </div>
     )
-  } else if (pageStep === 2) {
+  } else if (progress.safety.step === 2) {
     return (
       <div className="bg-[#FFF6F5] bg-[url('/bg-light-pink.png')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
@@ -55,7 +90,7 @@ export default function Safety() {
         </div>
       </div>
     )
-  } else if (pageStep === 3) {
+  } else if (progress.safety.step === 3) {
     return (
       <div className="bg-[#DA1B64] bg-[url('/bg-dark-pink.png')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10">
@@ -75,7 +110,7 @@ export default function Safety() {
         </div>
       </div>
     )
-  } else if (pageStep === 4) {
+  } else if (progress.safety.step === 4) {
     return (
       <div className="bg-[#FFF6F5] bg-[url('/bg-light-pink.png')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10">
@@ -95,7 +130,7 @@ export default function Safety() {
         </div>
       </div>
     )
-  } else if (pageStep === 5) {
+  } else if (progress.safety.step === 5) {
     return (
       <div className="bg-[#DA1B64] bg-[url('/bg-dark-pink.png')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10">
@@ -115,7 +150,7 @@ export default function Safety() {
         </div>
       </div>
     )
-  } else if (pageStep === 6) {
+  } else if (progress.safety.step === 6) {
     return (
       <div className="bg-[#FFF6F5] bg-[url('/bg-light-pink.png')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
@@ -128,7 +163,7 @@ export default function Safety() {
         </div>
       </div>
     )
-  } else if (pageStep === 7) {
+  } else if (progress.safety.step === 7) {
     return (
       <div className="bg-[#FFF6F5] bg-[url('/bg-light-pink.png')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
@@ -141,7 +176,7 @@ export default function Safety() {
         </div>
       </div>
     )
-  } else if (pageStep === 8) {
+  } else if (progress.safety.step === 8) {
     return (
       <div className="bg-[#FFF6F5] bg-[url('/bg-light-pink.png')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
@@ -152,7 +187,7 @@ export default function Safety() {
             <div className="text-2xl text-[#DA1B64] space-y-3" dangerouslySetInnerHTML={{ __html: safety[6].text }}></div>
           </div>
 
-          <Link href="/finish" className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Finish</Link>
+          <button onClick={() => handleFinish()} className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Finish</button>
         </div>
       </div>
     )

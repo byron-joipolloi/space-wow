@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react'
+import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Image from 'next/image'
 import data from '../data.json'
@@ -9,19 +10,53 @@ const imgLoader = ({ src, width, quality }) => {
 
 const attitudes = data.attitudes
 
-export default function Attitudes() {
-  const [pageStep, setPageStep] = useState(1)
+export default function Attitudes({
+  progress,
+  setProgress,
+  incrementScorel,
+  updateLocalStorage,
+}) {
+  const router = useRouter()
 
   const handleClick = (pageStep) => {
-    setPageStep(pageStep)
+    const newProgress = {
+      ...progress,
+      attitudes: {
+        ...progress.attitudes,
+        step: pageStep
+      }
+    }
+    setProgress(newProgress)
+    updateLocalStorage(newProgress)
     window.scrollTo(0, 0)
   }
 
-  if (pageStep === 1) {
+  const handleFinish = () => {
+    const newScore = progress.score + 1
+    const newFinished = true
+    const newProgress = {
+      ...progress,
+      score: newScore,
+      attitudes: {
+        ...progress.attitudes,
+        finished: newFinished,
+      }
+    }
+    setProgress(newProgress)
+    updateLocalStorage(newProgress)
+
+    if (newFinished) {
+      router.push({
+        pathname: '/finish',
+      })
+    }
+  }
+
+  if (progress.attitudes.step === 1) {
     return (
       <div className="bg-[url('/bg-green.png')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 text-center">
-          <p className="text-lg font-bold text-[#473f9b] uppercase tracking-widest">Scenario 1 / 4</p>
+          <p className="text-lg font-bold text-[#473f9b] uppercase tracking-widest">Scenario {progress.score + 1} / 4</p>
 
           <div>
             <h1 className="text-[#473f9b] font-serif text-6xl uppercase">
@@ -35,7 +70,7 @@ export default function Attitudes() {
         </div>
       </div>
     )
-  } else if (pageStep === 2) {
+  } else if (progress.attitudes.step === 2) {
     return (
       <div className="bg-[#b2d5d3] bg-[url('/bg-green.png')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
@@ -55,7 +90,7 @@ export default function Attitudes() {
         </div>
       </div>
     )
-  } else if (pageStep === 3) {
+  } else if (progress.attitudes.step === 3) {
     return (
       <div className="bg-[#454791] bg-[url('/bg-dark-blue.png')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10">
@@ -75,7 +110,7 @@ export default function Attitudes() {
         </div>
       </div>
     )
-  } else if (pageStep === 4) {
+  } else if (progress.attitudes.step === 4) {
     return (
       <div className="bg-[#b2d5d3] bg-[url('/bg-green.png')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
@@ -95,7 +130,7 @@ export default function Attitudes() {
         </div>
       </div>
     )
-  } else if (pageStep === 5) {
+  } else if (progress.attitudes.step === 5) {
     return (
       <div className="bg-[#454791] bg-[url('/bg-dark-blue.png')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10">
@@ -115,7 +150,7 @@ export default function Attitudes() {
         </div>
       </div>
     )
-  } else if (pageStep === 6) {
+  } else if (progress.attitudes.step === 6) {
     return (
       <div className="bg-[#b2d5d3] bg-[url('/bg-green.png')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
@@ -128,7 +163,7 @@ export default function Attitudes() {
         </div>
       </div>
     )
-  } else if (pageStep === 7) {
+  } else if (progress.attitudes.step === 7) {
     return (
       <div className="bg-[#b2d5d3] bg-[url('/bg-green.png')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
@@ -141,7 +176,7 @@ export default function Attitudes() {
         </div>
       </div>
     )
-  } else if (pageStep === 8) {
+  } else if (progress.attitudes.step === 8) {
     return (
       <div className="bg-[#b2d5d3] bg-[url('/bg-green.png')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
@@ -152,7 +187,7 @@ export default function Attitudes() {
             <div className="text-2xl text-[#473f9b] space-y-3" dangerouslySetInnerHTML={{ __html: attitudes[6].text }}></div>
           </div>
 
-          <Link href="/finish" className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Finish</Link>
+          <button onClick={() => handleFinish()} className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Finish</button>
         </div>
       </div>
     )

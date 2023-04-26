@@ -13,10 +13,11 @@ const safety = data.safety
 export default function Safety({
   progress,
   setProgress,
-  incrementScorel,
   updateLocalStorage,
+  getScore,
 }) {
   const router = useRouter()
+  const score = getScore(progress)
 
   const handleClick = (pageStep) => {
     const newProgress = {
@@ -32,20 +33,20 @@ export default function Safety({
   }
 
   const handleFinish = () => {
-    const newScore = progress.score + 1
-    const newFinished = true
+    const newScore = (progress.score >= 4) ? 4 : progress.score + 1
+    const newCompleted = true
     const newProgress = {
       ...progress,
       score: newScore,
       safety: {
         ...progress.safety,
-        finished: newFinished,
+        completed: newCompleted,
       }
     }
     setProgress(newProgress)
     updateLocalStorage(newProgress)
 
-    if (newFinished) {
+    if (newCompleted) {
       router.push({
         pathname: '/finish',
       })
@@ -56,7 +57,7 @@ export default function Safety({
     return (
       <div className="bg-[#FFF6F5] bg-[url('/bg-light-pink.png')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 text-center">
-          <p className="text-lg font-bold text-[#DA1B64] uppercase tracking-widest">Scenario {progress.score + 1} / 4</p>
+          <p className="text-lg font-bold text-[#DA1B64] uppercase tracking-widest">Scenario {score + 1} / 4</p>
 
           <div>
             <h1 className="text-[#DA1B64] font-serif text-6xl uppercase slide-up-1">

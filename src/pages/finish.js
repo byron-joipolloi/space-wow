@@ -5,7 +5,10 @@ import data from '../data.json'
 
 const finish = data.finish
 
-export default function Finish({progress}) {
+export default function Finish({
+  progress,
+  getScore,
+}) {
   const [messages, setMessages] = useState()
   const [activeMessage, setActiveMessage] = useState(1)
   const messagesEndRef = useRef(null)
@@ -23,20 +26,18 @@ export default function Finish({progress}) {
     }
   }
 
-  const backToStart = () => {
-    setActiveMessage(1)
-  }
-
   useEffect(() => {
     scrollToBottom()
   }, [activeMessage])
+
+  const score = getScore(progress)
 
   return (
     <div className="flex items-end min-h-screen bg-[#accff8] bg-[url('/bg-blue.png')] bg-center bg-no-repeat bg-cover">
       <div className="max-w-sm mx-auto px-6 py-10 relative">
         
         <div>
-          {(activeMessage > 0) ? <Message text={`You've found ${progress.score} of 4`} /> : null}
+          {(activeMessage > 0) ? <Message text={`You've found ${score} of 4`} /> : null}
           {(activeMessage > 1) ? <Message text={finish.text[1]} /> : null}
           {(activeMessage > 2) ? <Message text={finish.text[2]} /> : null}
         </div>

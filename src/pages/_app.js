@@ -3,33 +3,45 @@ import { useState, useEffect } from "react"
 
 export default function App({ Component, pageProps }) {
   const initialProgress = {
-    score: 0,
     attitudes: {
       step: 1,
-      finished: false,
+      completed: false,
     },
     safety: {
       step: 1,
-      finished: false,
+      completed: false,
     },
     environment: {
       step: 1,
-      finished: false,
+      completed: false,
     },
     health: {
       step: 1,
-      finished: false,
+      completed: false,
     }
   }
 
   const [progress, setProgress] = useState(initialProgress)
   const [scanned, setScanned] = useState(false)
 
-  const incrementScore = () => setProgress((amount) => amount + 1);
-
   function updateLocalStorage(progress) {
     localStorage.setItem('progress', JSON.stringify(progress));
   }
+
+  function getScore(prog) {
+    const score = Object.values(prog).reduce((count, page) => {
+      console.log({count, page});
+      if (page.completed === true) ++count
+      return count
+    }, 0)
+
+    return score
+  }
+
+  useEffect(() => {
+    let newProgress = JSON.parse(localStorage.getItem('progress')) || initialProgress
+    setProgress(newProgress)
+  }, [])
 
   useEffect(() => {
     if ('?fromQRcode' == location.search) {
@@ -43,8 +55,8 @@ export default function App({ Component, pageProps }) {
       {...pageProps}
       progress={progress}
       setProgress={setProgress}
-      incrementScore={incrementScore}
       updateLocalStorage={updateLocalStorage}
+      getScore={getScore}
     />
   )
 }

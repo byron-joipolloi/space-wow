@@ -79,9 +79,9 @@ export default function Attitudes({
             loader={imgLoader}
             src="/img-attitudes.png"
             alt="attitudes illustration"
-            width={300}
-            height={259}
-            className="block max-w-full h-auto mx-auto"
+            width={375}
+            height={324}
+            className="block min-w-[375px] max-w-full -ml-6 h-auto mx-auto"
           />
 
           <div className="text-2xl text-[#473f9b] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: attitudes[1].text }}></div>
@@ -119,9 +119,9 @@ export default function Attitudes({
             loader={imgLoader}
             src="/img-attitudes.png"
             alt="attitudes illustration"
-            width={327}
-            height={300}
-            className="block max-w-full h-auto mx-auto"
+            width={375}
+            height={324}
+            className="block min-w-[375px] max-w-full -ml-6 h-auto mx-auto"
           />
 
           <div className="text-2xl text-[#473f9b] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: attitudes[3].text }}></div>

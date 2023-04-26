@@ -79,8 +79,8 @@ export default function Environment({
             loader={imgLoader}
             src="/img-environment.png"
             alt="Environment illustration"
-            width={327}
-            height={294}
+            width={375}
+            height={337}
             className="block min-w-[375px] -ml-6 -mt-10 max-w-full h-auto mx-auto"
           />
 
@@ -119,8 +119,8 @@ export default function Environment({
             loader={imgLoader}
             src="/img-environment.png"
             alt="Environment illustration"
-            width={327}
-            height={294}
+            width={375}
+            height={337}
             className="block min-w-[375px] -ml-6 -mt-10 max-w-full h-auto mx-auto"
           />
 

@@ -79,8 +79,8 @@ export default function Safety({
             loader={imgLoader}
             src="/img-safety.png"
             alt="Safety illustration"
-            width={327}
-            height={290}
+            width={375}
+            height={333}
             className="block min-w-[375px] -ml-6 max-w-full h-auto mx-auto"
           />
 
@@ -119,8 +119,8 @@ export default function Safety({
             loader={imgLoader}
             src="/img-safety.png"
             alt="Safety illustration"
-            width={327}
-            height={290}
+            width={375}
+            height={333}
             className="block min-w-[375px] -ml-6 max-w-full h-auto mx-auto"
           />
 

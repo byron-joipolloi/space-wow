@@ -59,7 +59,7 @@ export default function Attitudes({
           <p className="text-lg font-bold text-[#473f9b] uppercase tracking-widest">Scenario {progress.score + 1} / 4</p>
 
           <div>
-            <h1 className="text-[#473f9b] font-serif text-6xl uppercase">
+            <h1 className="text-[#473f9b] font-serif text-6xl uppercase slide-up-1">
               <span className="block font-bold">{attitudes[0].title[0]}</span>
               <span className="block italic">{attitudes[0].title[1]}</span>
               <span className="block font-bold">{attitudes[0].title[2]}</span>
@@ -84,7 +84,7 @@ export default function Attitudes({
             className="block max-w-full h-auto mx-auto"
           />
 
-          <div className="text-2xl text-[#473f9b] space-y-3" dangerouslySetInnerHTML={{ __html: attitudes[1].text }}></div>
+          <div className="text-2xl text-[#473f9b] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: attitudes[1].text }}></div>
 
           <button onClick={() => handleClick(3)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
         </div>
@@ -96,7 +96,7 @@ export default function Attitudes({
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10">
 
           <div className="flex-1 flex items-center justify-center">
-            <p className="text-[#c0dbd4] font-serif text-6xl uppercase text-center">
+            <p className="text-[#c0dbd4] font-serif text-6xl uppercase text-center slide-up-1">
               <span className="block font-bold">{attitudes[2].title[0]}</span>
               <span className="block italic">{attitudes[2].title[1]}</span>
               <span className="block font-bold">{attitudes[2].title[2]}</span>
@@ -124,7 +124,7 @@ export default function Attitudes({
             className="block max-w-full h-auto mx-auto"
           />
 
-          <div className="text-2xl text-[#473f9b] space-y-3" dangerouslySetInnerHTML={{ __html: attitudes[3].text }}></div>
+          <div className="text-2xl text-[#473f9b] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: attitudes[3].text }}></div>
 
           <button onClick={() => handleClick(5)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
         </div>
@@ -136,7 +136,7 @@ export default function Attitudes({
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10">
 
           <div className="flex-1 flex items-center justify-center">
-            <p className="text-[#c0dbd4] font-serif text-6xl uppercase text-center">
+            <p className="text-[#c0dbd4] font-serif text-6xl uppercase text-center slide-up-1">
               <span className="block font-bold">{attitudes[4].title[0]}</span>
               <span className="block italic">{attitudes[4].title[1]}</span>
               <span className="block font-bold">{attitudes[4].title[2]}</span>
@@ -155,9 +155,9 @@ export default function Attitudes({
       <div className="bg-[#b2d5d3] bg-[url('/bg-green.png')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
 
-          <div className="text-2xl text-[#473f9b] space-y-3" dangerouslySetInnerHTML={{ __html: attitudes[5].text1 }}></div>
+          <div className="text-2xl text-[#473f9b] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: attitudes[5].text1 }}></div>
 
-          <blockquote className="quote bg-white text-[#473f9b] p-7 rounded-[0.25rem] shadow-[0.5rem_0.5rem_0_#6071be]" dangerouslySetInnerHTML={{ __html: attitudes[5].quote }}></blockquote>
+          <blockquote className="quote bg-white text-[#473f9b] p-7 rounded-[0.25rem] shadow-[0.5rem_0.5rem_0_#6071be] slide-up-2" dangerouslySetInnerHTML={{ __html: attitudes[5].quote }}></blockquote>
 
           <button onClick={() => handleClick(8)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
         </div>
@@ -168,9 +168,9 @@ export default function Attitudes({
       <div className="bg-[#b2d5d3] bg-[url('/bg-green.png')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
 
-          <div className="text-2xl text-[#473f9b] space-y-3" dangerouslySetInnerHTML={{ __html: attitudes[5].text2 }}></div>
+          <div className="text-2xl text-[#473f9b] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: attitudes[5].text2 }}></div>
 
-          <blockquote className="quote bg-white text-[#473f9b] p-7 rounded-[0.25rem] shadow-[0.5rem_0.5rem_0_#6071be]" dangerouslySetInnerHTML={{ __html: attitudes[5].quote }}></blockquote>
+          <blockquote className="quote bg-white text-[#473f9b] p-7 rounded-[0.25rem] shadow-[0.5rem_0.5rem_0_#6071be] slide-up-2" dangerouslySetInnerHTML={{ __html: attitudes[5].quote }}></blockquote>
 
           <button onClick={() => handleClick(8)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
         </div>
@@ -181,9 +181,9 @@ export default function Attitudes({
       <div className="bg-[#b2d5d3] bg-[url('/bg-green.png')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
 
-          <p className="end text-[#473f9b] font-serif text-6xl uppercase text-center mb-10" dangerouslySetInnerHTML={{ __html: attitudes[6].title }}></p>
+          <p className="end text-[#473f9b] font-serif text-6xl uppercase text-center" dangerouslySetInnerHTML={{ __html: attitudes[6].title }}></p>
 
-          <div className="scrollbar-thin scrollbar-thumb-[#473f9b] scrollbar-track-white scrollbar-thumb-rounded scrollbar-track-rounded h-[16rem] overflow-y-scroll pr-6">
+          <div className="scrollbar-thin scrollbar-thumb-[#473f9b] scrollbar-track-white scrollbar-thumb-rounded scrollbar-track-rounded h-[16rem] overflow-y-scroll pr-6 slide-up-1">
             <div className="text-2xl text-[#473f9b] space-y-3" dangerouslySetInnerHTML={{ __html: attitudes[6].text }}></div>
           </div>
 

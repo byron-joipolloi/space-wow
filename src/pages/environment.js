@@ -81,7 +81,7 @@ export default function Environment({
             alt="Environment illustration"
             width={327}
             height={294}
-            className="block max-w-full h-auto mx-auto"
+            className="block min-w-[375px] -ml-6 -mt-10 max-w-full h-auto mx-auto"
           />
 
           <div className="text-2xl text-[#6E0869] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: environment[1].text }}></div>
@@ -121,7 +121,7 @@ export default function Environment({
             alt="Environment illustration"
             width={327}
             height={294}
-            className="block max-w-full h-auto mx-auto"
+            className="block min-w-[375px] -ml-6 -mt-10 max-w-full h-auto mx-auto"
           />
 
           <div className="text-2xl text-[#6E0869] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: environment[3].text }}></div>

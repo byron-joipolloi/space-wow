@@ -45,7 +45,7 @@ export default function Home() {
           </span>
         </div>
 
-        <div className="space-y-6">
+        <div className="space-y-6 slide-up-1">
           <h1 className="text-[#a50c9d] font-serif text-6xl uppercase">
             <span className="block font-bold">{home.title[0]}</span>
             <span className="block italic">{home.title[1]}</span>

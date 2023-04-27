@@ -17,7 +17,7 @@ export default function Safety({
   getScore,
 }) {
   const router = useRouter()
-  const score = getScore(progress)
+  let score = getScore(progress)
 
   const handleClick = (pageStep) => {
     const newProgress = {
@@ -28,23 +28,22 @@ export default function Safety({
       }
     }
     setProgress(newProgress)
-    updateLocalStorage(newProgress)
+    updateLocalStorage('progress', newProgress)
     window.scrollTo(0, 0)
   }
 
-  const handleFinish = () => {
-    const newScore = (progress.score >= 4) ? 4 : progress.score + 1
+  const handleFinish = (pageStep) => {
     const newCompleted = true
     const newProgress = {
       ...progress,
-      score: newScore,
       safety: {
         ...progress.safety,
+        step: pageStep,
         completed: newCompleted,
       }
     }
     setProgress(newProgress)
-    updateLocalStorage(newProgress)
+    updateLocalStorage('progress', newProgress)
 
     if (newCompleted) {
       router.push({
@@ -57,7 +56,7 @@ export default function Safety({
     return (
       <div className="bg-[#FFF6F5] bg-[url('/bg-light-pink.png')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 text-center">
-          <p className="text-lg font-bold text-[#DA1B64] uppercase tracking-widest">Scenario {score + 1} / 4</p>
+          <p className="text-lg font-bold text-[#DA1B64] uppercase tracking-widest">Scenario {score} / 4</p>
 
           <div>
             <h1 className="text-[#DA1B64] font-serif text-6xl uppercase slide-up-1">
@@ -188,7 +187,7 @@ export default function Safety({
             <div className="text-2xl text-[#DA1B64] space-y-3" dangerouslySetInnerHTML={{ __html: safety[6].text }}></div>
           </div>
 
-          <button onClick={() => handleFinish()} className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Finish</button>
+          <button onClick={() => handleFinish(1)} className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Finish</button>
         </div>
       </div>
     )

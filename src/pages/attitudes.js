@@ -17,7 +17,7 @@ export default function Attitudes({
   getScore,
 }) {
   const router = useRouter()
-  const score = getScore(progress)
+  let score = getScore(progress)
 
   const handleClick = (pageStep) => {
     const newProgress = {
@@ -28,21 +28,22 @@ export default function Attitudes({
       }
     }
     setProgress(newProgress)
-    updateLocalStorage(newProgress)
+    updateLocalStorage('progress', newProgress)
     window.scrollTo(0, 0)
   }
 
-  const handleFinish = () => {
+  const handleFinish = (pageStep) => {
     const newCompleted = true
     const newProgress = {
       ...progress,
       attitudes: {
         ...progress.attitudes,
+        step: pageStep,
         completed: newCompleted,
       }
     }
     setProgress(newProgress)
-    updateLocalStorage(newProgress)
+    updateLocalStorage('progress', newProgress)
 
     if (newCompleted) {
       router.push({
@@ -55,7 +56,7 @@ export default function Attitudes({
     return (
       <div className="bg-[url('/bg-green.png')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 text-center">
-          <p className="text-lg font-bold text-[#473f9b] uppercase tracking-widest">Scenario {score + 1} / 4</p>
+          <p className="text-lg font-bold text-[#473f9b] uppercase tracking-widest">Scenario {score} / 4</p>
 
           <div>
             <h1 className="text-[#473f9b] font-serif text-6xl uppercase slide-up-1">
@@ -186,7 +187,7 @@ export default function Attitudes({
             <div className="text-2xl text-[#473f9b] space-y-3" dangerouslySetInnerHTML={{ __html: attitudes[6].text }}></div>
           </div>
 
-          <button onClick={() => handleFinish()} className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Finish</button>
+          <button onClick={() => handleFinish(1)} className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Finish</button>
         </div>
       </div>
     )

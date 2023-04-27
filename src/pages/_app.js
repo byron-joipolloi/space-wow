@@ -22,15 +22,14 @@ export default function App({ Component, pageProps }) {
   }
 
   const [progress, setProgress] = useState(initialProgress)
-  const [scanned, setScanned] = useState(false)
+  const [qrCode, setQrCode] = useState({})
 
-  function updateLocalStorage(progress) {
-    localStorage.setItem('progress', JSON.stringify(progress));
+  function updateLocalStorage(key, progress) {
+    localStorage.setItem(key, JSON.stringify(progress));
   }
 
   function getScore(prog) {
     const score = Object.values(prog).reduce((count, page) => {
-      console.log({count, page});
       if (page.completed === true) ++count
       return count
     }, 0)
@@ -38,17 +37,32 @@ export default function App({ Component, pageProps }) {
     return score
   }
 
+  function updateQr(page) {
+    const newQr = {
+      page: page
+    }
+    console.log(newQr);
+    setQrCode(newQr)
+    updateLocalStorage('qr', newQr)
+  }
+
   useEffect(() => {
     let newProgress = JSON.parse(localStorage.getItem('progress')) || initialProgress
     setProgress(newProgress)
-  }, [])
 
-  useEffect(() => {
-    if ('?fromQRcode' == location.search) {
-      setScanned(true)
-      window.localStorage.setItem('qrCode', JSON.stringify(scanned))
+    if ('?att' == location.search) {
+      updateQr('attitudes')
     }
-  })
+    if ('?hel' == location.search) {
+      updateQr('health')
+    }
+    if ('?saf' == location.search) {
+      updateQr('safety')
+    }
+    if ('?env' == location.search) {
+      updateQr('environment')
+    }
+  }, [])
 
   return (
     <Component
@@ -57,6 +71,8 @@ export default function App({ Component, pageProps }) {
       setProgress={setProgress}
       updateLocalStorage={updateLocalStorage}
       getScore={getScore}
+      qrCode={qrCode}
+      setQrCode={setQrCode}
     />
   )
 }

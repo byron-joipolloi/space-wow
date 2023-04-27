@@ -17,7 +17,7 @@ export default function Health({
   getScore,
 }) {
   const router = useRouter()
-  const score = getScore(progress)
+  let score = getScore(progress)
 
   const handleClick = (pageStep) => {
     const newProgress = {
@@ -28,23 +28,22 @@ export default function Health({
       }
     }
     setProgress(newProgress)
-    updateLocalStorage(newProgress)
+    updateLocalStorage('progress', newProgress)
     window.scrollTo(0, 0)
   }
 
-  const handleFinish = () => {
-    const newScore = (progress.score >= 4) ? 4 : progress.score + 1
+  const handleFinish = (pageStep) => {
     const newCompleted = true
     const newProgress = {
       ...progress,
-      score: newScore,
       health: {
         ...progress.health,
+        step: pageStep,
         completed: newCompleted,
       }
     }
     setProgress(newProgress)
-    updateLocalStorage(newProgress)
+    updateLocalStorage('progress', newProgress)
 
     if (newCompleted) {
       router.push({
@@ -57,7 +56,7 @@ export default function Health({
     return (
       <div className="bg-[#FFC33C] bg-[url('/bg-yellow.png')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 text-center">
-          <p className="text-lg font-bold text-[#9C0D95] uppercase tracking-widest">Scenario {score + 1} / 4</p>
+          <p className="text-lg font-bold text-[#9C0D95] uppercase tracking-widest">Scenario {score} / 4</p>
 
           <div>
             <h1 className="text-[#9C0D95] font-serif text-6xl uppercase slide-up-1">
@@ -194,7 +193,7 @@ export default function Health({
             </div>
           </div>
 
-          <button onClick={() => handleFinish()} className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#9C0D95] border-5 border-[#72056D] text-white shadow-sm transition">Finish</button>
+          <button onClick={() => handleFinish(1)} className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#9C0D95] border-5 border-[#72056D] text-white shadow-sm transition">Finish</button>
         </div>
       </div>
     )

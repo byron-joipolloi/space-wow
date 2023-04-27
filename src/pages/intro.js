@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Message from '../components/Message.js'
 import data from '../data.json'
+import { useRouter } from 'next/router'
 
 const imgLoader = ({ src, width, quality }) => {
   return `${src}?w=${width}&q=${quality || 75}`
@@ -10,10 +11,16 @@ const imgLoader = ({ src, width, quality }) => {
 
 const intro = data.intro
 
-export default function Intro() {
+export default function Intro({
+  progress,
+  qrCode,
+  setQrCode,
+}) {
   const [messages, setMessages] = useState(data)
   const [activeMessage, setActiveMessage] = useState(1)
   const messagesEndRef = useRef(null)
+
+  const router = useRouter()
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView()
@@ -25,6 +32,18 @@ export default function Intro() {
       setActiveMessage(activeMessage + 1)
     } else {
       setActiveMessage(Math.max(activeMessage - 1, 1))
+    }
+  }
+
+  const handleReady = (qr) => {
+    if (qr) {
+      router.push({
+        pathname: `/${qr}`,
+      })
+    } else {
+      router.push({
+        pathname: intro.link.url,
+      })
     }
   }
 
@@ -66,13 +85,15 @@ export default function Intro() {
           </button>
 
           {(activeMessage >= 5) ? (
-            <Link href={intro.link.url} className="text-lg uppercase tracking-widest flex items-center justify-center h-[60px] px-6 bg-[#374590] border-5 border-[#10194a] text-white ml-3">{intro.link.text}</Link>
-          ) : (
+            <button onClick={() => handleReady(qrCode.page)} className="text-lg uppercase tracking-widest flex items-center justify-center h-[60px] px-6 bg-[#374590] border-5 border-[#10194a] text-white ml-3">{intro.link.text}</button>
+          ) : null}
+
+          {(activeMessage < 5) ? (
             <button onClick={() => handleClick('next')} className="flex items-center justify-center w-[60px] h-[60px] bg-[#374590] border-5 border-[#10194a] text-white ml-3">
               <span className="sr-only">Next</span>
               <svg fill="currentColor" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
             </button>
-          )}
+          ) : null}
           
         </div>
       </div>

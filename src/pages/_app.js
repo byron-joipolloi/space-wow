@@ -41,7 +41,6 @@ export default function App({ Component, pageProps }) {
     const newQr = {
       page: page
     }
-    console.log(newQr);
     setQrCode(newQr)
     updateLocalStorage('qr', newQr)
   }

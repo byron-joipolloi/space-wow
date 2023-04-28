@@ -60,11 +60,11 @@ export default function Intro({
       <div className="max-w-sm mx-auto px-6 py-10 relative">
         
         <div>
-          {(activeMessage > 0) ? <Message id={1} text={intro.text[0]} /> : null}
-          {(activeMessage > 1) ? <Message id={2} text={intro.text[1]} /> : null}
-          {(activeMessage > 2) ? <Message id={3} text={intro.text[2]} /> : null}
-          {(activeMessage > 3) ? <Message id={4} text={intro.text[3]} /> : null}
-          {(activeMessage > 4) ? <Message id={5} text={intro.text[4]} /> : null}
+          {(activeMessage > 0) ? <Message text={intro.text[0]} /> : null}
+          {(activeMessage > 1) ? <Message text={intro.text[1]} /> : null}
+          {(activeMessage > 2) ? <Message text={intro.text[2]} /> : null}
+          {(activeMessage > 3) ? <Message text={intro.text[3]} /> : null}
+          {(activeMessage > 4) ? <Message text={intro.text[4]} /> : null}
         </div>
 
         <div className="mb-6">

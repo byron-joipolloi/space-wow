@@ -37,7 +37,11 @@ export default function Finish({
       <div className="max-w-sm mx-auto px-6 py-10 relative">
         
         <div>
-          {(activeMessage > 0) ? <Message text={`You've found ${score} of 4`} /> : null}
+          {(activeMessage > 0) ? (
+            <div className="message message-score text-3xl pt-8 pb-10 px-6 bg-white text-[#374590] mb-8 rounded-[0.25rem] relative shadow-[0.4rem_0.5rem_0_#6071be] slide-up-1 text-center max-w-[233px]">
+              <p>You've found <span className="block font-serif italic text-6xl">{score} of 4</span></p>
+            </div>
+          ) : null}
           {(activeMessage > 1) ? <Message text={finish.text[1]} /> : null}
           {(activeMessage > 2) ? <Message text={finish.text[2]} /> : null}
         </div>

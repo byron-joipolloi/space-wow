@@ -11,17 +11,17 @@
 .message::before,
 .message::after {
   content: '';
-  border-top: 12px solid #6071be;
-  border-right: 8px solid transparent;
-  border-left: 8px solid transparent;
+  border-top: 14px solid #6071be;
+  border-right: 9px solid transparent;
+  border-left: 9px solid transparent;
   position: absolute;
   bottom: -18px;
   left: 50%;
 }
 
 .message::after {
-  border-top: 12px solid #fff;
-  bottom: -12px;
+  border-top: 14px solid #fff;
+  bottom: -14px;
   left: calc(50% - 6px);
 }
 
@@ -33,10 +33,6 @@
   margin-left: 3rem;
 }
 
-.message-1 {
-  width: 140px;
-}
-
 .message:nth-child(odd)::before {
   left: 35%;
 }
@@ -45,12 +41,22 @@
   left: calc(35% - 6px);
 }
 
-.message:nth-child(even)::before {
+.message:nth-child(even)::before,
+.message.message-score::before {
   left: 65%;
 }
 
-.message:nth-child(even)::after {
+.message:nth-child(even)::after,
+.message.message-score::after {
   left: calc(65% - 6px);
+}
+
+.message:nth-child(1) {
+  width: 140px;
+}
+
+.message.message-score {
+  width: 233px;
 }
 
 .quote p:first-child {

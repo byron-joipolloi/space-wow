@@ -48,8 +48,6 @@ export default function Intro({
     }
   }
 
-  console.log(Object.keys(qrCode).length !== 0)
-
   const backToStart = () => {
     setActiveMessage(1)
   }

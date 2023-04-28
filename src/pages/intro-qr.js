@@ -10,7 +10,6 @@ const imgLoader = ({ src, width, quality }) => {
 }
 
 const intro = data.intro
-const introQr = data.introQr
 
 export default function Intro({
   progress,
@@ -43,12 +42,10 @@ export default function Intro({
       })
     } else {
       router.push({
-        pathname: intro.link.url,
+        pathname: introQr.link.url,
       })
     }
   }
-
-  console.log(Object.keys(qrCode).length !== 0)
 
   const backToStart = () => {
     setActiveMessage(1)
@@ -62,24 +59,13 @@ export default function Intro({
     <div className="flex items-end min-h-screen bg-[#accff8] bg-[url('/bg-blue.png')] bg-center bg-no-repeat bg-cover">
       <div className="max-w-sm mx-auto px-6 py-10 relative">
         
-
-        {(Object.keys(qrCode).length === 0) ? (
-          <div>
-            {(activeMessage > 0) ? <Message text={intro.text[0]} /> : null}
-            {(activeMessage > 1) ? <Message text={intro.text[1]} /> : null}
-            {(activeMessage > 2) ? <Message text={intro.text[2]} /> : null}
-            {(activeMessage > 3) ? <Message text={intro.text[3]} /> : null}
-            {(activeMessage > 4) ? <Message text={intro.text[4]} /> : null}
-          </div>
-        ) : (
-          <div>
-            {(activeMessage > 0) ? <Message text={introQr.text[0]} /> : null}
-            {(activeMessage > 1) ? <Message text={introQr.text[1]} /> : null}
-            {(activeMessage > 2) ? <Message text={introQr.text[2]} /> : null}
-            {(activeMessage > 3) ? <Message text={introQr.text[3]} /> : null}
-            {(activeMessage > 4) ? <Message text={introQr.text[4]} /> : null}
-          </div>
-        )}
+        <div>
+          {(activeMessage > 0) ? <Message text={introQr.text[0]} /> : null}
+          {(activeMessage > 1) ? <Message text={introQr.text[1]} /> : null}
+          {(activeMessage > 2) ? <Message text={introQr.text[2]} /> : null}
+          {(activeMessage > 3) ? <Message text={introQr.text[3]} /> : null}
+          {(activeMessage > 4) ? <Message text={introQr.text[4]} /> : null}
+        </div>
 
         <div className="mb-6">
           <Image
@@ -99,7 +85,7 @@ export default function Intro({
           </button>
 
           {(activeMessage >= 5) ? (
-            <button onClick={() => handleReady(qrCode.page)} className="text-lg uppercase tracking-widest flex items-center justify-center h-[60px] px-6 bg-[#374590] border-5 border-[#10194a] text-white ml-3">{intro.link.text}</button>
+            <button onClick={() => handleReady(qrCode.page)} className="text-lg uppercase tracking-widest flex items-center justify-center h-[60px] px-6 bg-[#374590] border-5 border-[#10194a] text-white ml-3">{introQr.link.text}</button>
           ) : null}
 
           {(activeMessage < 5) ? (

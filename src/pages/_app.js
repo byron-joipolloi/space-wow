@@ -23,6 +23,7 @@ export default function App({ Component, pageProps }) {
 
   const [progress, setProgress] = useState(initialProgress)
   const [qrCode, setQrCode] = useState({})
+  const [scenario, setScenario] = useState(1)
 
   function updateLocalStorage(key, progress) {
     localStorage.setItem(key, JSON.stringify(progress));
@@ -72,6 +73,8 @@ export default function App({ Component, pageProps }) {
       getScore={getScore}
       qrCode={qrCode}
       setQrCode={setQrCode}
+      scenario={scenario}
+      setScenario={setScenario}
     />
   )
 }

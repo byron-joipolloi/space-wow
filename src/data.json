@@ -15,6 +15,19 @@
         "text": [
             "Hi there!",
             "We're from the local secondary school.",
+            "Here you will find questions involving different scenarios.",
+            "Each scenario relates to topics that affect women, girls and non-binary people.",
+            "It's your job to make decisions!"
+        ],
+        "link": {
+            "text": "I'm ready!",
+            "url": "/menu"
+        }
+    },
+    "introQr": {
+        "text": [
+            "Hi there!",
+            "We're from the local secondary school.",
             "You've just found one of the barn's interactive experience stations!",
             "Around the barn, you will find different stations relating to topics that affect women, girls and non-binary people.",
             "You'll be given a scenario at each station. It's your job to make decisions!"

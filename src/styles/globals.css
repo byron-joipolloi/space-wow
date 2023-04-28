@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.container {
+  min-height: -webkit-fill-available;
+}
+
 .message {
   width: 270px;
 }

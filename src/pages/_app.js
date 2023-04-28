@@ -50,16 +50,16 @@ export default function App({ Component, pageProps }) {
     let newProgress = JSON.parse(localStorage.getItem('progress')) || initialProgress
     setProgress(newProgress)
 
-    if ('?att' == location.search) {
+    if ('?attitudes' == location.search) {
       updateQr('attitudes')
     }
-    if ('?hel' == location.search) {
+    if ('?health' == location.search) {
       updateQr('health')
     }
-    if ('?saf' == location.search) {
+    if ('?safety' == location.search) {
       updateQr('safety')
     }
-    if ('?env' == location.search) {
+    if ('?environment' == location.search) {
       updateQr('environment')
     }
   }, [])

@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .message {
-  width: 270px;
+  width: 220px;
 }
 
 .message::before,
@@ -52,11 +52,11 @@
 }
 
 .message:nth-child(1) {
-  width: 140px;
+  width: 116px;
 }
 
 .message.message-score {
-  width: 233px;
+  width: 170px;
 }
 
 .quote p:first-child {

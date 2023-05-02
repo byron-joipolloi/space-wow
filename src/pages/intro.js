@@ -84,8 +84,8 @@ export default function Intro({
             loader={imgLoader}
             src="/img-girls.png"
             alt="Girls illustration"
-            width={327}
-            height={300}
+            width={300}
+            height={274}
             className="block max-w-full h-auto mx-auto"
           />
         </div>

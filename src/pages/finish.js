@@ -1,13 +1,19 @@
-import Link from 'next/link'
 import { useEffect, useState, useRef } from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
 import Message from '../components/Message.js'
 import data from '../data.json'
+
+const imgLoader = ({ src, width, quality }) => {
+  return `${src}?w=${width}&q=${quality || 75}`
+}
 
 const finish = data.finish
 
 export default function Finish({
   progress,
   getScore,
+  qrCode,
 }) {
   const [messages, setMessages] = useState()
   const [activeMessage, setActiveMessage] = useState(1)
@@ -30,6 +36,12 @@ export default function Finish({
     scrollToBottom()
   }, [activeMessage])
 
+  const endingText = () => {
+    return finish[progress.active]
+  }
+
+  console.log(endingText)
+
   const score = getScore(progress)
 
   return (
@@ -38,8 +50,8 @@ export default function Finish({
         
         <div>
           {(activeMessage > 0) ? (
-            <div className="message message-score text-3xl pt-8 pb-10 px-6 bg-white text-[#374590] mb-8 rounded-[0.25rem] relative shadow-[0.4rem_0.5rem_0_#6071be] slide-up-1 text-center max-w-[233px]">
-              <p>You've found <span className="block font-serif italic text-6xl">{score} of 4</span></p>
+            <div className="message message-score text-xl pt-4 pb-6 px-4 bg-white text-[#374590] mb-8 rounded-[0.25rem] relative shadow-[0.4rem_0.5rem_0_#6071be] slide-up-1 text-center">
+              <p>You've found <span className="block font-serif italic text-5xl">{score} of 4</span></p>
             </div>
           ) : null}
           {(activeMessage > 1) ? <Message text={finish.text[1]} /> : null}
@@ -47,7 +59,14 @@ export default function Finish({
         </div>
 
         <div className="mb-6">
-          <img src="/img-girls.png" alt="" />
+          <Image
+            loader={imgLoader}
+            src="/img-girls.png"
+            alt="Girls illustration"
+            width={300}
+            height={274}
+            className="block max-w-full h-auto mx-auto"
+          />
         </div>
 
         <div className="flex justify-end">

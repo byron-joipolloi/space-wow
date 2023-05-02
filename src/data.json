@@ -222,10 +222,14 @@
         }
     ],
     "finish": {
+        "attitudes": "How do you think attitudes would be different if the world around us was built by women?",
+        "safety": "How do you think safety would be different if the world around us was built by women?",
+        "environment": "How do you think the environment would be different if the world around us was built by women?",
+        "health": "How do you think our health would be different if the world around us was built by women?",
         "text": [
-            "You've found 1 of 4",
-            "How do you think attitudes would be different if the world around us was built by women?",
-            "Write your thoughts on the whiteboard, and then find another station."
+            "You've done 1 of 4",
+            "Write your thoughts on the whiteboard, and then find another station.",
+            "How do you think attitudes would be different if the world around us was built by women?"
         ]
     }
 }

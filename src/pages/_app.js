@@ -6,18 +6,22 @@ export default function App({ Component, pageProps }) {
     attitudes: {
       step: 1,
       completed: false,
+      active: false,
     },
     safety: {
       step: 1,
       completed: false,
+      active: false,
     },
     environment: {
       step: 1,
       completed: false,
+      active: false,
     },
     health: {
       step: 1,
       completed: false,
+      active: false,
     }
   }
 

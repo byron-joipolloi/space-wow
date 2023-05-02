@@ -1,9 +1,38 @@
 import { useRouter } from 'next/router'
 
-export default function Reset() {
+export default function Reset({
+    progress,
+    setProgress
+}) {
     const router = useRouter()
 
+    console.log(setProgress)
+
     function resetLocalStorage() {
+        const newProgress = {
+            attitudes: {
+                step: 1,
+                completed: false,
+                active: false,
+            },
+            safety: {
+                step: 1,
+                completed: false,
+                active: false,
+            },
+            environment: {
+                step: 1,
+                completed: false,
+                active: false,
+            },
+            health: {
+                step: 1,
+                completed: false,
+                active: false,
+            }
+        }
+        setProgress(newProgress)
+
         localStorage.removeItem('qr');
         localStorage.removeItem('progress');
 

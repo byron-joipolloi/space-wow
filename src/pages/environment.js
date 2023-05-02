@@ -55,7 +55,7 @@ export default function Environment({
   if (progress.environment.step === 1) {
     return (
       <div className="bg-[#FF8FBA] bg-[url('/bg-medium-pink.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 text-center">
+        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 text-center space-y-12">
           <p className="text-lg font-bold text-[#6E0869] uppercase tracking-widest">Scenario {score} / 4</p>
 
           <div>
@@ -73,7 +73,7 @@ export default function Environment({
   } else if (progress.environment.step === 2) {
     return (
       <div className="bg-[#FF8FBA] bg-[url('/bg-medium-pink.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
+        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
 
           <Image
             loader={imgLoader}
@@ -93,9 +93,9 @@ export default function Environment({
   } else if (progress.environment.step === 3) {
     return (
       <div className="bg-[#8b1e6b] bg-[url('/bg-purple.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10">
+        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
 
-          <div className="flex-1 flex items-center justify-center">
+          <div className="flex items-center justify-center">
             <p className="text-[#FF8FBA] font-serif text-6xl uppercase text-center slide-up-1">
               <span className="font-bold">{environment[2].title[0]}&nbsp;</span>
               <span className="italic">{environment[2].title[1]}</span>
@@ -113,7 +113,7 @@ export default function Environment({
   } else if (progress.environment.step === 4) {
     return (
       <div className="bg-[#FF8FBA] bg-[url('/bg-medium-pink.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10">
+        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
 
           <Image
             loader={imgLoader}
@@ -133,9 +133,9 @@ export default function Environment({
   } else if (progress.environment.step === 5) {
     return (
       <div className="bg-[#8b1e6b] bg-[url('/bg-purple.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10">
+        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
 
-          <div className="flex-1 flex items-center justify-center">
+          <div className="flex items-center justify-center">
             <p className="text-[#FF8FBA] font-serif text-6xl uppercase text-center slide-up-1">
               <span className="block font-bold">{environment[4].title[0]}</span>
               <span className="block italic">{environment[4].title[1]}</span>
@@ -153,7 +153,7 @@ export default function Environment({
   } else if (progress.environment.step === 6) {
     return (
       <div className="bg-[#FF8FBA] bg-[url('/bg-medium-pink.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
+        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
 
           <div className="text-2xl text-[#6E0869] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: environment[5].text1 }}></div>
 
@@ -166,7 +166,7 @@ export default function Environment({
   } else if (progress.environment.step === 7) {
     return (
       <div className="bg-[#FF8FBA] bg-[url('/bg-medium-pink.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
+        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
 
           <div className="text-2xl text-[#6E0869] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: environment[5].text2 }}></div>
 
@@ -179,13 +179,11 @@ export default function Environment({
   } else if (progress.environment.step === 8) {
     return (
       <div className="bg-[#FF8FBA] bg-[url('/bg-medium-pink.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
+        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
 
           <p className="end text-[#6E0869] font-serif text-6xl uppercase text-center" dangerouslySetInnerHTML={{ __html: environment[6].title }}></p>
 
-          <div className="scrollbar-thin scrollbar-thumb-[#6E0869] scrollbar-track-white scrollbar-thumb-rounded scrollbar-track-rounded h-[18rem] overflow-y-scroll pr-6 space-y-10 slide-up-1">
-            <div className="text-2xl text-[#6E0869] space-y-3" dangerouslySetInnerHTML={{ __html: environment[6].text }}></div>
-          </div>
+          <div className="text-2xl text-[#6E0869] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: environment[6].text }}></div>
 
           <button onClick={() => handleFinish(1)} className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#6E0869] border-5 border-[#390136] text-white shadow-sm transition">Finish</button>
         </div>

@@ -11,7 +11,7 @@ const home = data.home
 export default function Home() {
   return (
     <div className="bg-[#fecee1] bg-[url('/bg-pink.png')] bg-center bg-no-repeat bg-cover">
-      <div className="container flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-12 text-center">
+      <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-12 text-center">
         <div className="flex items-center justify-center space-x-6">
           <span>
             <Image

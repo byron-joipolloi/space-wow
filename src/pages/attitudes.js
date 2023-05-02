@@ -56,7 +56,7 @@ export default function Attitudes({
   if (progress.attitudes.step === 1) {
     return (
       <div className="bg-[url('/bg-green.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 text-center space-y-10">
+        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 text-center space-y-12">
           <p className="text-lg font-bold text-[#473f9b] uppercase tracking-widest">Scenario {score} / 4</p>
 
           <div>
@@ -74,7 +74,7 @@ export default function Attitudes({
   } else if (progress.attitudes.step === 2) {
     return (
       <div className="bg-[#b2d5d3] bg-[url('/bg-green.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
+        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
 
           <Image
             loader={imgLoader}
@@ -114,7 +114,7 @@ export default function Attitudes({
   } else if (progress.attitudes.step === 4) {
     return (
       <div className="bg-[#b2d5d3] bg-[url('/bg-green.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
+        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
 
           <Image
             loader={imgLoader}
@@ -154,7 +154,7 @@ export default function Attitudes({
   } else if (progress.attitudes.step === 6) {
     return (
       <div className="bg-[#b2d5d3] bg-[url('/bg-green.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
+        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
 
           <div className="text-xl text-[#473f9b] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: attitudes[5].text1 }}></div>
 
@@ -167,7 +167,7 @@ export default function Attitudes({
   } else if (progress.attitudes.step === 7) {
     return (
       <div className="bg-[#b2d5d3] bg-[url('/bg-green.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
+        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
 
           <div className="text-xl text-[#473f9b] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: attitudes[5].text2 }}></div>
 
@@ -180,7 +180,7 @@ export default function Attitudes({
   } else if (progress.attitudes.step === 8) {
     return (
       <div className="bg-[#b2d5d3] bg-[url('/bg-green.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-10">
+        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
 
           <p className="end text-[#473f9b] font-serif text-6xl uppercase text-center" dangerouslySetInnerHTML={{ __html: attitudes[6].title }}></p>
 

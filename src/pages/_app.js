@@ -50,6 +50,8 @@ export default function App({ Component, pageProps }) {
     updateLocalStorage('qr', newQr)
   }
 
+  
+
   useEffect(() => {
     let newProgress = JSON.parse(localStorage.getItem('progress')) || initialProgress
     setProgress(newProgress)

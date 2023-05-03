@@ -25,7 +25,6 @@ export default function Attitudes({
       attitudes: {
         ...progress.attitudes,
         step: pageStep,
-        active: true,
       }
     }
     setProgress(newProgress)

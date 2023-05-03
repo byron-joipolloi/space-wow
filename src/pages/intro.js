@@ -14,8 +14,10 @@ const introQr = data.introQr
 
 export default function Intro({
   progress,
+  setProgress,
   qrCode,
   setQrCode,
+  updateLocalStorage,
 }) {
   const [messages, setMessages] = useState(data)
   const [activeMessage, setActiveMessage] = useState(1)
@@ -37,9 +39,16 @@ export default function Intro({
   }
 
   const handleReady = (qr) => {
-    if (qr) {
+    const newProgress = {
+      ...progress,
+      firstTime: false,
+    }
+    setProgress(newProgress)
+    updateLocalStorage('progress', newProgress)
+
+    if (qr.page) {
       router.push({
-        pathname: `/${qr}`,
+        pathname: `/${qr.page}`,
       })
     } else {
       router.push({
@@ -97,7 +106,7 @@ export default function Intro({
           </button>
 
           {(activeMessage >= 5) ? (
-            <button onClick={() => handleReady(qrCode.page)} className="text-lg uppercase tracking-widest flex items-center justify-center h-[60px] px-6 bg-[#374590] border-5 border-[#10194a] text-white ml-3">{intro.link.text}</button>
+            <button onClick={() => handleReady(qrCode)} className="text-lg uppercase tracking-widest flex items-center justify-center h-[60px] px-6 bg-[#374590] border-5 border-[#10194a] text-white ml-3">{intro.link.text}</button>
           ) : null}
 
           {(activeMessage < 5) ? (

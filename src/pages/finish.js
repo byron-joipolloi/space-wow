@@ -36,12 +36,6 @@ export default function Finish({
     scrollToBottom()
   }, [activeMessage])
 
-  const endingText = () => {
-    return finish[progress.active]
-  }
-
-  console.log(endingText)
-
   const score = getScore(progress)
 
   return (

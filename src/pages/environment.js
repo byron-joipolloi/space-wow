@@ -55,8 +55,6 @@ export default function Environment({
 
    useEffect(() => {
     if (progress.environment.indexOrder === -1) {
-      console.log('hello', progress.environment.indexOrder);
-
       const newProgress = {
         ...progress,
         environment: {
@@ -64,7 +62,6 @@ export default function Environment({
           indexOrder: score,
         }
       }
-      console.log(newProgress);
       setProgress(newProgress)
     }
   }, [progress])

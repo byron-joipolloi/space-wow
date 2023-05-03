@@ -55,8 +55,6 @@ export default function Health({
 
  useEffect(() => {
     if (progress.health.indexOrder === -1) {
-      console.log('hello', progress.health.indexOrder);
-
       const newProgress = {
         ...progress,
         health: {
@@ -64,7 +62,6 @@ export default function Health({
           indexOrder: score,
         }
       }
-      console.log(newProgress);
       setProgress(newProgress)
     }
   }, [progress])

@@ -57,8 +57,6 @@ export default function Attitudes({
 
   useEffect(() => {
     if (progress.attitudes.indexOrder === -1) {
-      console.log('hello', progress.attitudes.indexOrder);
-
       const newProgress = {
         ...progress,
         attitudes: {
@@ -66,7 +64,6 @@ export default function Attitudes({
           indexOrder: score,
         }
       }
-      console.log(newProgress);
       setProgress(newProgress)
     }
   }, [progress])

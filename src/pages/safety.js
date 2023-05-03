@@ -55,8 +55,6 @@ export default function Safety({
 
  useEffect(() => {
     if (progress.safety.indexOrder === -1) {
-      console.log('hello', progress.safety.indexOrder);
-
       const newProgress = {
         ...progress,
         safety: {
@@ -64,7 +62,6 @@ export default function Safety({
           indexOrder: score,
         }
       }
-      console.log(newProgress);
       setProgress(newProgress)
     }
   }, [progress])

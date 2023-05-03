@@ -53,11 +53,27 @@ export default function Health({
     }
   }
 
+ useEffect(() => {
+    if (progress.health.indexOrder === -1) {
+      console.log('hello', progress.health.indexOrder);
+
+      const newProgress = {
+        ...progress,
+        health: {
+          ...progress.health,
+          indexOrder: score,
+        }
+      }
+      console.log(newProgress);
+      setProgress(newProgress)
+    }
+  }, [progress])
+
   if (progress.health.step === 1) {
     return (
       <div className="bg-[#FFC33C] bg-[url('/bg-yellow.png')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 text-center space-y-12">
-          <p className="text-lg font-bold text-[#9C0D95] uppercase tracking-widest">Scenario {score} / 4</p>
+          <p className="text-lg font-bold text-[#9C0D95] uppercase tracking-widest">Scenario {progress.health.indexOrder} / 4</p>
 
           <div>
             <h1 className="text-[#9C0D95] font-serif text-6xl uppercase slide-up-1">

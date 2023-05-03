@@ -53,11 +53,27 @@ export default function Safety({
     }
   }
 
+ useEffect(() => {
+    if (progress.safety.indexOrder === -1) {
+      console.log('hello', progress.safety.indexOrder);
+
+      const newProgress = {
+        ...progress,
+        safety: {
+          ...progress.safety,
+          indexOrder: score,
+        }
+      }
+      console.log(newProgress);
+      setProgress(newProgress)
+    }
+  }, [progress])
+
   if (progress.safety.step === 1) {
     return (
       <div className="bg-[#FFF6F5] bg-[url('/bg-light-pink.png')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 text-center space-y-12">
-          <p className="text-lg font-bold text-[#DA1B64] uppercase tracking-widest">Scenario {score} / 4</p>
+          <p className="text-lg font-bold text-[#DA1B64] uppercase tracking-widest">Scenario {progress.safety.indexOrder} / 4</p>
 
           <div>
             <h1 className="text-[#DA1B64] font-serif text-6xl uppercase slide-up-1">

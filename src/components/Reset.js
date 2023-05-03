@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router'
+import {initialProgress} from '../pages/_app';
 
 export default function Reset({
     progress,
@@ -9,31 +10,12 @@ export default function Reset({
     const router = useRouter()
 
     function resetLocalStorage() {
-        const newProgress = {
-            active: '',
-            firstTime: true,
-            attitudes: {
-                step: 1,
-                completed: false,
-            },
-            safety: {
-                step: 1,
-                completed: false,
-            },
-            environment: {
-                step: 1,
-                completed: false,
-            },
-            health: {
-                step: 1,
-                completed: false,
-            }
-        }
+        const newProgress = {...initialProgress};
         setProgress(newProgress)
         setQrCode({})
 
         localStorage.removeItem('qr');
-        localStorage.removeItem('progress');
+        // localStorage.removeItem('progress');
 
         router.push({
           pathname: '/',

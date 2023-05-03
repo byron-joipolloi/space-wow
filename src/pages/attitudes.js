@@ -55,11 +55,27 @@ export default function Attitudes({
     }
   }
 
+  useEffect(() => {
+    if (progress.attitudes.indexOrder === -1) {
+      console.log('hello', progress.attitudes.indexOrder);
+
+      const newProgress = {
+        ...progress,
+        attitudes: {
+          ...progress.attitudes,
+          indexOrder: score,
+        }
+      }
+      console.log(newProgress);
+      setProgress(newProgress)
+    }
+  }, [progress])
+
   if (progress.attitudes.step === 1) {
     return (
       <div className="bg-[url('/bg-green.png')] bg-center bg-no-repeat bg-cover">
         <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 text-center space-y-12">
-          <p className="text-lg font-bold text-[#473f9b] uppercase tracking-widest">Scenario {score} / 4</p>
+          <p className="text-lg font-bold text-[#473f9b] uppercase tracking-widest">Scenario {progress.attitudes.indexOrder} / 4</p>
 
           <div>
             <h1 className="text-[#473f9b] font-serif text-6xl uppercase slide-up-1">

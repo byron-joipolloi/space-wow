@@ -1,31 +1,40 @@
 import '@/styles/globals.css'
 import { useState, useEffect } from "react"
 
-export default function App({ Component, pageProps }) {
-  const initialProgress = {
+export const initialProgress = {
     active: '',
     firstTime: true,
     attitudes: {
       step: 1,
       completed: false,
+      indexOrder: -1,
     },
     safety: {
       step: 1,
       completed: false,
+      indexOrder: -1,
     },
     environment: {
       step: 1,
       completed: false,
+      indexOrder: -1,
     },
     health: {
       step: 1,
       completed: false,
+      indexOrder: -1,
     }
   }
 
+export default function App({ Component, pageProps }) {
   const [progress, setProgress] = useState(initialProgress)
   const [qrCode, setQrCode] = useState({})
   const [scenario, setScenario] = useState(1)
+
+  function updateLocalProgress(progress) {
+    setProgress(progress);
+    updateLocalStorage('progress', progress);
+  }
 
   function updateLocalStorage(key, progress) {
     localStorage.setItem(key, JSON.stringify(progress));
@@ -37,7 +46,7 @@ export default function App({ Component, pageProps }) {
       return count
     }, 0)
 
-    return score
+    return score + 1
   }
 
   function updateQr(page) {
@@ -70,8 +79,8 @@ export default function App({ Component, pageProps }) {
     <Component
       {...pageProps}
       progress={progress}
-      setProgress={setProgress}
-      updateLocalStorage={updateLocalStorage}
+      setProgress={updateLocalProgress}
+      updateLocalStorage={() => {}}
       getScore={getScore}
       qrCode={qrCode}
       setQrCode={setQrCode}

@@ -22,6 +22,7 @@ export default function Environment({
   const handleClick = (pageStep) => {
     const newProgress = {
       ...progress,
+      active: 'environment',
       environment: {
         ...progress.environment,
         step: pageStep

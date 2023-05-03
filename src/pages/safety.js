@@ -22,6 +22,7 @@ export default function Safety({
   const handleClick = (pageStep) => {
     const newProgress = {
       ...progress,
+      active: 'safety',
       safety: {
         ...progress.safety,
         step: pageStep

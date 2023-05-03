@@ -48,7 +48,10 @@ export default function Finish({
               <p>You've found <span className="block font-serif italic text-5xl">{score} of 4</span></p>
             </div>
           ) : null}
-          {(activeMessage > 1) ? <Message text={finish.text[1]} /> : null}
+          {(activeMessage > 1 && progress.active === 'attitudes') ? <Message text={finish.attitudes} /> : null}
+          {(activeMessage > 1 && progress.active === 'health') ? <Message text={finish.health} /> : null}
+          {(activeMessage > 1 && progress.active === 'safety') ? <Message text={finish.safety} /> : null}
+          {(activeMessage > 1 && progress.active === 'environment') ? <Message text={finish.environment} /> : null}
           {(activeMessage > 2) ? <Message text={finish.text[2]} /> : null}
         </div>
 

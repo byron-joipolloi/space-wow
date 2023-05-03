@@ -22,6 +22,7 @@ export default function Health({
   const handleClick = (pageStep) => {
     const newProgress = {
       ...progress,
+      active: 'health',
       health: {
         ...progress.health,
         step: pageStep

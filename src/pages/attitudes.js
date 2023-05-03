@@ -15,6 +15,8 @@ export default function Attitudes({
   setProgress,
   updateLocalStorage,
   getScore,
+  scenario,
+  setScenario
 }) {
   const router = useRouter()
   let score = getScore(progress)
@@ -22,6 +24,7 @@ export default function Attitudes({
   const handleClick = (pageStep) => {
     const newProgress = {
       ...progress,
+      active: 'attitudes',
       attitudes: {
         ...progress.attitudes,
         step: pageStep,

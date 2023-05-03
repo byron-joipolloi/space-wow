@@ -188,7 +188,7 @@ export default function Attitudes({
 
           <div className="text-2xl text-[#473f9b] space-y-3" dangerouslySetInnerHTML={{ __html: attitudes[6].text }}></div>
 
-          <button onClick={() => handleClick(9)} className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Finish</button>
+          <button onClick={() => handleClick(9)} className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
         </div>
       </div>
     )

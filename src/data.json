@@ -79,8 +79,12 @@
             "quote": "<p><span>92%</span> of girls stated that they received sexist name-calling ‘a lot’ or ‘sometimes’ between people their age*</p><p><small>*A 2021 Ofsted survey of 32 schools and colleges</small></p>"
         },
         {
-            "title": "<span>But,</span><span>there is good news</span>",
+            "title": "<span>But,</span> <span>there is good news</span>",
             "text": "<p>In 2012, British feminst writer Laura Bates founded The Everyday Sexism project. The site documents examples of sexism from around the world. Entries may be submitted directly to the site, or by email or tweet. The accounts of abuse are collated by a small group of volunteers. The launch of this website is considered to be the beginning of fourth-wave feminism.</p>"
+        },
+        {
+            "title": "<span>Tips</span> <span>for if you're a man</span>",
+            "text": "<p>Don’t be a bystander! If your friends are making sexist jokes, call them out on it. You don’t want to encourage this sort of misogynistic behaviour.</p>"
         }
     ],
     "safety": [
@@ -125,7 +129,7 @@
             "quote": "<p><span>35%</span> of females aged 14-21 have experienced unwanted sexual attention or harassment in a public place while wearing a school uniform*</p><p><small>*A Plan International UK survey</small></p>"
         },
         {
-            "title": "<span>But,</span><span>there is good news</span>",
+            "title": "<span>But,</span> <span>there is good news</span>",
             "text": "<p>Campaign groups have managed to get a bill that would make street harassment illegal debated in parliament. However, as of the 24th of March 2023, the Bill still places a burden on victims of public sexual harassment to prove that the perpetrator intended to cause distress or harm. It does not explicitly make public sexual harassment a crime. Public sexual harassment needs to be directly addressed by the Bill as it progresses.</p>"
         }
     ],
@@ -171,7 +175,7 @@
             "quote": "<p><span>28%</span> of women steer clear of certain areas and 21% avoid being out at certain times to protect themselves. By contrast, only 14% of men avoid certain areas, and 9% avoid being out at certain times.*</p><p><small>*A 2018 YouGov survey</small></p>"
         },
         {
-            "title": "<span>But,</span><span>there is good news</span>",
+            "title": "<span>But,</span> <span>there is good news</span>",
             "text": "<p>Bradford has teamed up with personality safety app WalkSafe+ to become the world's first WalkSafe city. The app brings police crime data and community reported data together, allowing the user to plan safer journeys and understand local crime hotspots, as well as share their journey with family and friends so they can monitor their safe arrival, sending automatic alerts if they fail to reach their destination.</p>"
         }
     ],
@@ -217,7 +221,7 @@
             "quote": "<p><span>35%</span> of girls aged 13-18 have taken time off school or college because they have their period*</p><p><small>*A study by PHS Group with 250 young people</small></p>"
         },
         {
-            "title": "<span>But,</span><span>there is good news</span>",
+            "title": "<span>But,</span> <span>there is good news</span>",
             "text": "<p>In January 2020, the UK government launched its Period Products Scheme, which allows all state-maintained schools and 16 to 19 education organisations in England to order free period products. Since the scheme’s launch, 94% of secondary schools and 90% post-16 organisations in England now provide free period products to pupils.</p>"
         }
     ],

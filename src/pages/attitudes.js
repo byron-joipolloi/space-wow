@@ -188,6 +188,19 @@ export default function Attitudes({
 
           <div className="text-2xl text-[#473f9b] space-y-3" dangerouslySetInnerHTML={{ __html: attitudes[6].text }}></div>
 
+          <button onClick={() => handleClick(9)} className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Finish</button>
+        </div>
+      </div>
+    )
+  } else if (progress.attitudes.step === 9) {
+    return (
+      <div className="bg-[#b2d5d3] bg-[url('/bg-green.png')] bg-center bg-no-repeat bg-cover">
+        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
+
+          <p className="end text-[#473f9b] font-serif text-6xl uppercase text-center" dangerouslySetInnerHTML={{ __html: attitudes[7].title }}></p>
+
+          <div className="text-2xl text-[#473f9b] space-y-3" dangerouslySetInnerHTML={{ __html: attitudes[7].text }}></div>
+
           <button onClick={() => handleFinish(1)} className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Finish</button>
         </div>
       </div>

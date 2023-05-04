@@ -55,6 +55,11 @@
   width: 116px;
 }
 
+.message:nth-child(4) {
+  width: 260px;
+  margin-left: 4px;
+}
+
 .message.message-score {
   width: 170px;
 }

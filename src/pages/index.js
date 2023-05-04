@@ -4,7 +4,6 @@ import Image from 'next/image'
 import data from '../data.json'
 import Reset from '../components/Reset'
 import { useRouter } from 'next/router'
-import Html5QrcodePlugin from '../components/Html5QrcodePlugin.js'
 
 const imgLoader = ({ src, width, quality }) => {
   return `${src}?w=${width}&q=${quality || 75}`

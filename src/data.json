@@ -230,10 +230,7 @@
         "safety": "How do you think safety would be different if the world around us was built by women?",
         "environment": "How do you think the environment would be different if the world around us was built by women?",
         "health": "How do you think our health would be different if the world around us was built by women?",
-        "text": [
-            "You've done 1 of 4",
-            "How do you think attitudes would be different if the world around us was built by women?",
-            "Write your thoughts on the whiteboard, and then find another station."
-        ]
+        "textQr": "Write your thoughts on the blackboard, and then find another station.",
+        "textOnline": "Have a chat to your friends about your thoughts."
     }
 }

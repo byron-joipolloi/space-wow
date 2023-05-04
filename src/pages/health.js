@@ -69,7 +69,7 @@ export default function Health({
   if (progress.health.step === 1) {
     return (
       <div className="bg-[#FFC33C] bg-[url('/bg-yellow.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 text-center space-y-12">
+        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 text-center space-y-12">
           <p className="text-lg font-bold text-[#9C0D95] uppercase tracking-widest">Scenario {progress.health.indexOrder} / 4</p>
 
           <div>
@@ -87,7 +87,7 @@ export default function Health({
   } else if (progress.health.step === 2) {
     return (
       <div className="bg-[#FFC33C] bg-[url('/bg-yellow.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
+        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
 
           <Image
             loader={imgLoader}
@@ -98,7 +98,7 @@ export default function Health({
             className="block max-w-full -mt-2 h-auto mx-auto"
           />
 
-          <div className="text-2xl text-[#9C0D95] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: health[1].text }}></div>
+          <div className="text-xl text-[#9C0D95] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: health[1].text }}></div>
 
           <button onClick={() => handleClick(3)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#9C0D95] border-5 border-[#72056D] text-white shadow-sm transition">Next</button>
         </div>
@@ -107,9 +107,9 @@ export default function Health({
   } else if (progress.health.step === 3) {
     return (
       <div className="bg-[#ac2a83] bg-[url('/bg-light-purple.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
+        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
 
-          <div className="flex items-center justify-center">
+          <div className="flex-1 flex items-center justify-center">
             <p className="text-[#FFC33C] font-serif text-6xl uppercase text-center slide-up-1">
               <span className="font-bold">{health[2].title[0]}&nbsp;</span>
               <span className="italic">{health[2].title[1]}</span>
@@ -127,7 +127,7 @@ export default function Health({
   } else if (progress.health.step === 4) {
     return (
       <div className="bg-[#FFC33C] bg-[url('/bg-yellow.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
+        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
 
           <Image
             loader={imgLoader}
@@ -147,9 +147,9 @@ export default function Health({
   } else if (progress.health.step === 5) {
     return (
       <div className="bg-[#ac2a83] bg-[url('/bg-light-purple.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
+        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
 
-          <div className="flex items-center justify-center">
+          <div className="flex-1 flex items-center justify-center">
             <p className="text-[#FFC33C] font-serif text-6xl uppercase text-center slide-up-1">
               <span className="block font-bold">{health[4].title[0]}</span>
               <span className="block italic">{health[4].title[1]}</span>
@@ -167,7 +167,7 @@ export default function Health({
   } else if (progress.health.step === 6) {
     return (
       <div className="bg-[#FFC33C] bg-[url('/bg-yellow.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
+        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
 
           <div className="text-2xl text-[#9C0D95] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: health[5].text1 }}></div>
 
@@ -180,9 +180,9 @@ export default function Health({
   } else if (progress.health.step === 7) {
     return (
       <div className="bg-[#FFC33C] bg-[url('/bg-yellow.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
+        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
 
-          <div className="text-2xl text-[#9C0D95] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: health[5].text2 }}></div>
+          <div className="text-xl text-[#9C0D95] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: health[5].text2 }}></div>
 
           <blockquote className="quote bg-white text-[#9C0D95] p-7 rounded-[0.25rem] shadow-[0.5rem_0.5rem_0_#9a3082] slide-up-2" dangerouslySetInnerHTML={{ __html: health[5].quote }}>
           </blockquote>
@@ -194,11 +194,11 @@ export default function Health({
   } else if (progress.health.step === 8) {
     return (
       <div className="bg-[#FFC33C] bg-[url('/bg-yellow.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
+        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
 
           <p className="end text-[#9C0D95] font-serif text-6xl uppercase text-center" dangerouslySetInnerHTML={{ __html: health[6].title }}></p>
 
-          <div className="text-2xl text-[#9C0D95] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: health[6].text }}>
+          <div className="text-xl text-[#9C0D95] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: health[6].text }}>
             </div>
 
           <button onClick={() => handleFinish(1)} className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#9C0D95] border-5 border-[#72056D] text-white shadow-sm transition">Finish</button>

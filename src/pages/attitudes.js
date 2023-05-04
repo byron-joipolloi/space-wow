@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react'
+import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -71,7 +71,7 @@ export default function Attitudes({
   if (progress.attitudes.step === 1) {
     return (
       <div className="bg-[url('/bg-green.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 text-center space-y-12">
+        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 text-center space-y-12">
           <p className="text-lg font-bold text-[#473f9b] uppercase tracking-widest">Scenario {progress.attitudes.indexOrder} / 4</p>
 
           <div>
@@ -89,7 +89,7 @@ export default function Attitudes({
   } else if (progress.attitudes.step === 2) {
     return (
       <div className="bg-[#b2d5d3] bg-[url('/bg-green.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
+        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
 
           <Image
             loader={imgLoader}
@@ -109,9 +109,9 @@ export default function Attitudes({
   } else if (progress.attitudes.step === 3) {
     return (
       <div className="bg-[#454791] bg-[url('/bg-dark-blue.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
+        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
 
-          <div className="flex items-center justify-center">
+          <div className="flex-1 flex items-center justify-center">
             <p className="text-[#c0dbd4] font-serif text-6xl uppercase text-center slide-up-1">
               <span className="block font-bold">{attitudes[2].title[0]}</span>
               <span className="block italic">{attitudes[2].title[1]}</span>
@@ -129,7 +129,7 @@ export default function Attitudes({
   } else if (progress.attitudes.step === 4) {
     return (
       <div className="bg-[#b2d5d3] bg-[url('/bg-green.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
+        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
 
           <Image
             loader={imgLoader}
@@ -149,9 +149,9 @@ export default function Attitudes({
   } else if (progress.attitudes.step === 5) {
     return (
       <div className="bg-[#454791] bg-[url('/bg-dark-blue.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
+        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
 
-          <div className="flex items-center justify-center">
+          <div className="flex-1 flex items-center justify-center">
             <p className="text-[#c0dbd4] font-serif text-6xl uppercase text-center slide-up-1">
               <span className="block font-bold">{attitudes[4].title[0]}</span>
               <span className="block italic">{attitudes[4].title[1]}</span>
@@ -169,7 +169,7 @@ export default function Attitudes({
   } else if (progress.attitudes.step === 6) {
     return (
       <div className="bg-[#b2d5d3] bg-[url('/bg-green.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
+        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
 
           <div className="text-2xl text-[#473f9b] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: attitudes[5].text1 }}></div>
 
@@ -182,7 +182,7 @@ export default function Attitudes({
   } else if (progress.attitudes.step === 7) {
     return (
       <div className="bg-[#b2d5d3] bg-[url('/bg-green.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
+        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
 
           <div className="text-2xl text-[#473f9b] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: attitudes[5].text2 }}></div>
 
@@ -195,11 +195,11 @@ export default function Attitudes({
   } else if (progress.attitudes.step === 8) {
     return (
       <div className="bg-[#b2d5d3] bg-[url('/bg-green.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
+        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
 
           <p className="end text-[#473f9b] font-serif text-6xl uppercase text-center" dangerouslySetInnerHTML={{ __html: attitudes[6].title }}></p>
 
-          <div className="text-2xl text-[#473f9b] space-y-3" dangerouslySetInnerHTML={{ __html: attitudes[6].text }}></div>
+          <div className="text-xl text-[#473f9b] space-y-3" dangerouslySetInnerHTML={{ __html: attitudes[6].text }}></div>
 
           <button onClick={() => handleClick(9)} className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
         </div>
@@ -208,7 +208,7 @@ export default function Attitudes({
   } else if (progress.attitudes.step === 9) {
     return (
       <div className="bg-[#b2d5d3] bg-[url('/bg-green.png')] bg-center bg-no-repeat bg-cover">
-        <div className="flex flex-col justify-center min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
+        <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 space-y-12">
 
           <p className="end text-[#473f9b] font-serif text-6xl uppercase text-center" dangerouslySetInnerHTML={{ __html: attitudes[7].title }}></p>
 

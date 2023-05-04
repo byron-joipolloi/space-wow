@@ -38,6 +38,12 @@ export default function Finish({
 
   const score = getScore(progress)
 
+  const openQrScanner = () => {
+    alert('open QR code scanner')
+  }
+
+  console.log(activeMessage, score, qrCode.page)
+
   return (
     <div className="flex items-end min-h-screen bg-[#accff8] bg-[url('/bg-blue.png')] bg-center bg-no-repeat bg-cover">
       <div className="max-w-sm mx-auto px-6 py-10 relative">
@@ -74,11 +80,15 @@ export default function Finish({
             <svg fill="currentColor" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
           </button>
 
-          {(activeMessage >= 3 && score === 5 && qrCode.page !== undefined) ? (
+          {(activeMessage >= 3 && score === 5) ? (
             <Link href="/credits" className="text-lg uppercase tracking-widest flex items-center justify-center h-[60px] px-6 bg-[#374590] border-5 border-[#10194a] text-white ml-3">Credits</Link>
           ) : null}
 
-          {(activeMessage >= 3 && qrCode.page === undefined) ? (
+          {(activeMessage >= 3 && score !== 5 && qrCode.page !== undefined) ? (
+            <button onClick={() => openQrScanner()} className="text-lg uppercase tracking-widest flex items-center justify-center h-[60px] px-6 bg-[#374590] border-5 border-[#10194a] text-white ml-3">Find a Station</button>
+          ) : null}
+
+          {(activeMessage >= 3 && score !== 5 && qrCode.page === undefined) ? (
             <Link href="/menu" className="text-lg uppercase tracking-widest flex items-center justify-center h-[60px] px-6 bg-[#374590] border-5 border-[#10194a] text-white ml-3">Back to menu</Link>
           ) : null}
 

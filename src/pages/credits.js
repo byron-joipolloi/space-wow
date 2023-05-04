@@ -55,6 +55,8 @@ export default function Credits({
             </span>
           </div>
         </div>
+
+        <Link href="/menu" className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#a50c9d] border-5 border-[#7b0575] text-white shadow-sm transition">Menu</Link>
       </div>
 
       <Reset

@@ -232,5 +232,12 @@
         "health": "How do you think our health would be different if the world around us was built by women?",
         "textQr": "Write your thoughts on the blackboard, and then find another station.",
         "textOnline": "Have a chat to your friends about your thoughts."
+    },
+    "credits": {
+        "title": [
+            "Working",
+            "Together"
+        ],
+        "text": "One Way or Another is a collaboration between Leeds 2023, WOW Women of the World Foundation, The Space, Four Agency and students at Trinity Academy Leeds. To find out more click the logos below:"
     }
 }

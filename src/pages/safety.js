@@ -95,7 +95,7 @@ export default function Safety({
             alt="Safety illustration"
             width={375}
             height={333}
-            className="block min-w-[375px] -ml-6 max-w-full h-auto mx-auto"
+            className="block min-w-[296px] -mr-6 max-w-full h-auto mx-auto"
           />
 
           <div className="text-2xl text-[#DA1B64] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: safety[1].text }}></div>
@@ -135,7 +135,7 @@ export default function Safety({
             alt="Safety illustration"
             width={375}
             height={333}
-            className="block min-w-[375px] -ml-6 max-w-full h-auto mx-auto"
+            className="block min-w-[296px] -mr-6 max-w-full h-auto mx-auto"
           />
 
           <div className="text-2xl text-[#DA1B64] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: safety[3].text }}></div>

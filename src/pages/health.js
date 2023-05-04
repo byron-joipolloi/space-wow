@@ -95,7 +95,7 @@ export default function Health({
             alt="Health illustration"
             width={375}
             height={357}
-            className="block min-w-[375px] max-w-full -ml-6 -mt-6 h-auto mx-auto"
+            className="block max-w-full -mt-2 h-auto mx-auto"
           />
 
           <div className="text-2xl text-[#9C0D95] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: health[1].text }}></div>
@@ -135,7 +135,7 @@ export default function Health({
             alt="Health illustration"
             width={375}
             height={357}
-            className="block min-w-[375px] max-w-full -ml-6 -mt-6 h-auto mx-auto"
+            className="block max-w-full -mt-2 h-auto mx-auto"
           />
 
           <div className="text-2xl text-[#9C0D95] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: health[3].text }}></div>

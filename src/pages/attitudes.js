@@ -97,7 +97,7 @@ export default function Attitudes({
             alt="attitudes illustration"
             width={375}
             height={324}
-            className="block min-w-[375px] max-w-full -ml-6 h-auto mx-auto"
+            className="block max-w-full h-auto mx-auto"
           />
 
           <div className="text-2xl text-[#473f9b] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: attitudes[1].text }}></div>
@@ -137,7 +137,7 @@ export default function Attitudes({
             alt="attitudes illustration"
             width={375}
             height={324}
-            className="block min-w-[375px] max-w-full -ml-6 h-auto mx-auto"
+            className="block max-w-full h-auto mx-auto"
           />
 
           <div className="text-2xl text-[#473f9b] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: attitudes[3].text }}></div>

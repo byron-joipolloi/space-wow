@@ -18,6 +18,9 @@ module.exports = {
         '3xl': ['1.5rem', {
           lineHeight: '2.125rem'
         }],
+        '6xl': ['3.5rem', {
+          lineHeight: '1'
+        }],
       },
       borderWidth: {
         '5': '5px',

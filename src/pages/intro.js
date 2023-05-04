@@ -66,8 +66,8 @@ export default function Intro({
   }, [activeMessage])
 
   return (
-    <div className="flex items-end min-h-screen bg-[#accff8] bg-[url('/bg-blue.png')] bg-center bg-no-repeat bg-cover">
-      <div className="max-w-sm mx-auto px-6 py-10 relative">
+    <div className="flex items-end h-screen bg-[#accff8] bg-[url('/bg-blue.png')] bg-center bg-no-repeat bg-cover">
+      <div className="max-w-sm mx-auto px-6 py-10 relative overflow-hidden">
         
 
         {(Object.keys(qrCode).length === 0) ? (

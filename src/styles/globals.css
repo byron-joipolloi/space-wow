@@ -64,6 +64,10 @@
   width: 170px;
 }
 
+.message:not(:last-child) div {
+  filter: blur(3px);
+}
+
 .quote p:first-child {
   @apply text-lg mb-4;
 }

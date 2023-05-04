@@ -45,13 +45,15 @@ export default function Finish({
   console.log(activeMessage, score, qrCode.page)
 
   return (
-    <div className="flex items-end min-h-screen bg-[#accff8] bg-[url('/bg-blue.png')] bg-center bg-no-repeat bg-cover">
+    <div className="flex items-end h-screen bg-[#accff8] bg-[url('/bg-blue.png')] bg-center bg-no-repeat bg-cover">
       <div className="max-w-sm mx-auto px-6 py-10 relative">
         
         <div>
           {(activeMessage > 0) ? (
             <div className="message message-score text-xl pt-4 pb-6 px-4 bg-white text-[#374590] mb-8 rounded-[0.25rem] relative shadow-[0.4rem_0.5rem_0_#6071be] slide-up-1 text-center">
-              <p>You've found <span className="block font-serif italic text-5xl">{score - 1} of 4</span></p>
+              <div>
+                <p>You've found <span className="block font-serif italic text-5xl">{score - 1} of 4</span></p>
+              </div>
             </div>
           ) : null}
           {(activeMessage > 1 && progress.active === 'attitudes') ? <Message text={finish.attitudes} /> : null}

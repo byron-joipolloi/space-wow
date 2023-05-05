@@ -72,12 +72,12 @@ export default function Intro({
 
         {(Object.keys(qrCode).length === 0) ? (
           <div>
-            <Message text={intro.text[0]} className={(activeMessage > 0) ? `block` : 'hidden'} />
-            <Message text={intro.text[1]} className={(activeMessage > 1) ? `block` : 'hidden'} />
-            <Message text={intro.text[2]} className={(activeMessage > 2) ? `block` : 'hidden'} />
-            <Message text={intro.text[3]} className={(activeMessage > 3) ? `block` : 'hidden'} />
-            <Message text={intro.text[4]} className={(activeMessage > 4) ? `block` : 'hidden'} />
-            <Message text={intro.text[5]} className={(activeMessage > 5) ? `block` : 'hiddaten'} />
+            <Message text={intro.text[0]} isVisible={(activeMessage > 0)} id={1} />
+            <Message text={intro.text[1]} isVisible={(activeMessage > 1)} id={2} />
+            <Message text={intro.text[2]} isVisible={(activeMessage > 2)} id={3} />
+            <Message text={intro.text[3]} isVisible={(activeMessage > 3)} id={4} />
+            <Message text={intro.text[4]} isVisible={(activeMessage > 4)} id={5} />
+            <Message text={intro.text[5]} isVisible={(activeMessage > 5)} id={6} />
           </div>
         ) : (
           <div>

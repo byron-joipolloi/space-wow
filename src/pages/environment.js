@@ -93,9 +93,9 @@ export default function Environment({
             loader={imgLoader}
             src="/img-environment.png"
             alt="Environment illustration"
-            width={375}
-            height={337}
-            className="block min-w-[calc(100%+3rem)] -ml-6 -mt-10 h-auto mx-auto"
+            width={416}
+            height={374}
+            className="block min-w-[calc(100%+5rem)] -ml-10 -mt-10 h-auto mx-auto"
           />
 
           <div className="text-2xl text-[#6E0869] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: environment[1].text }}></div>
@@ -133,9 +133,9 @@ export default function Environment({
             loader={imgLoader}
             src="/img-environment.png"
             alt="Environment illustration"
-            width={375}
-            height={337}
-            className="block min-w-[calc(100%+3rem)] -ml-6 -mt-10 h-auto mx-auto"
+            width={416}
+            height={374}
+            className="block min-w-[calc(100%+5rem)] -ml-10 -mt-10 h-auto mx-auto"
           />
 
           <div className="text-2xl text-[#6E0869] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: environment[3].text }}></div>

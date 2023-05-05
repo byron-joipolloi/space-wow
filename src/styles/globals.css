@@ -60,6 +60,10 @@
   margin-left: 4px;
 }
 
+.message:nth-child(6) {
+  width: 172px;
+}
+
 .message.message-score {
   width: 170px;
 }

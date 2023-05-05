@@ -2,29 +2,29 @@ import '@/styles/globals.css'
 import { useState, useEffect } from "react"
 
 export const initialProgress = {
-    active: '',
-    firstTime: true,
-    attitudes: {
-      step: 1,
-      completed: false,
-      indexOrder: -1,
-    },
-    safety: {
-      step: 1,
-      completed: false,
-      indexOrder: -1,
-    },
-    environment: {
-      step: 1,
-      completed: false,
-      indexOrder: -1,
-    },
-    health: {
-      step: 1,
-      completed: false,
-      indexOrder: -1,
-    }
+  active: '',
+  firstTime: true,
+  attitudes: {
+    step: 1,
+    completed: false,
+    indexOrder: -1,
+  },
+  safety: {
+    step: 1,
+    completed: false,
+    indexOrder: -1,
+  },
+  environment: {
+    step: 1,
+    completed: false,
+    indexOrder: -1,
+  },
+  health: {
+    step: 1,
+    completed: false,
+    indexOrder: -1,
   }
+}
 
 export default function App({ Component, pageProps }) {
   const [progress, setProgress] = useState(initialProgress)

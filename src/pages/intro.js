@@ -72,21 +72,21 @@ export default function Intro({
 
         {(Object.keys(qrCode).length === 0) ? (
           <div>
-            <Message text={intro.text[0]} isVisible={(activeMessage > 0)} id={1} />
-            <Message text={intro.text[1]} isVisible={(activeMessage > 1)} id={2} />
-            <Message text={intro.text[2]} isVisible={(activeMessage > 2)} id={3} />
-            <Message text={intro.text[3]} isVisible={(activeMessage > 3)} id={4} />
-            <Message text={intro.text[4]} isVisible={(activeMessage > 4)} id={5} />
-            <Message text={intro.text[5]} isVisible={(activeMessage > 5)} id={6} />
+            <Message text={intro.text[0]} isVisible={(activeMessage > 0)} />
+            <Message text={intro.text[1]} isVisible={(activeMessage > 1)} />
+            <Message text={intro.text[2]} isVisible={(activeMessage > 2)} />
+            <Message text={intro.text[3]} isVisible={(activeMessage > 3)} />
+            <Message text={intro.text[4]} isVisible={(activeMessage > 4)} />
+            <Message text={intro.text[5]} isVisible={(activeMessage > 5)} />
           </div>
         ) : (
           <div>
-            {(activeMessage > 0) ? <Message text={introQr.text[0]} /> : null}
-            {(activeMessage > 1) ? <Message text={introQr.text[1]} /> : null}
-            {(activeMessage > 2) ? <Message text={introQr.text[2]} /> : null}
-            {(activeMessage > 3) ? <Message text={introQr.text[3]} /> : null}
-            {(activeMessage > 4) ? <Message text={introQr.text[4]} /> : null}
-            {(activeMessage > 5) ? <Message text={introQr.text[5]} /> : null}
+            <Message text={introQr.text[0]} isVisible={(activeMessage > 0)} />
+            <Message text={introQr.text[1]} isVisible={(activeMessage > 1)} />
+            <Message text={introQr.text[2]} isVisible={(activeMessage > 2)} />
+            <Message text={introQr.text[3]} isVisible={(activeMessage > 3)} />
+            <Message text={introQr.text[4]} isVisible={(activeMessage > 4)} />
+            <Message text={introQr.text[5]} isVisible={(activeMessage > 5)} />
           </div>
         )}
 

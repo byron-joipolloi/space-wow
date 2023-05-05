@@ -100,7 +100,7 @@
   @apply font-bold;
 }
 
-/*.slide-up-1 {
+.slide-up-1 {
   animation: .5s .25s slideup backwards ease-out;
 }
 
@@ -110,7 +110,7 @@
 
 .slide-up-3 {
   animation: .5s .75s slideup backwards ease-out;
-}*/
+}
 
 @keyframes slideup {
   from {

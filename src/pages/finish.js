@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Message from '../components/Message.js'
+import MessageScore from '../components/MessageScore.js'
 import data from '../data.json'
 
 const imgLoader = ({ src, width, quality }) => {
@@ -49,20 +50,14 @@ export default function Finish({
       <div className="max-w-sm mx-auto px-6 py-10 relative">
         
         <div>
-          {(activeMessage > 0) ? (
-            <div className="message message-score text-xl pt-4 pb-6 px-4 bg-white text-[#374590] mb-8 rounded-[0.25rem] relative shadow-[0.4rem_0.5rem_0_#6071be] slide-up-1 text-center">
-              <div>
-                <p>You've found <span className="block font-serif italic text-5xl">{score - 1} of 4</span></p>
-              </div>
-            </div>
-          ) : null}
-          {(activeMessage > 1 && progress.active === 'attitudes') ? <Message text={finish.attitudes} /> : null}
-          {(activeMessage > 1 && progress.active === 'health') ? <Message text={finish.health} /> : null}
-          {(activeMessage > 1 && progress.active === 'safety') ? <Message text={finish.safety} /> : null}
-          {(activeMessage > 1 && progress.active === 'environment') ? <Message text={finish.environment} /> : null}
+          <MessageScore isVisible={(activeMessage > 0)} score={score} />
+          <Message text={finish.attitudes} isVisible={(activeMessage > 1 && progress.active === 'attitudes')} />
+          <Message text={finish.health} isVisible={(activeMessage > 1 && progress.active === 'health')} />
+          <Message text={finish.safety} isVisible={(activeMessage > 1 && progress.active === 'safety')} />
+          <Message text={finish.environment} isVisible={(activeMessage > 1 && progress.active === 'environment')} />
           
-          {(activeMessage > 2 && qrCode.page === undefined) ? <Message text={finish.textOnline} /> : null}
-          {(activeMessage > 2 && qrCode.page !== undefined) ? <Message text={finish.textQr} /> : null}
+          <Message text={finish.textOnline} isVisible={(activeMessage > 2 && qrCode.page === undefined)} />
+          <Message text={finish.textQr} isVisible={(activeMessage > 2 && qrCode.page !== undefined)} />
         </div>
 
         <div className="mb-6">

@@ -77,6 +77,7 @@ export default function Health({
               <span className="block font-bold">{health[0].title[0]}</span>
               <span className="block italic">{health[0].title[1]}</span>
               <span className="block font-bold">{health[0].title[2]}</span>
+              <span className="block font-bold">{health[0].title[3]}</span>
             </h1>
           </div>
 

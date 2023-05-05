@@ -86,6 +86,7 @@ export default function Intro({
             {(activeMessage > 2) ? <Message text={introQr.text[2]} /> : null}
             {(activeMessage > 3) ? <Message text={introQr.text[3]} /> : null}
             {(activeMessage > 4) ? <Message text={introQr.text[4]} /> : null}
+            {(activeMessage > 5) ? <Message text={introQr.text[5]} /> : null}
           </div>
         )}
 

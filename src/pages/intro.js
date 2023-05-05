@@ -66,18 +66,18 @@ export default function Intro({
   }, [activeMessage])
 
   return (
-    <div className="flex items-end h-screen bg-[#accff8] bg-[url('/bg-blue.png')] bg-center bg-no-repeat bg-cover">
+    <div className="flex items-end h-[100dvh] bg-[#accff8] bg-[url('/bg-blue.png')] bg-center bg-no-repeat bg-cover">
       <div className="max-w-sm mx-auto px-6 py-10 relative overflow-hidden">
         
 
         {(Object.keys(qrCode).length === 0) ? (
           <div>
-            {(activeMessage > 0) ? <Message text={intro.text[0]} /> : null}
-            {(activeMessage > 1) ? <Message text={intro.text[1]} /> : null}
-            {(activeMessage > 2) ? <Message text={intro.text[2]} /> : null}
-            {(activeMessage > 3) ? <Message text={intro.text[3]} /> : null}
-            {(activeMessage > 4) ? <Message text={intro.text[4]} /> : null}
-            {(activeMessage > 5) ? <Message text={intro.text[5]} /> : null}
+            <Message text={intro.text[0]} className={(activeMessage > 0) ? `block` : 'hidden'} />
+            <Message text={intro.text[1]} className={(activeMessage > 1) ? `block` : 'hidden'} />
+            <Message text={intro.text[2]} className={(activeMessage > 2) ? `block` : 'hidden'} />
+            <Message text={intro.text[3]} className={(activeMessage > 3) ? `block` : 'hidden'} />
+            <Message text={intro.text[4]} className={(activeMessage > 4) ? `block` : 'hidden'} />
+            <Message text={intro.text[5]} className={(activeMessage > 5) ? `block` : 'hiddaten'} />
           </div>
         ) : (
           <div>

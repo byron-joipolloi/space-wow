@@ -17,7 +17,7 @@ export default function Credits({
 }) {
   return (
     <div className="bg-[#fecee1] bg-[url('/bg-pink.png')] bg-center bg-no-repeat bg-cover">
-      <div className="flex flex-col justify-between min-h-screen max-w-sm w-full mx-auto px-6 py-10 text-center space-y-12 space-y-6">
+      <div className="flex flex-col justify-between min-h-[100dvh] max-w-sm w-full mx-auto px-6 py-10 text-center space-y-12 space-y-6">
         
         <h1 className="text-[#a50c9d] font-serif text-6xl uppercase">
           <span className="block font-bold">{credits.title[0]}</span>

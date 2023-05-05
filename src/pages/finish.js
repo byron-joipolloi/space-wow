@@ -45,7 +45,7 @@ export default function Finish({
   console.log(activeMessage, score, qrCode.page)
 
   return (
-    <div className="flex items-end h-screen bg-[#accff8] bg-[url('/bg-blue.png')] bg-center bg-no-repeat bg-cover">
+    <div className="flex items-end h-[100dvh] bg-[#accff8] bg-[url('/bg-blue.png')] bg-center bg-no-repeat bg-cover">
       <div className="max-w-sm mx-auto px-6 py-10 relative">
         
         <div>

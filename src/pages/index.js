@@ -49,7 +49,7 @@ export default function Home({
     <div className="bg-[#fecee1] bg-[url('/bg-pink.png')] bg-center bg-no-repeat bg-cover">
       <div className="flex flex-col justify-between min-h-[100dvh] max-w-sm w-full mx-auto px-6 py-10 text-center space-y-12">
         <div className="flex items-center justify-center space-x-6">
-          <span>
+          <a href="https://leeds2023.co.uk/">
             <Image
               loader={imgLoader}
               src="/img-leeds.png"
@@ -58,8 +58,8 @@ export default function Home({
               height={33}
               className="max-w-full"
             />
-          </span>
-          <span>
+          </a>
+          <a href="https://thewowfoundation.com/">
             <Image
               loader={imgLoader}
               src="/img-wow.png"
@@ -68,8 +68,8 @@ export default function Home({
               height={33}
               className="max-w-full"
             />
-          </span>
-          <span>
+          </a>
+          <a href="https://www.thespace.org/">
             <Image
               loader={imgLoader}
               src="/img-space.png"
@@ -78,7 +78,7 @@ export default function Home({
               height={34}
               className="max-w-full"
             />
-          </span>
+          </a>
         </div>
 
         <div className="space-y-6 slide-up-1">

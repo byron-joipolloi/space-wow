@@ -27,7 +27,7 @@ export default function Credits({
         <div className="text-2xl text-[#a50c9d] text-left slide-up-1" dangerouslySetInnerHTML={{ __html: credits.text }}></div>
 
         <div className="flex items-center justify-center space-x-6">
-          <span>
+          <a href="https://leeds2023.co.uk/">
             <Image
               loader={imgLoader}
               src="/img-leeds.png"
@@ -36,8 +36,8 @@ export default function Credits({
               height={33}
               className="max-w-full"
             />
-          </span>
-          <span>
+          </a>
+          <a href="https://thewowfoundation.com/">
             <Image
               loader={imgLoader}
               src="/img-wow.png"
@@ -46,8 +46,8 @@ export default function Credits({
               height={33}
               className="max-w-full"
             />
-          </span>
-          <span>
+          </a>
+          <a href="https://www.thespace.org/">
             <Image
               loader={imgLoader}
               src="/img-space.png"
@@ -56,11 +56,11 @@ export default function Credits({
               height={34}
               className="max-w-full"
             />
-          </span>
+          </a>
         </div>
 
         <div className="flex items-center justify-center space-x-6">
-          <span>
+          <a href="https://leeds.trinitymat.org/">
             <Image
               loader={imgLoader}
               src="/img-trinity.png"
@@ -69,8 +69,8 @@ export default function Credits({
               height={78}
               className="max-w-full"
             />
-          </span>
-          <span>
+          </a>
+          <a href="https://www.four.agency/">
             <Image
               loader={imgLoader}
               src="/img-four.png"
@@ -79,7 +79,7 @@ export default function Credits({
               height={32}
               className="max-w-full"
             />
-          </span>
+          </a>
         </div>
 
         <Link href="/menu" className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#a50c9d] border-5 border-[#7b0575] text-white shadow-sm transition">Back to menu</Link>

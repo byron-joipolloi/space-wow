@@ -46,13 +46,13 @@ export default function Intro({
     setProgress(newProgress)
     updateLocalStorage('progress', newProgress)
 
-    if (qr.page) {
+    if (qr.page === 'qr') {
       router.push({
-        pathname: `/${qr.page}`,
+        pathname: '/reader',
       })
     } else {
       router.push({
-        pathname: intro.link.url,
+        pathname: '/menu',
       })
     }
   }

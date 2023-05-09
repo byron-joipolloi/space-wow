@@ -15,6 +15,7 @@ export default function Finish({
   progress,
   getScore,
   qrCode,
+  setQrCode,
 }) {
   const [messages, setMessages] = useState()
   const [activeMessage, setActiveMessage] = useState(1)
@@ -40,7 +41,7 @@ export default function Finish({
   const score = getScore(progress)
 
   const openQrScanner = () => {
-    alert('open QR code scanner')
+    console.log(qrCode)
   }
 
   console.log(activeMessage, score, qrCode.page)
@@ -81,8 +82,8 @@ export default function Finish({
             <Link href="/credits" className="text-lg uppercase tracking-widest flex items-center justify-center h-[60px] px-6 bg-[#374590] border-5 border-[#10194a] text-white ml-3">Credits</Link>
           ) : null}
 
-          {(activeMessage >= 3 && score !== 5 && qrCode.page !== undefined) ? (
-            <button onClick={() => openQrScanner()} className="text-lg uppercase tracking-widest flex items-center justify-center h-[60px] px-6 bg-[#374590] border-5 border-[#10194a] text-white ml-3">Find a Station</button>
+          {(activeMessage >= 3 && score !== 5 && qrCode.page === 'qr') ? (
+            <Link href="/reader" className="text-lg uppercase tracking-widest flex items-center justify-center h-[60px] px-6 bg-[#374590] border-5 border-[#10194a] text-white ml-3">Find a station</Link>
           ) : null}
 
           {(activeMessage >= 3 && score !== 5 && qrCode.page === undefined) ? (

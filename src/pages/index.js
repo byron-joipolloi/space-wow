@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import data from '../data.json'
@@ -26,9 +26,9 @@ export default function Home({
       router.push({
         pathname: '/intro',
       })
-    } else if (qr.page) {
+    } else if (qr.page === 'qr') {
       router.push({
-        pathname: `/${qr.page}`,
+        pathname: '/reader',
       })
     } else {
       router.push({
@@ -40,10 +40,6 @@ export default function Home({
   useEffect(() => {
     
   })
-
-  const onNewScanResult = (decodedText, decodedResult) => {
-    console.log(decodedText, decodedResult)
-  };
 
   return (
     <div className="bg-[#fecee1] bg-[url('/bg-pink.png')] bg-center bg-no-repeat bg-cover">
@@ -92,13 +88,6 @@ export default function Home({
         </div>
 
         <button onClick={() => handleStart(qrCode)} className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#a50c9d] border-5 border-[#7b0575] text-white shadow-sm transition">Start</button>
-        
-        {/*<Html5QrcodePlugin
-          fps={10}
-          qrbox={375}
-          disableFlip={false}
-          qrCodeSuccessCallback={onNewScanResult}
-        />*/}
 
       </div>
 

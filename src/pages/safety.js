@@ -15,6 +15,7 @@ export default function Safety({
   setProgress,
   updateLocalStorage,
   getScore,
+  qrCode,
 }) {
   const router = useRouter()
   let score = getScore(progress)
@@ -47,7 +48,7 @@ export default function Safety({
     updateLocalStorage('progress', newProgress)
 
     if (newCompleted) {
-      router.push({
+      router.replace({
         pathname: '/finish',
       })
     }

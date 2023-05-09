@@ -61,19 +61,12 @@ export default function App({ Component, pageProps }) {
     let newProgress = JSON.parse(localStorage.getItem('progress')) || initialProgress
     setProgress(newProgress)
 
-    if ('?attitudes' == location.search) {
-      updateQr('attitudes')
-    }
-    if ('?health' == location.search) {
-      updateQr('health')
-    }
-    if ('?safety' == location.search) {
-      updateQr('safety')
-    }
-    if ('?environment' == location.search) {
-      updateQr('environment')
+    if ('?qr' == location.search) {
+      updateQr('qr')
     }
   }, [])
+
+  // console.log(`QR: ${qrCode}`)
 
   return (
     <Component

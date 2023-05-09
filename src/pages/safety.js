@@ -199,6 +199,19 @@ export default function Safety({
 
           <div className="text-xl text-[#DA1B64] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: safety[6].text }}></div>
 
+          <button onClick={() => handleClick(9)} className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Next</button>
+        </div>
+      </div>
+    )
+  } else if (progress.safety.step === 9) {
+    return (
+      <div className="bg-[#FFF6F5] bg-[url('/bg-light-pink.png')] bg-center bg-no-repeat bg-cover">
+        <div className="flex flex-col justify-between min-h-[100dvh] max-w-sm w-full mx-auto px-6 py-10 space-y-12">
+
+          <p className="end text-[#DA1B64] font-serif text-6xl uppercase text-center" dangerouslySetInnerHTML={{ __html: safety[7].title }}></p>
+
+          <div className="text-2xl text-[#DA1B64] space-y-3" dangerouslySetInnerHTML={{ __html: safety[7].text }}></div>
+
           <button onClick={() => handleFinish(1)} className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Finish</button>
         </div>
       </div>

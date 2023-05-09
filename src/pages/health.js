@@ -202,6 +202,19 @@ export default function Health({
           <div className="text-xl text-[#9C0D95] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: health[6].text }}>
             </div>
 
+          <button onClick={() => handleClick(9)} className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#9C0D95] border-5 border-[#72056D] text-white shadow-sm transition">Next</button>
+        </div>
+      </div>
+    )
+  } else if (progress.health.step === 9) {
+    return (
+      <div className="bg-[#FFC33C] bg-[url('/bg-yellow.png')] bg-center bg-no-repeat bg-cover">
+        <div className="flex flex-col justify-between min-h-[100dvh] max-w-sm w-full mx-auto px-6 py-10 space-y-12">
+
+          <p className="end text-[#9C0D95] font-serif text-6xl uppercase text-center" dangerouslySetInnerHTML={{ __html: health[7].title }}></p>
+
+          <div className="text-2xl text-[#9C0D95] space-y-3" dangerouslySetInnerHTML={{ __html: health[7].text }}></div>
+
           <button onClick={() => handleFinish(1)} className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#9C0D95] border-5 border-[#72056D] text-white shadow-sm transition">Finish</button>
         </div>
       </div>

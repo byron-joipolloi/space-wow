@@ -24,7 +24,7 @@ export default function Credits({
           <span className="block italic">{credits.title[1]}</span>
         </h1>
 
-        <div className="text-2xl text-[#a50c9d] text-left slide-up-1" dangerouslySetInnerHTML={{ __html: credits.text }}></div>
+        <div className="text-2xl text-[#a50c9d] text-center slide-up-1" dangerouslySetInnerHTML={{ __html: credits.text }}></div>
 
         <div className="flex items-center justify-center space-x-6">
           <a href="https://leeds2023.co.uk/">

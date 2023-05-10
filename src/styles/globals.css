@@ -125,7 +125,7 @@
 }
 
 .qr-reader div {
-  height: 250px;
+  height: 100vh;
   position: relative;
   padding: 0 !important;
 }
@@ -141,6 +141,19 @@
   margin-left: -125px !important;
   top: 50% !important;
   margin-top: -125px !important;
+}
+
+.qr-reader div::before {
+  content: 'Scan a QR code';
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  position: absolute;
+  top: 25%;
+  left: 0;
+  right: 0;
+  z-index: 10;
 }
 
 .qr-reader video {

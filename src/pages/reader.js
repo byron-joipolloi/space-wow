@@ -10,8 +10,8 @@ export default function Reader({
   const router = useRouter()
 
   return (
-    <div className="bg-[#000] bg-center bg-no-repeat bg-cover">
-      <div className="flex flex-col justify-center min-h-[100dvh] max-w-sm w-full mx-auto px-6 py-10 text-center space-y-12">
+    <div className="bg-[#000]">
+      <div className="min-h-[100dvh] max-w-sm w-full mx-auto text-center">
         <QrReader
           className="qr-reader"
           constraints={{ facingMode: 'environment' }}

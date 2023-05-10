@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "AWS_PROFILE=the-space deploy-aws-s3-cloudfront --bucket the-space-wow-live --source out --distribution E12Z94DKQZII2O --invalidation-path /* --non-interactive",
-    "deploy-staging": "AWS_PROFILE=the-space deploy-aws-s3-cloudfront --bucket the-space-wow-staging --source out --distribution E2RWOIQN9LUQ6L --invalidation-path /* --non-interactive"
+    "deploy": "AWS_PROFILE=the-space deploy-aws-s3-cloudfront --bucket the-space-wow-live --source out --distribution E12Z94DKQZII2O --invalidation-path \"/*\" --non-interactive",
+    "deploy-staging": "AWS_PROFILE=the-space deploy-aws-s3-cloudfront --bucket the-space-wow-staging --source out --distribution E2RWOIQN9LUQ6L --invalidation-path \"/*\" --non-interactive"
   },
   "dependencies": {
     "autoprefixer": "10.4.14",

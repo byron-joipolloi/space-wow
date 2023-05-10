@@ -86,7 +86,7 @@ export default function Environment({
     )
   } else if (progress.environment.step === 2) {
     return (
-      <div className="bg-[#FF8FBA] bg-[url('/bg-medium-pink.png')] bg-center bg-no-repeat bg-cover">
+      <div className="bg-[#FF8FBA] bg-[url('/bg-medium-pink.png')] bg-center bg-no-repeat bg-cover overflow-hidden">
         <div className="flex flex-col justify-between min-h-[100dvh] max-w-sm w-full mx-auto px-6 py-10 space-y-12">
 
           <Image
@@ -126,7 +126,7 @@ export default function Environment({
     )
   } else if (progress.environment.step === 4) {
     return (
-      <div className="bg-[#FF8FBA] bg-[url('/bg-medium-pink.png')] bg-center bg-no-repeat bg-cover">
+      <div className="bg-[#FF8FBA] bg-[url('/bg-medium-pink.png')] bg-center bg-no-repeat bg-cover overflow-hidden">
         <div className="flex flex-col justify-between min-h-[100dvh] max-w-sm w-full mx-auto px-6 py-10 space-y-12">
 
           <Image

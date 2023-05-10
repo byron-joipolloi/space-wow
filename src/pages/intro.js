@@ -46,7 +46,23 @@ export default function Intro({
     setProgress(newProgress)
     updateLocalStorage('progress', newProgress)
 
-    if (qr.page !== undefined) {
+    if (qr.page === 'attitudes') {
+      router.push({
+        pathname: '/attitudes',
+      })
+    } else if (qr.page === 'health') {
+      router.push({
+        pathname: '/health',
+      })
+    } else if (qr.page === 'safety') {
+      router.push({
+        pathname: '/safety',
+      })
+    } else if (qr.page === 'environment') {
+      router.push({
+        pathname: '/environment',
+      })
+    } else if (qr.page !== undefined) {
       router.push({
         pathname: '/reader',
       })

@@ -26,9 +26,21 @@ export default function Home({
       router.push({
         pathname: '/intro',
       })
-    } else if (qr.page === 'qr') {
+    } else if (qr.page === 'attitudes') {
       router.push({
-        pathname: '/reader',
+        pathname: '/attitudes',
+      })
+    } else if (qr.page === 'health') {
+      router.push({
+        pathname: '/health',
+      })
+    } else if (qr.page === 'safety') {
+      router.push({
+        pathname: '/safety',
+      })
+    } else if (qr.page === 'environment') {
+      router.push({
+        pathname: '/environment',
       })
     } else {
       router.push({

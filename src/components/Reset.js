@@ -12,13 +12,15 @@ export default function Reset({
     function resetLocalStorage() {
         const newProgress = {...initialProgress};
         setProgress(newProgress)
-        setQrCode({})
+        setQrCode({page: 'qr'})
 
         localStorage.removeItem('qr');
+        localStorage.setItem('qr', JSON.stringify({page: 'qr'}));
         // localStorage.removeItem('progress');
 
         router.push({
-          pathname: '/?qr',
+          pathname: '/',
+          query: { qr: 1 }
         })
     }
 

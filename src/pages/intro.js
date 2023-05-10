@@ -46,7 +46,7 @@ export default function Intro({
     setProgress(newProgress)
     updateLocalStorage('progress', newProgress)
 
-    if (qr.page === 'qr') {
+    if (qr.page !== undefined) {
       router.push({
         pathname: '/reader',
       })

@@ -40,12 +40,6 @@ export default function Finish({
 
   const score = getScore(progress)
 
-  const openQrScanner = () => {
-    console.log(qrCode)
-  }
-
-  console.log(activeMessage, score, qrCode.page)
-
   return (
     <div className="flex items-end h-[100dvh] bg-[#accff8] bg-[url('/bg-blue.png')] bg-center bg-no-repeat bg-cover">
       <div className="max-w-sm mx-auto px-6 py-10 relative">
@@ -82,7 +76,7 @@ export default function Finish({
             <Link href="/credits" className="text-lg uppercase tracking-widest flex items-center justify-center h-[60px] px-6 bg-[#374590] border-5 border-[#10194a] text-white ml-3">Credits</Link>
           ) : null}
 
-          {(activeMessage >= 3 && score !== 5 && qrCode.page === 'qr') ? (
+          {(activeMessage >= 3 && score !== 5 && qrCode.page !== undefined) ? (
             <Link href="/reader" className="text-lg uppercase tracking-widest flex items-center justify-center h-[60px] px-6 bg-[#374590] border-5 border-[#10194a] text-white ml-3">Find a station</Link>
           ) : null}
 

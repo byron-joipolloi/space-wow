@@ -17,15 +17,12 @@ export default function Reader({
           constraints={{ facingMode: 'environment' }}
           onResult={(result, error) => {
             if (!!result) {
-              const path = result?.text.substring(result?.text.lastIndexOf("?") + 1);
+              const path = result?.text.replace('https://www.one-way-or-another.co.uk/?', '')
               setData(path);
-              const obj = {}
-              obj[path] = 1
 
               if (progress.firstTime) {
                 router.push({
-                  pathname: `/intro`,
-                  query: obj
+                  pathname: `/intro?${path}`,
                 })
               } else {
                 router.push({

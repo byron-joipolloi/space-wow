@@ -18,7 +18,7 @@ export default function Reset({
         // localStorage.removeItem('progress');
 
         router.push({
-          pathname: '/',
+          pathname: '/?qr',
         })
     }
 

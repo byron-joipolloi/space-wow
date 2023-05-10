@@ -17,12 +17,15 @@ export default function Reader({
           constraints={{ facingMode: 'environment' }}
           onResult={(result, error) => {
             if (!!result) {
-              const path = result?.text.replace('https://space-wow.vercel.app/?', '')
+              const path = result?.text.substring(result?.text.lastIndexOf("?") + 1);
               setData(path);
+              const obj = {}
+              obj[path] = 1
 
               if (progress.firstTime) {
                 router.push({
-                  pathname: `/intro?${path}`,
+                  pathname: `/intro`,
+                  query: obj
                 })
               } else {
                 router.push({

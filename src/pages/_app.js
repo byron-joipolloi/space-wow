@@ -1,5 +1,6 @@
 import '@/styles/globals.css'
 import { useState, useEffect } from "react"
+import { GoogleAnalytics } from "nextjs-google-analytics"
 
 export const initialProgress = {
   active: '',
@@ -79,16 +80,19 @@ export default function App({ Component, pageProps }) {
   }, [])
 
   return (
-    <Component
-      {...pageProps}
-      progress={progress}
-      setProgress={updateLocalProgress}
-      updateLocalStorage={() => {}}
-      getScore={getScore}
-      qrCode={qrCode}
-      setQrCode={setQrCode}
-      scenario={scenario}
-      setScenario={setScenario}
-    />
+    <>
+      <GoogleAnalytics trackPageViews />
+      <Component
+        {...pageProps}
+        progress={progress}
+        setProgress={updateLocalProgress}
+        updateLocalStorage={() => {}}
+        getScore={getScore}
+        qrCode={qrCode}
+        setQrCode={setQrCode}
+        scenario={scenario}
+        setScenario={setScenario}
+      />
+    </>
   )
 }

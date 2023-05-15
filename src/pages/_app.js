@@ -1,4 +1,5 @@
 import '@/styles/globals.css'
+import Head from 'next/head'
 import { useState, useEffect } from "react"
 import { GoogleAnalytics } from "nextjs-google-analytics"
 
@@ -81,6 +82,9 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
+      <Head>
+        <title>One Way or Another</title>
+      </Head>
       <GoogleAnalytics trackPageViews />
       <Component
         {...pageProps}

@@ -17,17 +17,17 @@ export default function Credits({
 }) {
   return (
     <div className="bg-[#fecee1] bg-[url('/bg-pink.png')] bg-center bg-no-repeat bg-cover">
-      <div className="flex flex-col justify-between min-h-[100dvh] max-w-sm w-full mx-auto px-6 py-10 text-center space-y-12 space-y-6">
+      <div className="flex flex-col justify-between min-h-[100dvh] max-w-sm w-full mx-auto px-6 py-10 text-center space-y-12 space-y-4">
         
         <h1 className="text-[#a50c9d] font-serif text-6xl uppercase">
           <span className="block font-bold">{credits.title[0]}</span>
           <span className="block italic">{credits.title[1]}</span>
         </h1>
 
-        <div className="text-2xl text-[#a50c9d] text-center slide-up-1" dangerouslySetInnerHTML={{ __html: credits.text }}></div>
+        <div className="text-xl text-[#a50c9d] text-center slide-up-1" dangerouslySetInnerHTML={{ __html: credits.text }}></div>
 
-        <div className="flex items-center justify-center space-x-6">
-          <a href="https://leeds2023.co.uk/">
+        <div className="flex flex-wrap items-center justify-center">
+          <a href="https://leeds2023.co.uk/" class="mx-2 mb-4 mt-0">
             <Image
               loader={imgLoader}
               src="/img-leeds.png"
@@ -37,7 +37,7 @@ export default function Credits({
               className="max-w-full"
             />
           </a>
-          <a href="https://thewowfoundation.com/">
+          <a href="https://thewowfoundation.com/" class="mx-2 mb-4 mt-0">
             <Image
               loader={imgLoader}
               src="/img-wow.png"
@@ -47,7 +47,7 @@ export default function Credits({
               className="max-w-full"
             />
           </a>
-          <a href="https://www.thespace.org/">
+          <a href="https://www.thespace.org/" class="mx-2 mb-4 mt-0">
             <Image
               loader={imgLoader}
               src="/img-space.png"
@@ -57,10 +57,17 @@ export default function Credits({
               className="max-w-full"
             />
           </a>
-        </div>
-
-        <div className="flex items-center justify-center space-x-6">
-          <a href="https://leeds.trinitymat.org/">
+          <a href="https://www.artscouncil.org.uk/" class="mx-2 mb-4 mt-0">
+            <Image
+              loader={imgLoader}
+              src="/img-lottery.png"
+              alt="Lottery Funded"
+              width={260}
+              height={70}
+              className="max-w-full"
+            />
+          </a>
+          <a href="https://leeds.trinitymat.org/" class="mx-2 mb-4 mt-0">
             <Image
               loader={imgLoader}
               src="/img-trinity.png"
@@ -70,7 +77,7 @@ export default function Credits({
               className="max-w-full"
             />
           </a>
-          <a href="https://www.four.agency/">
+          <a href="https://www.four.agency/" class="mx-2 mb-4 mt-0">
             <Image
               loader={imgLoader}
               src="/img-four.png"

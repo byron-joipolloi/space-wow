@@ -56,8 +56,8 @@ export default function Home({
   return (
     <div className="bg-[#fecee1] bg-[url('/bg-pink.png')] bg-center bg-no-repeat bg-cover">
       <div className="flex flex-col justify-between min-h-[100dvh] max-w-sm w-full mx-auto px-6 py-10 text-center space-y-12">
-        <div className="flex items-center justify-center space-x-6">
-          <a href="https://leeds2023.co.uk/">
+        <div className="flex flex-wrap items-center justify-center">
+          <a href="https://leeds2023.co.uk/" class="mx-2 mb-4 mt-0">
             <Image
               loader={imgLoader}
               src="/img-leeds.png"
@@ -67,7 +67,7 @@ export default function Home({
               className="max-w-full"
             />
           </a>
-          <a href="https://thewowfoundation.com/">
+          <a href="https://thewowfoundation.com/" class="mx-2 mb-4 mt-0">
             <Image
               loader={imgLoader}
               src="/img-wow.png"
@@ -77,13 +77,23 @@ export default function Home({
               className="max-w-full"
             />
           </a>
-          <a href="https://www.thespace.org/">
+          <a href="https://www.thespace.org/" class="mx-2 mb-4 mt-0">
             <Image
               loader={imgLoader}
               src="/img-space.png"
               alt="Leeds 2020"
               width={105}
               height={34}
+              className="max-w-full"
+            />
+          </a>
+          <a href="https://www.artscouncil.org.uk/" class="mx-2 mb-4 mt-0">
+            <Image
+              loader={imgLoader}
+              src="/img-lottery.png"
+              alt="Lottery Funded"
+              width={260}
+              height={70}
               className="max-w-full"
             />
           </a>

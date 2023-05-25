@@ -53,6 +53,7 @@ export default function Finish({
           
           <Message text={finish.textOnline} isVisible={(activeMessage > 2 && qrCode.page === undefined)} />
           <Message text={finish.textQr} isVisible={(activeMessage > 2 && qrCode.page !== undefined)} />
+          <Message text={finish.stayInTouch.text} isVisible={(activeMessage > 2 && qrCode.page === undefined)} link={finish.stayInTouch.link} />
         </div>
 
         <div className="mb-6">

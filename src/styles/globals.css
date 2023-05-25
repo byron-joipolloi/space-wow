@@ -68,9 +68,9 @@
   width: 170px;
 }
 
-/*.message:not(:last-child) div {
-  filter: blur(3px);
-}*/
+.message strong {
+  @apply font-serif italic block text-5xl mb-4;
+}
 
 .quote p:first-child {
   @apply text-lg mb-4;

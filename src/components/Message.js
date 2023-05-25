@@ -2,7 +2,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 export default function Message({
   text,
-  isVisible
+  isVisible,
+  link
 }) {
   return (
     <AnimatePresence mode={'popLayout'}>
@@ -15,9 +16,15 @@ export default function Message({
           transition={{ type: 'spring' }}
           className={`message text-xl py-4 px-5 bg-white text-[#374590] mb-8 rounded-[0.25rem] relative shadow-[0.4rem_0.5rem_0_#6071be]`}
         >
-          <div>
-            <p>{text}</p>
-          </div>
+          {link ? (
+            <a href={link} target="_blank" rel="noopener noreferrer">
+              <p className="text-center" dangerouslySetInnerHTML={{ __html: text }}></p>
+            </a>
+          ) : (
+            <div>
+              <p>{text}</p>
+            </div>
+          )}
         </motion.div>
       )}
     </AnimatePresence>

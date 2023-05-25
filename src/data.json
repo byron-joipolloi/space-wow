@@ -246,7 +246,11 @@
         "environment": "How do you think the environment would be different if the world around us was built by women?",
         "health": "How do you think our health would be different if the world around us was built by women?",
         "textQr": "Write your thoughts on the blackboard, and then find another station.",
-        "textOnline": "Have a chat to your friends about your thoughts."
+        "textOnline": "Have a chat to your friends about your thoughts.",
+        "stayInTouch": {
+            "text": "<strong>Sign up</strong> to our mailing list at <span class='underline'>thewowfoundation.com</span>",
+            "link": "https://thewowfoundation.com/"
+        }
     },
     "credits": {
         "title": [

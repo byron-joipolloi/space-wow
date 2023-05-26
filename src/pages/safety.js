@@ -81,7 +81,7 @@ export default function Safety({
             </h1>
           </div>
 
-          <button onClick={() => handleClick(2)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Start</button>
+          <button onClick={() => handleClick(2)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Start</button>
         </div>
       </div>
     )
@@ -101,7 +101,14 @@ export default function Safety({
 
           <div className="text-2xl text-[#DA1B64] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: safety[1].text }}></div>
 
-          <button onClick={() => handleClick(3)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Next</button>
+          <div className="flex">
+            <button onClick={() => handleClick(1)} className="flex items-center justify-center min-w-[50px] min-h-[60px] bg-[#DA1B64] border-5 border-[#96013B] text-white mr-3 disabled:opacity-50">
+              <span className="sr-only">Previous</span>
+              <svg fill="currentColor" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </button>
+
+            <button onClick={() => handleClick(3)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Next</button>
+          </div>
         </div>
       </div>
     )
@@ -119,8 +126,16 @@ export default function Safety({
           </div>
 
           <div>
-            <button onClick={() => handleClick(4)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-white border-5 border-[#96013B] text-[#DA1B64] shadow-sm transition mb-4">{safety[2].button[0]}</button>
-            <button onClick={() => handleClick(7)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-white border-5 border-[#96013B] text-[#DA1B64] shadow-sm transition">{safety[2].button[1]}</button>
+            <button onClick={() => handleClick(4)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-white border-5 border-[#96013B] text-[#DA1B64] shadow-sm transition mb-4">{safety[2].button[0]}</button>
+
+            <div className="flex items-end">
+              <button onClick={() => handleClick(2)} className="flex items-center justify-center min-w-[50px] min-h-[60px] bg-white border-5 border-[#96013B] text-[#DA1B64] mr-3 disabled:opacity-50">
+                <span className="sr-only">Previous</span>
+                <svg fill="currentColor" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+              </button>
+              
+              <button onClick={() => handleClick(7)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-white border-5 border-[#96013B] text-[#DA1B64] shadow-sm transition">{safety[2].button[1]}</button>
+            </div>
           </div>
         </div>
       </div>
@@ -141,7 +156,14 @@ export default function Safety({
 
           <div className="text-2xl text-[#DA1B64] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: safety[3].text }}></div>
 
-          <button onClick={() => handleClick(5)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Next</button>
+          <div className="flex">
+            <button onClick={() => handleClick(3)} className="flex items-center justify-center min-w-[50px] min-h-[60px] bg-[#DA1B64] border-5 border-[#96013B] text-white mr-3 disabled:opacity-50">
+              <span className="sr-only">Previous</span>
+              <svg fill="currentColor" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </button>
+
+            <button onClick={() => handleClick(5)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Next</button>
+          </div>
         </div>
       </div>
     )
@@ -159,8 +181,16 @@ export default function Safety({
           </div>
 
           <div>
-            <button onClick={() => handleClick(6)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-white border-5 border-[#96013B] text-[#DA1B64] shadow-sm transition mb-4">{safety[4].button[0]}</button>
-            <button onClick={() => handleClick(7)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-white border-5 border-[#96013B] text-[#DA1B64] shadow-sm transition">{safety[4].button[1]}</button>
+            <button onClick={() => handleClick(6)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-white border-5 border-[#96013B] text-[#DA1B64] shadow-sm transition mb-4">{safety[4].button[0]}</button>
+
+            <div className="flex items-end">
+              <button onClick={() => handleClick(4)} className="flex items-center justify-center min-w-[50px] min-h-[60px] bg-white border-5 border-[#96013B] text-[#DA1B64] mr-3 disabled:opacity-50">
+                <span className="sr-only">Previous</span>
+                <svg fill="currentColor" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+              </button>
+
+              <button onClick={() => handleClick(7)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-white border-5 border-[#96013B] text-[#DA1B64] shadow-sm transition">{safety[4].button[1]}</button>
+            </div>
           </div>
         </div>
       </div>
@@ -174,7 +204,14 @@ export default function Safety({
 
           <blockquote className="quote bg-white text-[#DA1B64] p-7 rounded-[0.25rem] shadow-[0.5rem_0.5rem_0_#DA1B64B3] slide-up-2" dangerouslySetInnerHTML={{ __html: safety[5].quote }}></blockquote>
 
-          <button onClick={() => handleClick(8)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Next</button>
+          <div className="flex">
+            <button onClick={() => handleClick(5)} className="flex items-center justify-center min-w-[50px] min-h-[60px] bg-[#DA1B64] border-5 border-[#96013B] text-white mr-3 disabled:opacity-50">
+              <span className="sr-only">Previous</span>
+              <svg fill="currentColor" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </button>
+
+            <button onClick={() => handleClick(8)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Next</button>
+          </div>
         </div>
       </div>
     )
@@ -187,7 +224,14 @@ export default function Safety({
 
           <blockquote className="quote bg-white text-[#DA1B64] p-7 rounded-[0.25rem] shadow-[0.5rem_0.5rem_0_#DA1B64B3] slide-up-2" dangerouslySetInnerHTML={{ __html: safety[5].quote }}></blockquote>
 
-          <button onClick={() => handleClick(8)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Next</button>
+          <div className="flex">
+            <button onClick={() => handleClick(3)} className="flex items-center justify-center min-w-[50px] min-h-[60px] bg-[#DA1B64] border-5 border-[#96013B] text-white mr-3 disabled:opacity-50">
+              <span className="sr-only">Previous</span>
+              <svg fill="currentColor" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </button>
+
+            <button onClick={() => handleClick(8)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Next</button>
+          </div>
         </div>
       </div>
     )
@@ -200,7 +244,14 @@ export default function Safety({
 
           <div className="text-xl text-[#DA1B64] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: safety[6].text }}></div>
 
-          <button onClick={() => handleClick(9)} className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Next</button>
+          <div className="flex">
+            <button onClick={() => handleClick(7)} className="flex items-center justify-center min-w-[50px] min-h-[60px] bg-[#DA1B64] border-5 border-[#96013B] text-white mr-3 disabled:opacity-50">
+              <span className="sr-only">Previous</span>
+              <svg fill="currentColor" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </button>
+
+            <button onClick={() => handleClick(9)} className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Next</button>
+          </div>
         </div>
       </div>
     )
@@ -213,7 +264,14 @@ export default function Safety({
 
           <div className="text-2xl text-[#DA1B64] space-y-3" dangerouslySetInnerHTML={{ __html: safety[7].text }}></div>
 
-          <button onClick={() => handleFinish(1)} className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Finish</button>
+          <div className="flex">
+            <button onClick={() => handleClick(8)} className="flex items-center justify-center min-w-[50px] min-h-[60px] bg-[#DA1B64] border-5 border-[#96013B] text-white mr-3 disabled:opacity-50">
+              <span className="sr-only">Previous</span>
+              <svg fill="currentColor" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </button>
+
+            <button onClick={() => handleFinish(1)} className="min-h-[60px] text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#DA1B64] border-5 border-[#96013B] text-white shadow-sm transition">Finish</button>
+          </div>
         </div>
       </div>
     )

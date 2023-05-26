@@ -82,7 +82,7 @@ export default function Attitudes({
             </h1>
           </div>
 
-          <button onClick={() => handleClick(2)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Start</button>
+          <button onClick={() => handleClick(2)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Start</button>
         </div>
       </div>
     )
@@ -102,7 +102,14 @@ export default function Attitudes({
 
           <div className="text-2xl text-[#473f9b] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: attitudes[1].text }}></div>
 
-          <button onClick={() => handleClick(3)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
+          <div className="flex">
+            <button onClick={() => handleClick(1)} className="flex items-center justify-center min-w-[50px] min-h-[60px] bg-[#473f9b] border-5 border-[#231d57] text-white mr-3 disabled:opacity-50">
+              <span className="sr-only">Previous</span>
+              <svg fill="currentColor" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </button>
+
+            <button onClick={() => handleClick(3)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
+          </div>
         </div>
       </div>
     )
@@ -120,8 +127,16 @@ export default function Attitudes({
           </div>
 
           <div>
-            <button onClick={() => handleClick(4)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#c0dbd4] border-5 border-[#231d57] text-[#454791] shadow-sm transition mb-4">{attitudes[2].button[0]}</button>
-            <button onClick={() => handleClick(7)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#c0dbd4] border-5 border-[#231d57] text-[#454791] shadow-sm transition">{attitudes[2].button[1]}</button>
+            <button onClick={() => handleClick(4)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#c0dbd4] border-5 border-[#231d57] text-[#454791] shadow-sm transition mb-4">{attitudes[2].button[0]}</button>
+
+            <div className="flex items-end">
+              <button onClick={() => handleClick(2)} className="flex items-center justify-center min-w-[50px] min-h-[60px] bg-[#c0dbd4] border-5 border-[#231d57] text-[#454791] mr-3 disabled:opacity-50">
+                <span className="sr-only">Previous</span>
+                <svg fill="currentColor" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+              </button>
+
+              <button onClick={() => handleClick(7, 3)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#c0dbd4] border-5 border-[#231d57] text-[#454791] shadow-sm transition">{attitudes[2].button[1]}</button>
+            </div>
           </div>
         </div>
       </div>
@@ -142,7 +157,14 @@ export default function Attitudes({
 
           <div className="text-2xl text-[#473f9b] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: attitudes[3].text }}></div>
 
-          <button onClick={() => handleClick(5)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
+          <div className="flex">
+            <button onClick={() => handleClick(3)} className="flex items-center justify-center min-w-[50px] min-h-[60px] bg-[#473f9b] border-5 border-[#231d57] text-white mr-3 disabled:opacity-50">
+              <span className="sr-only">Previous</span>
+              <svg fill="currentColor" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </button>
+
+            <button onClick={() => handleClick(5)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
+          </div>
         </div>
       </div>
     )
@@ -159,9 +181,18 @@ export default function Attitudes({
             </p>
           </div>
 
+
           <div>
-            <button onClick={() => handleClick(6)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#c0dbd4] border-5 border-[#231d57] text-[#454791] shadow-sm transition mb-4">{attitudes[4].button[0]}</button>
-            <button onClick={() => handleClick(7)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#c0dbd4] border-5 border-[#231d57] text-[#454791] shadow-sm transition">{attitudes[4].button[1]}</button>
+            <button onClick={() => handleClick(6)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#c0dbd4] border-5 border-[#231d57] text-[#454791] shadow-sm transition mb-4">{attitudes[4].button[0]}</button>
+
+            <div className="flex items-end">
+              <button onClick={() => handleClick(4)} className="flex items-center justify-center min-w-[50px] min-h-[60px] bg-[#c0dbd4] border-5 border-[#231d57] text-[#454791] mr-3 disabled:opacity-50">
+                <span className="sr-only">Previous</span>
+                <svg fill="currentColor" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+              </button>
+
+              <button onClick={() => handleClick(7)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#c0dbd4] border-5 border-[#231d57] text-[#454791] shadow-sm transition">{attitudes[4].button[1]}</button>
+            </div>
           </div>
         </div>
       </div>
@@ -175,7 +206,14 @@ export default function Attitudes({
 
           <blockquote className="quote bg-white text-[#473f9b] p-7 rounded-[0.25rem] shadow-[0.5rem_0.5rem_0_#6071be] slide-up-2" dangerouslySetInnerHTML={{ __html: attitudes[5].quote }}></blockquote>
 
-          <button onClick={() => handleClick(8)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
+          <div className="flex">
+            <button onClick={() => handleClick(5)} className="flex items-center justify-center min-w-[50px] min-h-[60px] bg-[#473f9b] border-5 border-[#231d57] text-white mr-3 disabled:opacity-50">
+              <span className="sr-only">Previous</span>
+              <svg fill="currentColor" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </button>
+
+            <button onClick={() => handleClick(8)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
+          </div>
         </div>
       </div>
     )
@@ -188,7 +226,14 @@ export default function Attitudes({
 
           <blockquote className="quote bg-white text-[#473f9b] p-7 rounded-[0.25rem] shadow-[0.5rem_0.5rem_0_#6071be] slide-up-2" dangerouslySetInnerHTML={{ __html: attitudes[5].quote }}></blockquote>
 
-          <button onClick={() => handleClick(8)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
+          <div className="flex">
+            <button onClick={() => handleClick(3)} className="flex items-center justify-center min-w-[50px] min-h-[60px] bg-[#473f9b] border-5 border-[#231d57] text-white mr-3 disabled:opacity-50">
+              <span className="sr-only">Previous</span>
+              <svg fill="currentColor" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </button>
+
+            <button onClick={() => handleClick(8)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
+          </div>
         </div>
       </div>
     )
@@ -201,7 +246,14 @@ export default function Attitudes({
 
           <div className="text-xl text-[#473f9b] space-y-3" dangerouslySetInnerHTML={{ __html: attitudes[6].text }}></div>
 
-          <button onClick={() => handleClick(9)} className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
+          <div className="flex">
+            <button onClick={() => handleClick(7)} className="flex items-center justify-center min-w-[50px] min-h-[60px] bg-[#473f9b] border-5 border-[#231d57] text-white mr-3 disabled:opacity-50">
+              <span className="sr-only">Previous</span>
+              <svg fill="currentColor" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </button>
+
+            <button onClick={() => handleClick(9)} className="min-h-[60px] text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Next</button>
+          </div>
         </div>
       </div>
     )
@@ -214,7 +266,14 @@ export default function Attitudes({
 
           <div className="text-2xl text-[#473f9b] space-y-3" dangerouslySetInnerHTML={{ __html: attitudes[7].text }}></div>
 
-          <button onClick={() => handleFinish(1)} className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Finish</button>
+          <div className="flex">
+            <button onClick={() => handleClick(8)} className="flex items-center justify-center min-w-[50px] min-h-[60px] bg-[#473f9b] border-5 border-[#231d57] text-white mr-3 disabled:opacity-50">
+              <span className="sr-only">Previous</span>
+              <svg fill="currentColor" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </button>
+
+            <button onClick={() => handleFinish(1)} className="min-h-[60px] text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#473f9b] border-5 border-[#231d57] text-white shadow-sm transition">Finish</button>
+          </div>
         </div>
       </div>
     )

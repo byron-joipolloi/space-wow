@@ -62,8 +62,8 @@ export default function Credits({
               loader={imgLoader}
               src="/img-lottery.png"
               alt="Lottery Funded"
-              width={260}
-              height={70}
+              width={190}
+              height={51}
               className="max-w-full"
             />
           </a>

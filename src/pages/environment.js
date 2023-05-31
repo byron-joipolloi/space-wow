@@ -100,13 +100,13 @@ export default function Environment({
 
           <div className="text-2xl text-[#6E0869] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: environment[1].text }}></div>
 
-          <div className="flex">
-            <button onClick={() => handleClick(1)} className="flex items-center justify-center min-w-[50px] min-h-[60px] bg-[#6E0869] border-5 border-[#390136] text-white mr-3 disabled:opacity-50">
-              <span className="sr-only">Previous</span>
-              <svg fill="currentColor" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
-            </button>
-
+          <div className="space-y-3">
             <button onClick={() => handleClick(3)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#6E0869] border-5 border-[#390136] text-white shadow-sm transition">Next</button>
+
+            <button onClick={() => handleClick(1)} className="flex items-center justify-center w-full min-h-[60px] bg-[#6E0869] border-5 border-[#390136] text-white relative">
+              <svg fill="currentColor" className="w-5 h-5 absolute left-24 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+              <span className="text-lg uppercase tracking-widest">Back</span>
+            </button>
           </div>
         </div>
       </div>
@@ -124,17 +124,15 @@ export default function Environment({
             </p>
           </div>
 
-          <div>
-            <button onClick={() => handleClick(4)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#FF8FBA] border-5 border-[#390136] text-[#6E0869] shadow-sm transition mb-4">{environment[2].button[0]}</button>
+          <div className="space-y-3">
+            <button onClick={() => handleClick(4)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#FF8FBA] border-5 border-[#390136] text-[#6E0869] shadow-sm transition">{environment[2].button[0]}</button>
 
-            <div className="flex items-end">
-              <button onClick={() => handleClick(2)} className="flex items-center justify-center min-w-[50px] min-h-[60px] bg-[#FF8FBA] border-5 border-[#390136] text-[#6E0869] mr-3 disabled:opacity-50">
-                <span className="sr-only">Previous</span>
-                <svg fill="currentColor" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            <button onClick={() => handleClick(7)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#FF8FBA] border-5 border-[#390136] text-[#6E0869] shadow-sm transition">{environment[2].button[1]}</button>
+
+            <button onClick={() => handleClick(2)} className="flex items-center justify-center w-full min-h-[60px] bg-[#FF8FBA] border-5 border-[#390136] text-[#6E0869] relative">
+                <svg fill="currentColor" className="w-5 h-5 absolute left-24 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+                <span className="text-lg uppercase tracking-widest">Back</span>
               </button>
-
-              <button onClick={() => handleClick(7)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#FF8FBA] border-5 border-[#390136] text-[#6E0869] shadow-sm transition">{environment[2].button[1]}</button>
-            </div>
           </div>
         </div>
       </div>
@@ -155,13 +153,13 @@ export default function Environment({
 
           <div className="text-2xl text-[#6E0869] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: environment[3].text }}></div>
 
-          <div className="flex">
-            <button onClick={() => handleClick(3)} className="flex items-center justify-center min-w-[50px] min-h-[60px] bg-[#6E0869] border-5 border-[#390136] text-white mr-3 disabled:opacity-50">
-              <span className="sr-only">Previous</span>
-              <svg fill="currentColor" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
-            </button>
-            
+          <div className="space-y-3">
             <button onClick={() => handleClick(5)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#6E0869] border-5 border-[#390136] text-white shadow-sm transition">Next</button>
+
+            <button onClick={() => handleClick(3)} className="flex items-center justify-center w-full min-h-[60px] bg-[#6E0869] border-5 border-[#390136] text-white relative">
+              <svg fill="currentColor" className="w-5 h-5 absolute left-24 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+              <span className="text-lg uppercase tracking-widest">Back</span>
+            </button>
           </div>
         </div>
       </div>
@@ -179,17 +177,15 @@ export default function Environment({
             </p>
           </div>
 
-          <div>
-            <button onClick={() => handleClick(6)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#FF8FBA] border-5 border-[#390136] text-[#6E0869] shadow-sm transition mb-4">{environment[4].button[0]}</button>
+          <div className="space-y-3">
+            <button onClick={() => handleClick(6)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#FF8FBA] border-5 border-[#390136] text-[#6E0869] shadow-sm transition">{environment[4].button[0]}</button>
 
-            <div className="flex items-end">
-              <button onClick={() => handleClick(4)} className="flex items-center justify-center min-w-[50px] min-h-[60px] bg-[#FF8FBA] border-5 border-[#390136] text-[#6E0869] mr-3 disabled:opacity-50">
-                <span className="sr-only">Previous</span>
-                <svg fill="currentColor" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
-              </button>
-              
-              <button onClick={() => handleClick(7)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#FF8FBA] border-5 border-[#390136] text-[#6E0869] shadow-sm transition">{environment[4].button[1]}</button>
-            </div>
+            <button onClick={() => handleClick(7)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#FF8FBA] border-5 border-[#390136] text-[#6E0869] shadow-sm transition">{environment[4].button[1]}</button>
+
+            <button onClick={() => handleClick(4)} className="flex items-center justify-center w-full min-h-[60px] bg-[#FF8FBA] border-5 border-[#390136] text-[#6E0869] relative">
+              <svg fill="currentColor" className="w-5 h-5 absolute left-24 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+              <span className="text-lg uppercase tracking-widest">Back</span>
+            </button>
           </div>
         </div>
       </div>
@@ -203,13 +199,13 @@ export default function Environment({
 
           <blockquote className="quote bg-white text-[#6E0869] p-7 rounded-[0.25rem] shadow-[0.5rem_0.5rem_0_#9a3082] slide-up-2" dangerouslySetInnerHTML={{ __html: environment[5].quote }}></blockquote>
 
-          <div className="flex">
-            <button onClick={() => handleClick(5)} className="flex items-center justify-center min-w-[50px] min-h-[60px] bg-[#6E0869] border-5 border-[#390136] text-white mr-3 disabled:opacity-50">
-              <span className="sr-only">Previous</span>
-              <svg fill="currentColor" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
-            </button>
-
+          <div className="space-y-3">
             <button onClick={() => handleClick(8)} className="text-lg uppercase tracking-widest w-full p-2.5 bg-[#6E0869] border-5 border-[#390136] text-white shadow-sm transition">Next</button>
+
+            <button onClick={() => handleClick(5)} className="flex items-center justify-center w-full min-h-[60px] bg-[#6E0869] border-5 border-[#390136] text-white relative">
+              <svg fill="currentColor" className="w-5 h-5 absolute left-24 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+              <span className="text-lg uppercase tracking-widest">Back</span>
+            </button>
           </div>
         </div>
       </div>
@@ -223,13 +219,13 @@ export default function Environment({
 
           <blockquote className="quote bg-white text-[#6E0869] p-7 rounded-[0.25rem] shadow-[0.5rem_0.5rem_0_#9a3082] slide-up-2" dangerouslySetInnerHTML={{ __html: environment[5].quote }}></blockquote>
 
-          <div className="flex">
-            <button onClick={() => handleClick(3)} className="flex items-center justify-center min-w-[50px] min-h-[60px] bg-[#6E0869] border-5 border-[#390136] text-white mr-3 disabled:opacity-50">
-              <span className="sr-only">Previous</span>
-              <svg fill="currentColor" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
-            </button>
-
+          <div className="space-y-3">
             <button onClick={() => handleClick(8)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#6E0869] border-5 border-[#390136] text-white shadow-sm transition">Next</button>
+
+            <button onClick={() => handleClick(3)} className="flex items-center justify-center w-full min-h-[60px] bg-[#6E0869] border-5 border-[#390136] text-white relative">
+              <svg fill="currentColor" className="w-5 h-5 absolute left-24 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+              <span className="text-lg uppercase tracking-widest">Back</span>
+            </button>
           </div>
         </div>
       </div>
@@ -241,15 +237,15 @@ export default function Environment({
 
           <p className="end text-[#6E0869] font-serif text-6xl uppercase text-center" dangerouslySetInnerHTML={{ __html: environment[6].title }}></p>
 
-          <div className="text-xl text-[#6E0869] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: environment[6].text }}></div>
+          <div className="text-lg text-[#6E0869] space-y-3 slide-up-1" dangerouslySetInnerHTML={{ __html: environment[6].text }}></div>
 
-          <div className="flex">
-            <button onClick={() => handleClick(7)} className="flex items-center justify-center min-w-[50px] min-h-[60px] bg-[#6E0869] border-5 border-[#390136] text-white mr-3 disabled:opacity-50">
-              <span className="sr-only">Previous</span>
-              <svg fill="currentColor" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
-            </button>
-
+          <div className="space-y-3">
             <button onClick={() => handleClick(9)} className="min-h-[60px] text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#6E0869] border-5 border-[#390136] text-white shadow-sm transition">Next</button>
+
+            <button onClick={() => handleClick(7)} className="flex items-center justify-center w-full min-h-[60px] bg-[#6E0869] border-5 border-[#390136] text-white relative">
+              <svg fill="currentColor" className="w-5 h-5 absolute left-24 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+              <span className="text-lg uppercase tracking-widest">Back</span>
+            </button>
           </div>
         </div>
       </div>
@@ -263,13 +259,13 @@ export default function Environment({
 
           <div className="text-2xl text-[#6E0869] space-y-3" dangerouslySetInnerHTML={{ __html: environment[7].text }}></div>
 
-          <div className="flex">
-            <button onClick={() => handleClick(8)} className="flex items-center justify-center min-w-[50px] min-h-[60px] bg-[#6E0869] border-5 border-[#390136] text-white mr-3 disabled:opacity-50">
-              <span className="sr-only">Previous</span>
-              <svg fill="currentColor" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
-            </button>
-
+          <div className="space-y-3">
             <button onClick={() => handleFinish(1)} className="min-h-[60px] text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#6E0869] border-5 border-[#390136] text-white shadow-sm transition">Finish</button>
+
+            <button onClick={() => handleClick(8)} className="flex items-center justify-center w-full min-h-[60px] bg-[#6E0869] border-5 border-[#390136] text-white relative">
+              <svg fill="currentColor" className="w-5 h-5 absolute left-24 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+              <span className="text-lg uppercase tracking-widest">Back</span>
+            </button>
           </div>
         </div>
       </div>

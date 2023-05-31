@@ -4,6 +4,22 @@ import Image from 'next/image'
 import data from '../data.json'
 import Reset from '../components/Reset'
 import { useRouter } from 'next/router'
+import Modal from 'react-modal';
+
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    width: 'calc(100% - 3rem)',
+    maxWidth: '375px'
+  },
+};
+
+Modal.setAppElement('#app');
 
 const imgLoader = ({ src, width, quality }) => {
   return `${src}?w=${width}&q=${quality || 75}`
@@ -20,6 +36,22 @@ export default function Home({
   updateLocalStorage,
 }) {
   const router = useRouter()
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  let subtitle;
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    // subtitle.style.color = '#f00';
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
   
   const handleStart = (qr) => {
     if (progress.firstTime) {
@@ -49,9 +81,19 @@ export default function Home({
     }
   }
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(e);
+    let gender = document.querySelector('input[name="gender"]:checked');
+
+    console.log(gender.value);
+  }
+
   useEffect(() => {
-    
-  })
+    if (progress.firstTime) {
+      openModal();
+    }
+  }, [])
 
   return (
     <div className="bg-[#fecee1] bg-[url('/bg-pink.png')] bg-center bg-no-repeat bg-cover">
@@ -110,6 +152,43 @@ export default function Home({
         </div>
 
         <button onClick={() => handleStart(qrCode)} className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#a50c9d] border-5 border-[#7b0575] text-white shadow-sm transition">Start</button>
+
+        <Modal
+          isOpen={modalIsOpen}
+          onAfterOpen={afterOpenModal}
+          onRequestClose={closeModal}
+          style={customStyles}
+          contentLabel="Modal"
+        >
+          <h2 className="text-xl mb-4" ref={(_subtitle) => (subtitle = _subtitle)}>What's your gender?</h2>
+          <button onClick={closeModal} className="text-2xl absolute top-0 right-0 leading-none p-4">&times;<span className="sr-only">close</span></button>
+
+          <form onSubmit={handleSubmit}>
+            <div>
+              <input type="radio" id="male" name="gender" value="male" />
+              <label htmlFor="male" className="text-lg ml-2">Male</label>
+            </div>
+
+            <div>
+              <input type="radio" id="female" name="gender" value="female" />
+              <label htmlFor="female" className="text-lg ml-2">Female</label>
+            </div>
+
+            <div>
+              <input type="radio" id="nonbinary" name="gender" value="nonbinary" />
+              <label htmlFor="nonbinary" className="text-lg ml-2">Non binary</label>
+            </div>
+
+            <div>
+              <input type="radio" id="prefernottosay" name="gender" value="prefernottosay" />
+              <label htmlFor="prefernottosay" className="text-lg ml-2">Prefer not to say</label>
+            </div>
+
+            <div>
+              <button className="text-lg text-center uppercase tracking-widest w-full p-2.5 bg-[#a50c9d] border-5 border-[#7b0575] text-white shadow-sm transition mt-4">Submit</button>
+            </div>
+          </form>
+        </Modal>
 
       </div>
 

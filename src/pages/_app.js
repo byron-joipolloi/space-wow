@@ -1,7 +1,7 @@
 import '@/styles/globals.css'
 import Head from 'next/head'
 import { useState, useEffect } from "react"
-import { GoogleAnalytics } from "nextjs-google-analytics"
+import Script from 'next/script'
 
 export const initialProgress = {
   active: '',
@@ -85,7 +85,16 @@ export default function App({ Component, pageProps }) {
       <Head>
         <title>One Way or Another</title>
       </Head>
-      <GoogleAnalytics trackPageViews />
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-8PNM3E2P5K" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G-8PNM3E2P5K', {  cookie_flags: 'max-age=7200;secure;samesite=none' });
+        `}
+      </Script>
       <Component
         {...pageProps}
         progress={progress}

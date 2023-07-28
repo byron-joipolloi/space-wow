@@ -6,6 +6,7 @@ import { GoogleAnalytics } from "nextjs-google-analytics"
 export const initialProgress = {
   active: '',
   firstTime: true,
+  gender: '',
   attitudes: {
     step: 1,
     completed: false,

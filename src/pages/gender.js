@@ -37,7 +37,6 @@ export default function Home({
     }
 
     gtag('event', 'gender_select', {'gender': progress.gender})
-    console.log(`gtag('event', 'gender_select', {'gender': progress.gender})`);
   }
 
   const selectGender = (gender) => {
@@ -47,7 +46,6 @@ export default function Home({
     }
     setProgress(newProgress)
     updateLocalStorage({progress: newProgress})
-    console.log(progress)
   }
 
   const showingStart = () => {

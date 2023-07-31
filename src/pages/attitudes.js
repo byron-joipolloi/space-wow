@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-import Link from 'next/link'
 import Image from 'next/image'
 import data from '../data.json'
 
@@ -15,8 +14,6 @@ export default function Attitudes({
   setProgress,
   updateLocalStorage,
   getScore,
-  scenario,
-  setScenario
 }) {
   const router = useRouter()
   let score = getScore(progress)
@@ -32,6 +29,7 @@ export default function Attitudes({
     }
     setProgress(newProgress)
     updateLocalStorage('progress', newProgress)
+    console.log(progress)
     window.scrollTo(0, 0)
   }
 

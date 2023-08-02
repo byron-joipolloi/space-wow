@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-import Link from 'next/link'
 import Image from 'next/image'
 import data from '../data.json'
 
@@ -31,6 +30,17 @@ export default function Environment({
     setProgress(newProgress)
     updateLocalStorage('progress', newProgress)
     window.scrollTo(0, 0)
+  }
+
+  const handleAnswerClick = (questionLabel, responseText, pageStep) => {
+    const gender = process.gender
+    gtag('event', 'question_answered',
+    {
+       question: questionLabel,
+       response: responseText,
+       gender: gender
+    });
+    handleClick(pageStep);
   }
 
   const handleFinish = (pageStep) => {
@@ -125,9 +135,9 @@ export default function Environment({
           </div>
 
           <div className="space-y-3">
-            <button onClick={() => handleClick(4)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#FF8FBA] border-5 border-[#390136] text-[#6E0869] shadow-sm transition">{environment[2].button[0]}</button>
+            <button onClick={() => handleAnswerClick('environment_question_answered', environment[2].button[0], 4)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#FF8FBA] border-5 border-[#390136] text-[#6E0869] shadow-sm transition">{environment[2].button[0]}</button>
 
-            <button onClick={() => handleClick(7)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#FF8FBA] border-5 border-[#390136] text-[#6E0869] shadow-sm transition">{environment[2].button[1]}</button>
+            <button onClick={() => handleAnswerClick('environment_question_answered', environment[2].button[1], 7)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#FF8FBA] border-5 border-[#390136] text-[#6E0869] shadow-sm transition">{environment[2].button[1]}</button>
 
             <button onClick={() => handleClick(2)} className="flex items-center justify-center w-full min-h-[60px] bg-[#FF8FBA] border-5 border-[#390136] text-[#6E0869] relative">
                 <svg fill="currentColor" className="w-5 h-5 absolute left-24 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
@@ -178,9 +188,9 @@ export default function Environment({
           </div>
 
           <div className="space-y-3">
-            <button onClick={() => handleClick(6)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#FF8FBA] border-5 border-[#390136] text-[#6E0869] shadow-sm transition">{environment[4].button[0]}</button>
+            <button onClick={() => handleAnswerClick('environment_question_answered', environment[4].button[0], 6)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#FF8FBA] border-5 border-[#390136] text-[#6E0869] shadow-sm transition">{environment[4].button[0]}</button>
 
-            <button onClick={() => handleClick(7)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#FF8FBA] border-5 border-[#390136] text-[#6E0869] shadow-sm transition">{environment[4].button[1]}</button>
+            <button onClick={() => handleAnswerClick('environment_question_answered', environment[4].button[1], 7)} className="min-h-[60px] text-lg uppercase tracking-widest w-full p-2.5 bg-[#FF8FBA] border-5 border-[#390136] text-[#6E0869] shadow-sm transition">{environment[4].button[1]}</button>
 
             <button onClick={() => handleClick(4)} className="flex items-center justify-center w-full min-h-[60px] bg-[#FF8FBA] border-5 border-[#390136] text-[#6E0869] relative">
               <svg fill="currentColor" className="w-5 h-5 absolute left-24 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>

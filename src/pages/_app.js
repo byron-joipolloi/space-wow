@@ -6,6 +6,7 @@ import Script from 'next/script'
 export const initialProgress = {
   active: '',
   firstTime: true,
+  gender: '',
   attitudes: {
     step: 1,
     completed: false,

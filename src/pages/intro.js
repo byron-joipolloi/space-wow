@@ -1,5 +1,4 @@
 import { useEffect, useState, useRef } from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 import Message from '../components/Message.js'
 import data from '../data.json'
@@ -16,7 +15,6 @@ export default function Intro({
   progress,
   setProgress,
   qrCode,
-  setQrCode,
   updateLocalStorage,
 }) {
   const [messages, setMessages] = useState(data)

@@ -15,7 +15,6 @@ export default function Finish({
   progress,
   getScore,
   qrCode,
-  setQrCode,
 }) {
   const [messages, setMessages] = useState()
   const [activeMessage, setActiveMessage] = useState(1)

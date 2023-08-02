@@ -2,7 +2,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import data from '../data.json'
 import Reset from '../components/Reset'
-import { useRouter } from 'next/router'
 
 const credits = data.credits
 
@@ -27,7 +26,7 @@ export default function Credits({
         <div className="text-xl text-[#a50c9d] text-center slide-up-1" dangerouslySetInnerHTML={{ __html: credits.text }}></div>
 
         <div className="flex flex-wrap items-center justify-center">
-          <a href="https://leeds2023.co.uk/" class="mx-2 mb-4 mt-0">
+          <a href="https://leeds2023.co.uk/" className="mx-2 mb-4 mt-0">
             <Image
               loader={imgLoader}
               src="/img-leeds.png"
@@ -37,7 +36,7 @@ export default function Credits({
               className="max-w-full"
             />
           </a>
-          <a href="https://thewowfoundation.com/" class="mx-2 mb-4 mt-0">
+          <a href="https://thewowfoundation.com/" className="mx-2 mb-4 mt-0">
             <Image
               loader={imgLoader}
               src="/img-wow.png"
@@ -47,7 +46,7 @@ export default function Credits({
               className="max-w-full"
             />
           </a>
-          <a href="https://www.thespace.org/" class="mx-2 mb-4 mt-0">
+          <a href="https://www.thespace.org/" className="mx-2 mb-4 mt-0">
             <Image
               loader={imgLoader}
               src="/img-space.png"
@@ -57,7 +56,7 @@ export default function Credits({
               className="max-w-full"
             />
           </a>
-          <a href="https://www.artscouncil.org.uk/" class="mx-2 mb-4 mt-0">
+          <a href="https://www.artscouncil.org.uk/" className="mx-2 mb-4 mt-0">
             <Image
               loader={imgLoader}
               src="/img-lottery.png"
@@ -67,7 +66,7 @@ export default function Credits({
               className="max-w-full"
             />
           </a>
-          <a href="https://leeds.trinitymat.org/" class="mx-2 mb-4 mt-0">
+          <a href="https://leeds.trinitymat.org/" className="mx-2 mb-4 mt-0">
             <Image
               loader={imgLoader}
               src="/img-trinity.png"
@@ -77,7 +76,7 @@ export default function Credits({
               className="max-w-full"
             />
           </a>
-          <a href="https://www.four.agency/" class="mx-2 mb-4 mt-0">
+          <a href="https://www.four.agency/" className="mx-2 mb-4 mt-0">
             <Image
               loader={imgLoader}
               src="/img-four.png"
